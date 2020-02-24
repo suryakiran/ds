@@ -1,0 +1,20 @@
+task.id,task.name,task.assigned.to,task.due.date,task.priority,task.module,task.url
+1157562707024814,EP - Profile using new Hazard slides will not Update in Config mode,,,Blocker,EigenProfile,https://app.asana.com/0/1134367795571121/1157562707024814
+1156941871863305,EE - Hazard Data apply-to-all option is not same as in geocoding,Karthika Kalaivani,,Medium,EigenExpress,https://app.asana.com/0/1134367795571121/1156941871863305
+1156460975802774,EA - WMS layer labels must be legible in drop down,Karthika Kalaivani,,Critical,Exposure Analytics,https://app.asana.com/0/1134367795571121/1156460975802774
+1162837460852153,User unable to create Comparison Profile in EP page ,Krishnakumar,2020-02-21,,EigenProfile,https://app.asana.com/0/1134367795571121/1162837460852153
+1161298893105353,EP - CSS alignment for EP hazard slide - Part 2,RAMYA ,,Blocker,EigenProfile,https://app.asana.com/0/1134367795571121/1161298893105353
+1156590408930791,Update Consolidated EP template with new Hazard Slide in prism.support,Karthika Kalaivani,2020-02-24,Critical,,https://app.asana.com/0/1134367795571121/1156590408930791
+1156460975780769,EA - Show legend for WMS layers under map,Krishnakumar,2020-02-24,Blocker,Exposure Analytics,https://app.asana.com/0/1134367795571121/1156460975780769
+1156401406409685,EP - Allow users to select any attribute (text attribute/ enum/ number) in top n grid,RAMYA ,2020-02-24,Critical,EigenProfile,https://app.asana.com/0/1134367795571121/1156401406409685
+1155933470055352,EP - default zoom level is broken in EP,Krishnakumar,2020-02-24,Blocker,EigenProfile,https://app.asana.com/0/1134367795571121/1155933470055352
+1162183369370567,EP PDF issues,Subbu,2020-03-04,,EigenProfile,https://app.asana.com/0/1134367795571121/1162183369370567
+1162183369370563,EP new hazard slide -show legend for all pie chart contribution graph ,Subbu,2020-03-03,Critical,EigenProfile,https://app.asana.com/0/1134367795571121/1162183369370563
+1155933470055349,Add heatmap legend in EP,Krishnakumar,2020-02-24,High,EigenProfile,https://app.asana.com/0/1134367795571121/1155933470055349
+1162183369370561,EP - Make TopN grid dynamic ,Subbu,2020-02-25,Blocker,EigenProfile,https://app.asana.com/0/1134367795571121/1162183369370561
+1156460975780772,Update colormap labels,Abdul Azeem,2020-02-24,High,,https://app.asana.com/0/1134367795571121/1156460975780772
+1161854664864243,EA - Contribution widget to Export does not populate the legend labels when Enum is Flood Score or Surge Score,Rohit,2020-02-26,Critical,Exposure Analytics,https://app.asana.com/0/1134367795571121/1161854664864243
+1159907257029281,White Label Email - Customize text on the Link to Triggered Alerts,RAMYA ,,High,EigenAlert,https://app.asana.com/0/1134367795571121/1159907257029281
+1154551763284057,Duplicate columns in Asset Details in Export Analysis,Rohit,2020-03-02,High,Exposure Analytics,https://app.asana.com/0/1134367795571121/1154551763284057
+1155933470055364,EP text boxes are supporting special chars,Rohit,2020-02-24,Critical,EigenProfile,https://app.asana.com/0/1134367795571121/1155933470055364
+1155933470055370,Analysis link - Option to navigate from EP to EA ,Rohit,2020-02-20,High,EigenProfile,https://app.asana.com/0/1134367795571121/1155933470055370

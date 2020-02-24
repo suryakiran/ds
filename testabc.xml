@@ -1,0 +1,4864 @@
+<Tasks xmlns:ns0="http://schemas.microsoft.com/windows/2004/02/mit/task">
+
+<ns0:Task version="1.2">
+  <ns0:RegistrationInfo>
+    <ns0:Date>2016-08-30T17:11:46.746</ns0:Date>
+    <ns0:Author>WIN-IU04NHUPKTG\Administrator</ns0:Author>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:TimeTrigger>
+      <ns0:Repetition>
+        <ns0:Interval>PT3M</ns0:Interval>
+        <ns0:StopAtDurationEnd>false</ns0:StopAtDurationEnd>
+      </ns0:Repetition>
+      <ns0:StartBoundary>2016-08-30T17:12:11</ns0:StartBoundary>
+      <ns0:ExecutionTimeLimit>PT4M</ns0:ExecutionTimeLimit>
+      <ns0:Enabled>true</ns0:Enabled>
+    </ns0:TimeTrigger>
+  </ns0:Triggers>
+  <ns0:Principals>
+    <ns0:Principal id="Author">
+      <ns0:RunLevel>LeastPrivilege</ns0:RunLevel>
+      <ns0:UserId>Administrator</ns0:UserId>
+      <ns0:LogonType>Password</ns0:LogonType>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Settings>
+    <ns0:MultipleInstancesPolicy>StopExisting</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>true</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>true</ns0:StopIfGoingOnBatteries>
+    <ns0:AllowHardTerminate>true</ns0:AllowHardTerminate>
+    <ns0:StartWhenAvailable>false</ns0:StartWhenAvailable>
+    <ns0:RunOnlyIfNetworkAvailable>false</ns0:RunOnlyIfNetworkAvailable>
+    <ns0:IdleSettings>
+      <ns0:StopOnIdleEnd>true</ns0:StopOnIdleEnd>
+      <ns0:RestartOnIdle>false</ns0:RestartOnIdle>
+    </ns0:IdleSettings>
+    <ns0:AllowStartOnDemand>true</ns0:AllowStartOnDemand>
+    <ns0:Enabled>false</ns0:Enabled>
+    <ns0:Hidden>false</ns0:Hidden>
+    <ns0:RunOnlyIfIdle>false</ns0:RunOnlyIfIdle>
+    <ns0:WakeToRun>false</ns0:WakeToRun>
+    <ns0:ExecutionTimeLimit>PT3M</ns0:ExecutionTimeLimit>
+    <ns0:Priority>7</ns0:Priority>
+  </ns0:Settings>
+  <ns0:Actions Context="Author">
+    <ns0:Exec>
+      <ns0:Command>C:\ER\Perl\Batch\alerts.bat</ns0:Command>
+      <ns0:WorkingDirectory>C:\ER\Perl\Batch\</ns0:WorkingDirectory>
+    </ns0:Exec>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.2">
+  <ns0:RegistrationInfo>
+    <ns0:Date>2017-04-12T10:48:11.7093183</ns0:Date>
+    <ns0:Author>WIN-IU04NHUPKTG\Administrator</ns0:Author>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:TimeTrigger>
+      <ns0:Repetition>
+        <ns0:Interval>PT5M</ns0:Interval>
+        <ns0:StopAtDurationEnd>false</ns0:StopAtDurationEnd>
+      </ns0:Repetition>
+      <ns0:StartBoundary>2017-04-12T10:45:48.1581183</ns0:StartBoundary>
+      <ns0:ExecutionTimeLimit>PT4M</ns0:ExecutionTimeLimit>
+      <ns0:Enabled>true</ns0:Enabled>
+    </ns0:TimeTrigger>
+  </ns0:Triggers>
+  <ns0:Principals>
+    <ns0:Principal id="Author">
+      <ns0:RunLevel>LeastPrivilege</ns0:RunLevel>
+      <ns0:UserId>WIN-IU04NHUPKTG\Administrator</ns0:UserId>
+      <ns0:LogonType>Password</ns0:LogonType>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Settings>
+    <ns0:MultipleInstancesPolicy>StopExisting</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>true</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>true</ns0:StopIfGoingOnBatteries>
+    <ns0:AllowHardTerminate>true</ns0:AllowHardTerminate>
+    <ns0:StartWhenAvailable>false</ns0:StartWhenAvailable>
+    <ns0:RunOnlyIfNetworkAvailable>false</ns0:RunOnlyIfNetworkAvailable>
+    <ns0:IdleSettings>
+      <ns0:StopOnIdleEnd>true</ns0:StopOnIdleEnd>
+      <ns0:RestartOnIdle>false</ns0:RestartOnIdle>
+    </ns0:IdleSettings>
+    <ns0:AllowStartOnDemand>true</ns0:AllowStartOnDemand>
+    <ns0:Enabled>false</ns0:Enabled>
+    <ns0:Hidden>false</ns0:Hidden>
+    <ns0:RunOnlyIfIdle>false</ns0:RunOnlyIfIdle>
+    <ns0:WakeToRun>false</ns0:WakeToRun>
+    <ns0:ExecutionTimeLimit>PT4M</ns0:ExecutionTimeLimit>
+    <ns0:Priority>7</ns0:Priority>
+  </ns0:Settings>
+  <ns0:Actions Context="Author">
+    <ns0:Exec>
+      <ns0:Command>C:\ER\Perl\Batch\alerts.bat</ns0:Command>
+      <ns0:WorkingDirectory>C:\ER\Perl\Batch\</ns0:WorkingDirectory>
+    </ns0:Exec>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.2">
+  <ns0:RegistrationInfo>
+    <ns0:Date>2019-09-26T13:03:56.7002762</ns0:Date>
+    <ns0:Author>WIN-IU04NHUPKTG\Administrator</ns0:Author>
+    <ns0:Description>checks the running bigtiff upload count , if it is less than 3 then it uploads a new file</ns0:Description>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:TimeTrigger>
+      <ns0:Repetition>
+        <ns0:Interval>PT15M</ns0:Interval>
+        <ns0:StopAtDurationEnd>false</ns0:StopAtDurationEnd>
+      </ns0:Repetition>
+      <ns0:StartBoundary>2019-09-26T13:02:45.1435349</ns0:StartBoundary>
+      <ns0:ExecutionTimeLimit>P3D</ns0:ExecutionTimeLimit>
+      <ns0:Enabled>true</ns0:Enabled>
+      <ns0:RandomDelay>PT30S</ns0:RandomDelay>
+    </ns0:TimeTrigger>
+  </ns0:Triggers>
+  <ns0:Principals>
+    <ns0:Principal id="Author">
+      <ns0:RunLevel>HighestAvailable</ns0:RunLevel>
+      <ns0:UserId>WIN-IU04NHUPKTG\Administrator</ns0:UserId>
+      <ns0:LogonType>Password</ns0:LogonType>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Settings>
+    <ns0:MultipleInstancesPolicy>IgnoreNew</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>true</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>true</ns0:StopIfGoingOnBatteries>
+    <ns0:AllowHardTerminate>true</ns0:AllowHardTerminate>
+    <ns0:StartWhenAvailable>true</ns0:StartWhenAvailable>
+    <ns0:RunOnlyIfNetworkAvailable>false</ns0:RunOnlyIfNetworkAvailable>
+    <ns0:IdleSettings>
+      <ns0:StopOnIdleEnd>true</ns0:StopOnIdleEnd>
+      <ns0:RestartOnIdle>false</ns0:RestartOnIdle>
+    </ns0:IdleSettings>
+    <ns0:AllowStartOnDemand>true</ns0:AllowStartOnDemand>
+    <ns0:Enabled>false</ns0:Enabled>
+    <ns0:Hidden>false</ns0:Hidden>
+    <ns0:RunOnlyIfIdle>false</ns0:RunOnlyIfIdle>
+    <ns0:WakeToRun>false</ns0:WakeToRun>
+    <ns0:ExecutionTimeLimit>P3D</ns0:ExecutionTimeLimit>
+    <ns0:Priority>7</ns0:Priority>
+    <ns0:RestartOnFailure>
+      <ns0:Interval>PT15M</ns0:Interval>
+      <ns0:Count>3</ns0:Count>
+    </ns0:RestartOnFailure>
+  </ns0:Settings>
+  <ns0:Actions Context="Author">
+    <ns0:Exec>
+      <ns0:Command>check_and_import_bigtiff.bat</ns0:Command>
+      <ns0:WorkingDirectory>E:\</ns0:WorkingDirectory>
+    </ns0:Exec>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.2">
+  <ns0:RegistrationInfo>
+    <ns0:Date>2015-01-20T19:48:35.1363029</ns0:Date>
+    <ns0:Author>Amazon EC2Config</ns0:Author>
+    <ns0:Description>Ec2ConfigMonitor is a watchdog related to Ec2Config service.</ns0:Description>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:BootTrigger>
+      <ns0:Enabled>true</ns0:Enabled>
+      <ns0:Delay>PT1M</ns0:Delay>
+    </ns0:BootTrigger>
+    <ns0:EventTrigger>
+      <ns0:Enabled>true</ns0:Enabled>
+      <ns0:Subscription>&lt;QueryList&gt;&lt;Query Id="0" Path="System"&gt;&lt;Select Path="System"&gt;*[System[Provider[@Name='Service Control Manager'] and (Level=1  or Level=2) and (EventID=7009) and TimeCreated[timediff(@SystemTime) &amp;lt;= 3600000]]] 
+     and *[EventData[Data[@Name='param2'] and (Data='Ec2Config')]]
+    &lt;/Select&gt;&lt;/Query&gt;&lt;/QueryList&gt;</ns0:Subscription>
+      <ns0:Delay>PT30S</ns0:Delay>
+    </ns0:EventTrigger>
+  </ns0:Triggers>
+  <ns0:Principals>
+    <ns0:Principal id="Author">
+      <ns0:RunLevel>HighestAvailable</ns0:RunLevel>
+      <ns0:UserId>S-1-5-18</ns0:UserId>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Settings>
+    <ns0:MultipleInstancesPolicy>IgnoreNew</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>true</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>true</ns0:StopIfGoingOnBatteries>
+    <ns0:AllowHardTerminate>true</ns0:AllowHardTerminate>
+    <ns0:StartWhenAvailable>false</ns0:StartWhenAvailable>
+    <ns0:RunOnlyIfNetworkAvailable>false</ns0:RunOnlyIfNetworkAvailable>
+    <ns0:IdleSettings>
+      <ns0:StopOnIdleEnd>true</ns0:StopOnIdleEnd>
+      <ns0:RestartOnIdle>false</ns0:RestartOnIdle>
+    </ns0:IdleSettings>
+    <ns0:AllowStartOnDemand>true</ns0:AllowStartOnDemand>
+    <ns0:Enabled>true</ns0:Enabled>
+    <ns0:Hidden>false</ns0:Hidden>
+    <ns0:RunOnlyIfIdle>false</ns0:RunOnlyIfIdle>
+    <ns0:WakeToRun>false</ns0:WakeToRun>
+    <ns0:ExecutionTimeLimit>P3D</ns0:ExecutionTimeLimit>
+    <ns0:Priority>7</ns0:Priority>
+  </ns0:Settings>
+  <ns0:Actions Context="Author">
+    <ns0:Exec>
+      <ns0:Command>"%ProgramFiles%\Amazon\Ec2ConfigService\Ec2ConfigMonitor.exe"</ns0:Command>
+      <ns0:WorkingDirectory>%ProgramFiles%\Amazon\Ec2ConfigService</ns0:WorkingDirectory>
+    </ns0:Exec>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.2">
+  <ns0:RegistrationInfo>
+    <ns0:Date>2016-06-29T08:04:25.0796</ns0:Date>
+    <ns0:Author>WIN-IU04NHUPKTG\Administrator</ns0:Author>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:TimeTrigger>
+      <ns0:Repetition>
+        <ns0:Interval>PT1H</ns0:Interval>
+        <ns0:StopAtDurationEnd>false</ns0:StopAtDurationEnd>
+      </ns0:Repetition>
+      <ns0:StartBoundary>2016-06-29T08:22:28</ns0:StartBoundary>
+      <ns0:ExecutionTimeLimit>PT50M</ns0:ExecutionTimeLimit>
+      <ns0:Enabled>true</ns0:Enabled>
+    </ns0:TimeTrigger>
+  </ns0:Triggers>
+  <ns0:Principals>
+    <ns0:Principal id="Author">
+      <ns0:RunLevel>LeastPrivilege</ns0:RunLevel>
+      <ns0:UserId>Administrator</ns0:UserId>
+      <ns0:LogonType>Password</ns0:LogonType>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Settings>
+    <ns0:MultipleInstancesPolicy>IgnoreNew</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>true</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>true</ns0:StopIfGoingOnBatteries>
+    <ns0:AllowHardTerminate>true</ns0:AllowHardTerminate>
+    <ns0:StartWhenAvailable>false</ns0:StartWhenAvailable>
+    <ns0:RunOnlyIfNetworkAvailable>false</ns0:RunOnlyIfNetworkAvailable>
+    <ns0:IdleSettings>
+      <ns0:StopOnIdleEnd>true</ns0:StopOnIdleEnd>
+      <ns0:RestartOnIdle>false</ns0:RestartOnIdle>
+    </ns0:IdleSettings>
+    <ns0:AllowStartOnDemand>true</ns0:AllowStartOnDemand>
+    <ns0:Enabled>true</ns0:Enabled>
+    <ns0:Hidden>false</ns0:Hidden>
+    <ns0:RunOnlyIfIdle>false</ns0:RunOnlyIfIdle>
+    <ns0:WakeToRun>false</ns0:WakeToRun>
+    <ns0:ExecutionTimeLimit>P3D</ns0:ExecutionTimeLimit>
+    <ns0:Priority>7</ns0:Priority>
+  </ns0:Settings>
+  <ns0:Actions Context="Author">
+    <ns0:Exec>
+      <ns0:Command>C:\ER\Perl\Batch\fire_events_response.bat</ns0:Command>
+      <ns0:WorkingDirectory>C:\ER\Perl\Batch\</ns0:WorkingDirectory>
+    </ns0:Exec>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.2">
+  <ns0:RegistrationInfo>
+    <ns0:Version>1.3.35.442</ns0:Version>
+    <ns0:Description>Keeps your Google software up to date. If this task is disabled or stopped, your Google software will not be kept up to date, meaning security vulnerabilities that may arise cannot be fixed and features may not work. This task uninstalls itself when there is no Google software using it.</ns0:Description>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:LogonTrigger>
+      <ns0:Enabled>true</ns0:Enabled>
+    </ns0:LogonTrigger>
+    <ns0:CalendarTrigger>
+      <ns0:StartBoundary>2020-02-05T04:56:53</ns0:StartBoundary>
+      <ns0:ScheduleByDay>
+        <ns0:DaysInterval>1</ns0:DaysInterval>
+      </ns0:ScheduleByDay>
+    </ns0:CalendarTrigger>
+  </ns0:Triggers>
+  <ns0:Principals>
+    <ns0:Principal id="Author">
+      <ns0:UserId>S-1-5-18</ns0:UserId>
+      <ns0:RunLevel>HighestAvailable</ns0:RunLevel>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Settings>
+    <ns0:MultipleInstancesPolicy>IgnoreNew</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>false</ns0:DisallowStartIfOnBatteries>
+    <ns0:StartWhenAvailable>true</ns0:StartWhenAvailable>
+    <ns0:RunOnlyIfNetworkAvailable>false</ns0:RunOnlyIfNetworkAvailable>
+    <ns0:Enabled>true</ns0:Enabled>
+    <ns0:RunOnlyIfIdle>false</ns0:RunOnlyIfIdle>
+    <ns0:WakeToRun>false</ns0:WakeToRun>
+    <ns0:ExecutionTimeLimit>PT72H</ns0:ExecutionTimeLimit>
+  </ns0:Settings>
+  <ns0:Actions Context="Author">
+    <ns0:Exec>
+      <ns0:Command>C:\Program Files (x86)\Google\Update\GoogleUpdate.exe</ns0:Command>
+      <ns0:Arguments>/c</ns0:Arguments>
+    </ns0:Exec>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.2">
+  <ns0:RegistrationInfo>
+    <ns0:Version>1.3.35.442</ns0:Version>
+    <ns0:Description>Keeps your Google software up to date. If this task is disabled or stopped, your Google software will not be kept up to date, meaning security vulnerabilities that may arise cannot be fixed and features may not work. This task uninstalls itself when there is no Google software using it.</ns0:Description>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:CalendarTrigger>
+      <ns0:StartBoundary>2020-02-05T04:56:53</ns0:StartBoundary>
+      <ns0:Repetition>
+        <ns0:Interval>PT1H</ns0:Interval>
+        <ns0:Duration>P1D</ns0:Duration>
+      </ns0:Repetition>
+      <ns0:ScheduleByDay>
+        <ns0:DaysInterval>1</ns0:DaysInterval>
+      </ns0:ScheduleByDay>
+    </ns0:CalendarTrigger>
+  </ns0:Triggers>
+  <ns0:Principals>
+    <ns0:Principal id="Author">
+      <ns0:UserId>S-1-5-18</ns0:UserId>
+      <ns0:RunLevel>HighestAvailable</ns0:RunLevel>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Settings>
+    <ns0:MultipleInstancesPolicy>IgnoreNew</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>false</ns0:DisallowStartIfOnBatteries>
+    <ns0:StartWhenAvailable>true</ns0:StartWhenAvailable>
+    <ns0:RunOnlyIfNetworkAvailable>false</ns0:RunOnlyIfNetworkAvailable>
+    <ns0:Enabled>true</ns0:Enabled>
+    <ns0:RunOnlyIfIdle>false</ns0:RunOnlyIfIdle>
+    <ns0:WakeToRun>false</ns0:WakeToRun>
+    <ns0:ExecutionTimeLimit>PT72H</ns0:ExecutionTimeLimit>
+  </ns0:Settings>
+  <ns0:Actions Context="Author">
+    <ns0:Exec>
+      <ns0:Command>C:\Program Files (x86)\Google\Update\GoogleUpdate.exe</ns0:Command>
+      <ns0:Arguments>/ua /installsource scheduler</ns0:Arguments>
+    </ns0:Exec>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.2">
+  <ns0:RegistrationInfo>
+    <ns0:Date>2015-12-27T16:08:08.7052649</ns0:Date>
+    <ns0:Author>WIN-IU04NHUPKTG\Administrator</ns0:Author>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:TimeTrigger>
+      <ns0:Repetition>
+        <ns0:Interval>PT15M</ns0:Interval>
+        <ns0:StopAtDurationEnd>false</ns0:StopAtDurationEnd>
+      </ns0:Repetition>
+      <ns0:StartBoundary>2015-12-27T16:09:00</ns0:StartBoundary>
+      <ns0:ExecutionTimeLimit>PT1H</ns0:ExecutionTimeLimit>
+      <ns0:Enabled>true</ns0:Enabled>
+    </ns0:TimeTrigger>
+  </ns0:Triggers>
+  <ns0:Principals>
+    <ns0:Principal id="Author">
+      <ns0:RunLevel>LeastPrivilege</ns0:RunLevel>
+      <ns0:UserId>Administrator</ns0:UserId>
+      <ns0:LogonType>Password</ns0:LogonType>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Settings>
+    <ns0:MultipleInstancesPolicy>IgnoreNew</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>true</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>true</ns0:StopIfGoingOnBatteries>
+    <ns0:AllowHardTerminate>true</ns0:AllowHardTerminate>
+    <ns0:StartWhenAvailable>false</ns0:StartWhenAvailable>
+    <ns0:RunOnlyIfNetworkAvailable>false</ns0:RunOnlyIfNetworkAvailable>
+    <ns0:IdleSettings>
+      <ns0:StopOnIdleEnd>true</ns0:StopOnIdleEnd>
+      <ns0:RestartOnIdle>false</ns0:RestartOnIdle>
+    </ns0:IdleSettings>
+    <ns0:AllowStartOnDemand>true</ns0:AllowStartOnDemand>
+    <ns0:Enabled>true</ns0:Enabled>
+    <ns0:Hidden>false</ns0:Hidden>
+    <ns0:RunOnlyIfIdle>false</ns0:RunOnlyIfIdle>
+    <ns0:WakeToRun>false</ns0:WakeToRun>
+    <ns0:ExecutionTimeLimit>P3D</ns0:ExecutionTimeLimit>
+    <ns0:Priority>7</ns0:Priority>
+  </ns0:Settings>
+  <ns0:Actions Context="Author">
+    <ns0:Exec>
+      <ns0:Command>C:\ER\Perl\Batch\hail_noaa_events_response.bat</ns0:Command>
+      <ns0:WorkingDirectory>C:\ER\Perl\Batch\</ns0:WorkingDirectory>
+    </ns0:Exec>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.2">
+  <ns0:RegistrationInfo>
+    <ns0:Date>2019-09-06T20:45:11.0477738</ns0:Date>
+    <ns0:Author>WIN-IU04NHUPKTG\Administrator</ns0:Author>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:TimeTrigger>
+      <ns0:Repetition>
+        <ns0:Interval>PT17M</ns0:Interval>
+        <ns0:StopAtDurationEnd>false</ns0:StopAtDurationEnd>
+      </ns0:Repetition>
+      <ns0:StartBoundary>2019-09-06T20:43:48.3209738</ns0:StartBoundary>
+      <ns0:ExecutionTimeLimit>PT30M</ns0:ExecutionTimeLimit>
+      <ns0:Enabled>true</ns0:Enabled>
+      <ns0:RandomDelay>PT10S</ns0:RandomDelay>
+    </ns0:TimeTrigger>
+  </ns0:Triggers>
+  <ns0:Principals>
+    <ns0:Principal id="Author">
+      <ns0:RunLevel>LeastPrivilege</ns0:RunLevel>
+      <ns0:UserId>WIN-IU04NHUPKTG\Administrator</ns0:UserId>
+      <ns0:LogonType>Password</ns0:LogonType>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Settings>
+    <ns0:MultipleInstancesPolicy>IgnoreNew</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>true</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>true</ns0:StopIfGoingOnBatteries>
+    <ns0:AllowHardTerminate>true</ns0:AllowHardTerminate>
+    <ns0:StartWhenAvailable>true</ns0:StartWhenAvailable>
+    <ns0:RunOnlyIfNetworkAvailable>false</ns0:RunOnlyIfNetworkAvailable>
+    <ns0:IdleSettings>
+      <ns0:StopOnIdleEnd>true</ns0:StopOnIdleEnd>
+      <ns0:RestartOnIdle>false</ns0:RestartOnIdle>
+    </ns0:IdleSettings>
+    <ns0:AllowStartOnDemand>true</ns0:AllowStartOnDemand>
+    <ns0:Enabled>true</ns0:Enabled>
+    <ns0:Hidden>false</ns0:Hidden>
+    <ns0:RunOnlyIfIdle>false</ns0:RunOnlyIfIdle>
+    <ns0:WakeToRun>false</ns0:WakeToRun>
+    <ns0:ExecutionTimeLimit>PT30M</ns0:ExecutionTimeLimit>
+    <ns0:Priority>7</ns0:Priority>
+  </ns0:Settings>
+  <ns0:Actions Context="Author">
+    <ns0:Exec>
+      <ns0:Command>C:\ER\Perl\Batch\hurricane_mapping_event_response.bat</ns0:Command>
+      <ns0:WorkingDirectory>C:\ER\Perl\Batch\</ns0:WorkingDirectory>
+    </ns0:Exec>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.2">
+  <ns0:RegistrationInfo>
+    <ns0:Date>2016-07-04T08:03:56.8208</ns0:Date>
+    <ns0:Author>WIN-IU04NHUPKTG\Administrator</ns0:Author>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:TimeTrigger>
+      <ns0:Repetition>
+        <ns0:Interval>PT30M</ns0:Interval>
+        <ns0:StopAtDurationEnd>false</ns0:StopAtDurationEnd>
+      </ns0:Repetition>
+      <ns0:StartBoundary>2016-07-04T08:10:28</ns0:StartBoundary>
+      <ns0:ExecutionTimeLimit>PT25M</ns0:ExecutionTimeLimit>
+      <ns0:Enabled>true</ns0:Enabled>
+    </ns0:TimeTrigger>
+  </ns0:Triggers>
+  <ns0:Principals>
+    <ns0:Principal id="Author">
+      <ns0:RunLevel>LeastPrivilege</ns0:RunLevel>
+      <ns0:UserId>Administrator</ns0:UserId>
+      <ns0:LogonType>Password</ns0:LogonType>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Settings>
+    <ns0:MultipleInstancesPolicy>IgnoreNew</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>true</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>true</ns0:StopIfGoingOnBatteries>
+    <ns0:AllowHardTerminate>true</ns0:AllowHardTerminate>
+    <ns0:StartWhenAvailable>false</ns0:StartWhenAvailable>
+    <ns0:RunOnlyIfNetworkAvailable>false</ns0:RunOnlyIfNetworkAvailable>
+    <ns0:IdleSettings>
+      <ns0:StopOnIdleEnd>true</ns0:StopOnIdleEnd>
+      <ns0:RestartOnIdle>false</ns0:RestartOnIdle>
+    </ns0:IdleSettings>
+    <ns0:AllowStartOnDemand>true</ns0:AllowStartOnDemand>
+    <ns0:Enabled>true</ns0:Enabled>
+    <ns0:Hidden>false</ns0:Hidden>
+    <ns0:RunOnlyIfIdle>false</ns0:RunOnlyIfIdle>
+    <ns0:WakeToRun>false</ns0:WakeToRun>
+    <ns0:ExecutionTimeLimit>P3D</ns0:ExecutionTimeLimit>
+    <ns0:Priority>7</ns0:Priority>
+  </ns0:Settings>
+  <ns0:Actions Context="Author">
+    <ns0:Exec>
+      <ns0:Command>C:\ER\Perl\Batch\landslide_events_response.bat</ns0:Command>
+      <ns0:WorkingDirectory>C:\ER\Perl\Batch\</ns0:WorkingDirectory>
+    </ns0:Exec>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.2">
+  <ns0:RegistrationInfo>
+    <ns0:Date>2016-08-31T08:28:04.354</ns0:Date>
+    <ns0:Author>WIN-IU04NHUPKTG\Administrator</ns0:Author>
+    <ns0:Description>Sends the list of  alert counts for each user</ns0:Description>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:TimeTrigger>
+      <ns0:Repetition>
+        <ns0:Interval>PT3H</ns0:Interval>
+        <ns0:StopAtDurationEnd>false</ns0:StopAtDurationEnd>
+      </ns0:Repetition>
+      <ns0:StartBoundary>2016-08-31T11:35:00</ns0:StartBoundary>
+      <ns0:Enabled>true</ns0:Enabled>
+    </ns0:TimeTrigger>
+  </ns0:Triggers>
+  <ns0:Principals>
+    <ns0:Principal id="Author">
+      <ns0:RunLevel>LeastPrivilege</ns0:RunLevel>
+      <ns0:UserId>Administrator</ns0:UserId>
+      <ns0:LogonType>Password</ns0:LogonType>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Settings>
+    <ns0:MultipleInstancesPolicy>IgnoreNew</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>true</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>true</ns0:StopIfGoingOnBatteries>
+    <ns0:AllowHardTerminate>true</ns0:AllowHardTerminate>
+    <ns0:StartWhenAvailable>false</ns0:StartWhenAvailable>
+    <ns0:RunOnlyIfNetworkAvailable>false</ns0:RunOnlyIfNetworkAvailable>
+    <ns0:IdleSettings>
+      <ns0:StopOnIdleEnd>true</ns0:StopOnIdleEnd>
+      <ns0:RestartOnIdle>false</ns0:RestartOnIdle>
+    </ns0:IdleSettings>
+    <ns0:AllowStartOnDemand>true</ns0:AllowStartOnDemand>
+    <ns0:Enabled>true</ns0:Enabled>
+    <ns0:Hidden>false</ns0:Hidden>
+    <ns0:RunOnlyIfIdle>false</ns0:RunOnlyIfIdle>
+    <ns0:WakeToRun>false</ns0:WakeToRun>
+    <ns0:ExecutionTimeLimit>P3D</ns0:ExecutionTimeLimit>
+    <ns0:Priority>7</ns0:Priority>
+  </ns0:Settings>
+  <ns0:Actions Context="Author">
+    <ns0:Exec>
+      <ns0:Command>java</ns0:Command>
+      <ns0:Arguments>-jar MailAlertSentStatus.jar C:\ER\Status_Mailer\config_alert_status.json</ns0:Arguments>
+      <ns0:WorkingDirectory>C:\ER\Status_Mailer</ns0:WorkingDirectory>
+    </ns0:Exec>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.2">
+  <ns0:RegistrationInfo>
+    <ns0:Date>2017-01-06T12:59:02.5904</ns0:Date>
+    <ns0:Author>WIN-IU04NHUPKTG\Administrator</ns0:Author>
+    <ns0:Description>MailAlertSentStatus-Every 24hr</ns0:Description>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:CalendarTrigger>
+      <ns0:StartBoundary>2017-01-06T11:30:00</ns0:StartBoundary>
+      <ns0:Enabled>true</ns0:Enabled>
+      <ns0:ScheduleByDay>
+        <ns0:DaysInterval>1</ns0:DaysInterval>
+      </ns0:ScheduleByDay>
+    </ns0:CalendarTrigger>
+  </ns0:Triggers>
+  <ns0:Principals>
+    <ns0:Principal id="Author">
+      <ns0:RunLevel>LeastPrivilege</ns0:RunLevel>
+      <ns0:UserId>WIN-IU04NHUPKTG\Administrator</ns0:UserId>
+      <ns0:LogonType>Password</ns0:LogonType>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Settings>
+    <ns0:MultipleInstancesPolicy>IgnoreNew</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>true</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>true</ns0:StopIfGoingOnBatteries>
+    <ns0:AllowHardTerminate>true</ns0:AllowHardTerminate>
+    <ns0:StartWhenAvailable>false</ns0:StartWhenAvailable>
+    <ns0:RunOnlyIfNetworkAvailable>false</ns0:RunOnlyIfNetworkAvailable>
+    <ns0:IdleSettings>
+      <ns0:StopOnIdleEnd>true</ns0:StopOnIdleEnd>
+      <ns0:RestartOnIdle>false</ns0:RestartOnIdle>
+    </ns0:IdleSettings>
+    <ns0:AllowStartOnDemand>true</ns0:AllowStartOnDemand>
+    <ns0:Enabled>true</ns0:Enabled>
+    <ns0:Hidden>false</ns0:Hidden>
+    <ns0:RunOnlyIfIdle>false</ns0:RunOnlyIfIdle>
+    <ns0:WakeToRun>false</ns0:WakeToRun>
+    <ns0:ExecutionTimeLimit>P3D</ns0:ExecutionTimeLimit>
+    <ns0:Priority>7</ns0:Priority>
+  </ns0:Settings>
+  <ns0:Actions Context="Author">
+    <ns0:Exec>
+      <ns0:Command>java</ns0:Command>
+      <ns0:Arguments>-jar MailAlertSentStatus.jar C:\ER\Status_Mailer\config_alert_status_24hr.json</ns0:Arguments>
+      <ns0:WorkingDirectory>C:\ER\Status_Mailer</ns0:WorkingDirectory>
+    </ns0:Exec>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.2">
+  <ns0:RegistrationInfo>
+    <ns0:Date>2016-07-15T11:18:33.439</ns0:Date>
+    <ns0:Author>WIN-IU04NHUPKTG\Administrator</ns0:Author>
+    <ns0:Description>Sends the list of event count for each realtime event set</ns0:Description>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:CalendarTrigger>
+      <ns0:StartBoundary>2016-07-15T11:30:00</ns0:StartBoundary>
+      <ns0:Enabled>true</ns0:Enabled>
+      <ns0:ScheduleByDay>
+        <ns0:DaysInterval>1</ns0:DaysInterval>
+      </ns0:ScheduleByDay>
+    </ns0:CalendarTrigger>
+  </ns0:Triggers>
+  <ns0:Principals>
+    <ns0:Principal id="Author">
+      <ns0:RunLevel>LeastPrivilege</ns0:RunLevel>
+      <ns0:UserId>Administrator</ns0:UserId>
+      <ns0:LogonType>Password</ns0:LogonType>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Settings>
+    <ns0:MultipleInstancesPolicy>IgnoreNew</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>true</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>true</ns0:StopIfGoingOnBatteries>
+    <ns0:AllowHardTerminate>true</ns0:AllowHardTerminate>
+    <ns0:StartWhenAvailable>false</ns0:StartWhenAvailable>
+    <ns0:RunOnlyIfNetworkAvailable>false</ns0:RunOnlyIfNetworkAvailable>
+    <ns0:IdleSettings>
+      <ns0:StopOnIdleEnd>true</ns0:StopOnIdleEnd>
+      <ns0:RestartOnIdle>false</ns0:RestartOnIdle>
+    </ns0:IdleSettings>
+    <ns0:AllowStartOnDemand>true</ns0:AllowStartOnDemand>
+    <ns0:Enabled>true</ns0:Enabled>
+    <ns0:Hidden>false</ns0:Hidden>
+    <ns0:RunOnlyIfIdle>false</ns0:RunOnlyIfIdle>
+    <ns0:WakeToRun>false</ns0:WakeToRun>
+    <ns0:ExecutionTimeLimit>P3D</ns0:ExecutionTimeLimit>
+    <ns0:Priority>7</ns0:Priority>
+  </ns0:Settings>
+  <ns0:Actions Context="Author">
+    <ns0:Exec>
+      <ns0:Command>java</ns0:Command>
+      <ns0:Arguments>-jar MailRealTimeEventUploadStatus.jar C:\ER\Status_Mailer\config_realtime_event_status.json</ns0:Arguments>
+      <ns0:WorkingDirectory>C:\ER\Status_Mailer</ns0:WorkingDirectory>
+    </ns0:Exec>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.2">
+  <ns0:RegistrationInfo>
+    <ns0:Date>2017-01-17T10:19:15.343179</ns0:Date>
+    <ns0:Author>WIN-IU04NHUPKTG\Administrator</ns0:Author>
+    <ns0:Description>Mail : list of failed/attempted signups, registered (inactive) and activated users in last 12 hours from prism</ns0:Description>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:CalendarTrigger>
+      <ns0:Repetition>
+        <ns0:Interval>PT12H</ns0:Interval>
+        <ns0:StopAtDurationEnd>false</ns0:StopAtDurationEnd>
+      </ns0:Repetition>
+      <ns0:StartBoundary>2017-01-17T11:00:00</ns0:StartBoundary>
+      <ns0:Enabled>true</ns0:Enabled>
+      <ns0:ScheduleByDay>
+        <ns0:DaysInterval>1</ns0:DaysInterval>
+      </ns0:ScheduleByDay>
+    </ns0:CalendarTrigger>
+  </ns0:Triggers>
+  <ns0:Principals>
+    <ns0:Principal id="Author">
+      <ns0:RunLevel>LeastPrivilege</ns0:RunLevel>
+      <ns0:UserId>WIN-IU04NHUPKTG\Administrator</ns0:UserId>
+      <ns0:LogonType>Password</ns0:LogonType>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Settings>
+    <ns0:MultipleInstancesPolicy>IgnoreNew</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>true</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>true</ns0:StopIfGoingOnBatteries>
+    <ns0:AllowHardTerminate>true</ns0:AllowHardTerminate>
+    <ns0:StartWhenAvailable>false</ns0:StartWhenAvailable>
+    <ns0:RunOnlyIfNetworkAvailable>false</ns0:RunOnlyIfNetworkAvailable>
+    <ns0:IdleSettings>
+      <ns0:StopOnIdleEnd>true</ns0:StopOnIdleEnd>
+      <ns0:RestartOnIdle>false</ns0:RestartOnIdle>
+    </ns0:IdleSettings>
+    <ns0:AllowStartOnDemand>true</ns0:AllowStartOnDemand>
+    <ns0:Enabled>true</ns0:Enabled>
+    <ns0:Hidden>false</ns0:Hidden>
+    <ns0:RunOnlyIfIdle>false</ns0:RunOnlyIfIdle>
+    <ns0:WakeToRun>false</ns0:WakeToRun>
+    <ns0:ExecutionTimeLimit>P3D</ns0:ExecutionTimeLimit>
+    <ns0:Priority>7</ns0:Priority>
+  </ns0:Settings>
+  <ns0:Actions Context="Author">
+    <ns0:Exec>
+      <ns0:Command>java</ns0:Command>
+      <ns0:Arguments>-jar C:\ER\Status_Mailer\MailSignupDetails.jar C:\ER\Status_Mailer\config_signup_details.json</ns0:Arguments>
+      <ns0:WorkingDirectory>C:\ER\Status_Mailer</ns0:WorkingDirectory>
+    </ns0:Exec>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.2">
+  <ns0:RegistrationInfo>
+    <ns0:Date>2017-07-25T09:57:21.716564</ns0:Date>
+    <ns0:Author>WIN-IU04NHUPKTG\Administrator</ns0:Author>
+    <ns0:Description>Send mail (every Monday) to internal admin users for the user activity report @ tenant level.</ns0:Description>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:CalendarTrigger>
+      <ns0:StartBoundary>2017-07-31T10:24:00</ns0:StartBoundary>
+      <ns0:ExecutionTimeLimit>PT1H</ns0:ExecutionTimeLimit>
+      <ns0:Enabled>true</ns0:Enabled>
+      <ns0:ScheduleByWeek>
+        <ns0:DaysOfWeek>
+          <ns0:Monday />
+        </ns0:DaysOfWeek>
+        <ns0:WeeksInterval>1</ns0:WeeksInterval>
+      </ns0:ScheduleByWeek>
+    </ns0:CalendarTrigger>
+  </ns0:Triggers>
+  <ns0:Principals>
+    <ns0:Principal id="Author">
+      <ns0:RunLevel>LeastPrivilege</ns0:RunLevel>
+      <ns0:UserId>WIN-IU04NHUPKTG\Administrator</ns0:UserId>
+      <ns0:LogonType>Password</ns0:LogonType>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Settings>
+    <ns0:MultipleInstancesPolicy>IgnoreNew</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>true</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>true</ns0:StopIfGoingOnBatteries>
+    <ns0:AllowHardTerminate>true</ns0:AllowHardTerminate>
+    <ns0:StartWhenAvailable>false</ns0:StartWhenAvailable>
+    <ns0:RunOnlyIfNetworkAvailable>false</ns0:RunOnlyIfNetworkAvailable>
+    <ns0:IdleSettings>
+      <ns0:StopOnIdleEnd>true</ns0:StopOnIdleEnd>
+      <ns0:RestartOnIdle>false</ns0:RestartOnIdle>
+    </ns0:IdleSettings>
+    <ns0:AllowStartOnDemand>true</ns0:AllowStartOnDemand>
+    <ns0:Enabled>true</ns0:Enabled>
+    <ns0:Hidden>false</ns0:Hidden>
+    <ns0:RunOnlyIfIdle>false</ns0:RunOnlyIfIdle>
+    <ns0:WakeToRun>false</ns0:WakeToRun>
+    <ns0:ExecutionTimeLimit>P3D</ns0:ExecutionTimeLimit>
+    <ns0:Priority>7</ns0:Priority>
+  </ns0:Settings>
+  <ns0:Actions Context="Author">
+    <ns0:Exec>
+      <ns0:Command>java</ns0:Command>
+      <ns0:Arguments>-jar C:\ER\Status_Mailer\ActivityReport.jar C:\ER\Status_Mailer\Config_activity_report.json</ns0:Arguments>
+      <ns0:WorkingDirectory>C:\ER\Status_Mailer\activity_report</ns0:WorkingDirectory>
+    </ns0:Exec>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.2">
+  <ns0:RegistrationInfo>
+    <ns0:Date>2017-11-13T06:43:23.9006</ns0:Date>
+    <ns0:Author>WIN-IU04NHUPKTG\Administrator</ns0:Author>
+    <ns0:Description>Sends mail for user activity report every Monday</ns0:Description>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:CalendarTrigger>
+      <ns0:StartBoundary>2017-11-13T10:24:00</ns0:StartBoundary>
+      <ns0:Enabled>true</ns0:Enabled>
+      <ns0:ScheduleByWeek>
+        <ns0:DaysOfWeek>
+          <ns0:Monday />
+        </ns0:DaysOfWeek>
+        <ns0:WeeksInterval>1</ns0:WeeksInterval>
+      </ns0:ScheduleByWeek>
+    </ns0:CalendarTrigger>
+  </ns0:Triggers>
+  <ns0:Principals>
+    <ns0:Principal id="Author">
+      <ns0:RunLevel>LeastPrivilege</ns0:RunLevel>
+      <ns0:UserId>WIN-IU04NHUPKTG\Administrator</ns0:UserId>
+      <ns0:LogonType>Password</ns0:LogonType>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Settings>
+    <ns0:MultipleInstancesPolicy>IgnoreNew</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>true</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>true</ns0:StopIfGoingOnBatteries>
+    <ns0:AllowHardTerminate>true</ns0:AllowHardTerminate>
+    <ns0:StartWhenAvailable>false</ns0:StartWhenAvailable>
+    <ns0:RunOnlyIfNetworkAvailable>false</ns0:RunOnlyIfNetworkAvailable>
+    <ns0:IdleSettings>
+      <ns0:StopOnIdleEnd>true</ns0:StopOnIdleEnd>
+      <ns0:RestartOnIdle>false</ns0:RestartOnIdle>
+    </ns0:IdleSettings>
+    <ns0:AllowStartOnDemand>true</ns0:AllowStartOnDemand>
+    <ns0:Enabled>true</ns0:Enabled>
+    <ns0:Hidden>false</ns0:Hidden>
+    <ns0:RunOnlyIfIdle>false</ns0:RunOnlyIfIdle>
+    <ns0:WakeToRun>false</ns0:WakeToRun>
+    <ns0:ExecutionTimeLimit>P3D</ns0:ExecutionTimeLimit>
+    <ns0:Priority>7</ns0:Priority>
+  </ns0:Settings>
+  <ns0:Actions Context="Author">
+    <ns0:Exec>
+      <ns0:Command>java</ns0:Command>
+      <ns0:Arguments>-jar C:\ER\Status_Mailer\ActivityReportForUserAndTenant.jar C:\ER\Status_Mailer\Config_user_activity_report.json</ns0:Arguments>
+      <ns0:WorkingDirectory>C:\ER\Status_Mailer\user_activity_report</ns0:WorkingDirectory>
+    </ns0:Exec>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.2">
+  <ns0:RegistrationInfo>
+    <ns0:Date>2016-07-29T13:38:34.58</ns0:Date>
+    <ns0:Author>WIN-IU04NHUPKTG\Administrator</ns0:Author>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:TimeTrigger>
+      <ns0:Repetition>
+        <ns0:Interval>PT12M</ns0:Interval>
+        <ns0:StopAtDurationEnd>false</ns0:StopAtDurationEnd>
+      </ns0:Repetition>
+      <ns0:StartBoundary>2016-07-29T13:35:40.673</ns0:StartBoundary>
+      <ns0:ExecutionTimeLimit>PT30M</ns0:ExecutionTimeLimit>
+      <ns0:Enabled>true</ns0:Enabled>
+    </ns0:TimeTrigger>
+  </ns0:Triggers>
+  <ns0:Principals>
+    <ns0:Principal id="Author">
+      <ns0:RunLevel>LeastPrivilege</ns0:RunLevel>
+      <ns0:UserId>Administrator</ns0:UserId>
+      <ns0:LogonType>Password</ns0:LogonType>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Settings>
+    <ns0:MultipleInstancesPolicy>IgnoreNew</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>true</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>true</ns0:StopIfGoingOnBatteries>
+    <ns0:AllowHardTerminate>true</ns0:AllowHardTerminate>
+    <ns0:StartWhenAvailable>false</ns0:StartWhenAvailable>
+    <ns0:RunOnlyIfNetworkAvailable>false</ns0:RunOnlyIfNetworkAvailable>
+    <ns0:IdleSettings>
+      <ns0:StopOnIdleEnd>true</ns0:StopOnIdleEnd>
+      <ns0:RestartOnIdle>false</ns0:RestartOnIdle>
+    </ns0:IdleSettings>
+    <ns0:AllowStartOnDemand>true</ns0:AllowStartOnDemand>
+    <ns0:Enabled>true</ns0:Enabled>
+    <ns0:Hidden>false</ns0:Hidden>
+    <ns0:RunOnlyIfIdle>false</ns0:RunOnlyIfIdle>
+    <ns0:WakeToRun>false</ns0:WakeToRun>
+    <ns0:ExecutionTimeLimit>P3D</ns0:ExecutionTimeLimit>
+    <ns0:Priority>7</ns0:Priority>
+  </ns0:Settings>
+  <ns0:Actions Context="Author">
+    <ns0:Exec>
+      <ns0:Command>C:\ER\Perl\Batch\metcon_events_response.bat</ns0:Command>
+      <ns0:WorkingDirectory>c:\er\perl\batch\</ns0:WorkingDirectory>
+    </ns0:Exec>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.2">
+  <ns0:RegistrationInfo>
+    <ns0:Date>2017-05-10T15:12:31.1141479</ns0:Date>
+    <ns0:Author>WIN-IU04NHUPKTG\Administrator</ns0:Author>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:TimeTrigger>
+      <ns0:Repetition>
+        <ns0:Interval>PT15M</ns0:Interval>
+        <ns0:StopAtDurationEnd>false</ns0:StopAtDurationEnd>
+      </ns0:Repetition>
+      <ns0:StartBoundary>2017-05-10T15:10:37.7496746</ns0:StartBoundary>
+      <ns0:ExecutionTimeLimit>PT30M</ns0:ExecutionTimeLimit>
+      <ns0:Enabled>true</ns0:Enabled>
+    </ns0:TimeTrigger>
+  </ns0:Triggers>
+  <ns0:Principals>
+    <ns0:Principal id="Author">
+      <ns0:RunLevel>LeastPrivilege</ns0:RunLevel>
+      <ns0:UserId>WIN-IU04NHUPKTG\Administrator</ns0:UserId>
+      <ns0:LogonType>Password</ns0:LogonType>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Settings>
+    <ns0:MultipleInstancesPolicy>IgnoreNew</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>true</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>true</ns0:StopIfGoingOnBatteries>
+    <ns0:AllowHardTerminate>true</ns0:AllowHardTerminate>
+    <ns0:StartWhenAvailable>true</ns0:StartWhenAvailable>
+    <ns0:RunOnlyIfNetworkAvailable>false</ns0:RunOnlyIfNetworkAvailable>
+    <ns0:IdleSettings>
+      <ns0:StopOnIdleEnd>true</ns0:StopOnIdleEnd>
+      <ns0:RestartOnIdle>false</ns0:RestartOnIdle>
+    </ns0:IdleSettings>
+    <ns0:AllowStartOnDemand>true</ns0:AllowStartOnDemand>
+    <ns0:Enabled>true</ns0:Enabled>
+    <ns0:Hidden>false</ns0:Hidden>
+    <ns0:RunOnlyIfIdle>false</ns0:RunOnlyIfIdle>
+    <ns0:WakeToRun>false</ns0:WakeToRun>
+    <ns0:ExecutionTimeLimit>PT30M</ns0:ExecutionTimeLimit>
+    <ns0:Priority>7</ns0:Priority>
+  </ns0:Settings>
+  <ns0:Actions Context="Author">
+    <ns0:Exec>
+      <ns0:Command>C:\ER\Perl\Batch\observed_winds_event_response.bat</ns0:Command>
+      <ns0:WorkingDirectory>C:\ER\Perl\Batch\</ns0:WorkingDirectory>
+    </ns0:Exec>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.2">
+  <ns0:RegistrationInfo>
+    <ns0:Date>2016-07-04T08:52:08.7954</ns0:Date>
+    <ns0:Author>WIN-IU04NHUPKTG\Administrator</ns0:Author>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:TimeTrigger>
+      <ns0:Repetition>
+        <ns0:Interval>PT18M</ns0:Interval>
+        <ns0:StopAtDurationEnd>false</ns0:StopAtDurationEnd>
+      </ns0:Repetition>
+      <ns0:StartBoundary>2016-07-04T08:51:19.1044</ns0:StartBoundary>
+      <ns0:ExecutionTimeLimit>PT16M</ns0:ExecutionTimeLimit>
+      <ns0:Enabled>true</ns0:Enabled>
+    </ns0:TimeTrigger>
+  </ns0:Triggers>
+  <ns0:Principals>
+    <ns0:Principal id="Author">
+      <ns0:RunLevel>LeastPrivilege</ns0:RunLevel>
+      <ns0:UserId>Administrator</ns0:UserId>
+      <ns0:LogonType>Password</ns0:LogonType>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Settings>
+    <ns0:MultipleInstancesPolicy>IgnoreNew</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>true</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>true</ns0:StopIfGoingOnBatteries>
+    <ns0:AllowHardTerminate>true</ns0:AllowHardTerminate>
+    <ns0:StartWhenAvailable>false</ns0:StartWhenAvailable>
+    <ns0:RunOnlyIfNetworkAvailable>false</ns0:RunOnlyIfNetworkAvailable>
+    <ns0:IdleSettings>
+      <ns0:StopOnIdleEnd>true</ns0:StopOnIdleEnd>
+      <ns0:RestartOnIdle>false</ns0:RestartOnIdle>
+    </ns0:IdleSettings>
+    <ns0:AllowStartOnDemand>true</ns0:AllowStartOnDemand>
+    <ns0:Enabled>true</ns0:Enabled>
+    <ns0:Hidden>false</ns0:Hidden>
+    <ns0:RunOnlyIfIdle>false</ns0:RunOnlyIfIdle>
+    <ns0:WakeToRun>false</ns0:WakeToRun>
+    <ns0:ExecutionTimeLimit>P3D</ns0:ExecutionTimeLimit>
+    <ns0:Priority>7</ns0:Priority>
+  </ns0:Settings>
+  <ns0:Actions Context="Author">
+    <ns0:Exec>
+      <ns0:Command>C:\ER\Perl\Batch\modis_events_response.bat</ns0:Command>
+      <ns0:Arguments>africa 0</ns0:Arguments>
+      <ns0:WorkingDirectory>c:\er\perl\batch\</ns0:WorkingDirectory>
+    </ns0:Exec>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.2">
+  <ns0:RegistrationInfo>
+    <ns0:Date>2016-07-05T08:15:53.6844</ns0:Date>
+    <ns0:Author>WIN-IU04NHUPKTG\Administrator</ns0:Author>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:TimeTrigger>
+      <ns0:Repetition>
+        <ns0:Interval>PT18M</ns0:Interval>
+        <ns0:StopAtDurationEnd>false</ns0:StopAtDurationEnd>
+      </ns0:Repetition>
+      <ns0:StartBoundary>2016-07-05T08:14:50.3924</ns0:StartBoundary>
+      <ns0:ExecutionTimeLimit>PT15M</ns0:ExecutionTimeLimit>
+      <ns0:Enabled>true</ns0:Enabled>
+    </ns0:TimeTrigger>
+  </ns0:Triggers>
+  <ns0:Principals>
+    <ns0:Principal id="Author">
+      <ns0:RunLevel>LeastPrivilege</ns0:RunLevel>
+      <ns0:UserId>Administrator</ns0:UserId>
+      <ns0:LogonType>Password</ns0:LogonType>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Settings>
+    <ns0:MultipleInstancesPolicy>IgnoreNew</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>true</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>true</ns0:StopIfGoingOnBatteries>
+    <ns0:AllowHardTerminate>true</ns0:AllowHardTerminate>
+    <ns0:StartWhenAvailable>false</ns0:StartWhenAvailable>
+    <ns0:RunOnlyIfNetworkAvailable>false</ns0:RunOnlyIfNetworkAvailable>
+    <ns0:IdleSettings>
+      <ns0:StopOnIdleEnd>true</ns0:StopOnIdleEnd>
+      <ns0:RestartOnIdle>false</ns0:RestartOnIdle>
+    </ns0:IdleSettings>
+    <ns0:AllowStartOnDemand>true</ns0:AllowStartOnDemand>
+    <ns0:Enabled>true</ns0:Enabled>
+    <ns0:Hidden>false</ns0:Hidden>
+    <ns0:RunOnlyIfIdle>false</ns0:RunOnlyIfIdle>
+    <ns0:WakeToRun>false</ns0:WakeToRun>
+    <ns0:ExecutionTimeLimit>P3D</ns0:ExecutionTimeLimit>
+    <ns0:Priority>7</ns0:Priority>
+  </ns0:Settings>
+  <ns0:Actions Context="Author">
+    <ns0:Exec>
+      <ns0:Command>C:\ER\Perl\Batch\modis_events_response.bat</ns0:Command>
+      <ns0:Arguments>africa 1</ns0:Arguments>
+      <ns0:WorkingDirectory>c:\er\perl\batch\</ns0:WorkingDirectory>
+    </ns0:Exec>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.2">
+  <ns0:RegistrationInfo>
+    <ns0:Date>2016-07-04T08:54:31.5854</ns0:Date>
+    <ns0:Author>WIN-IU04NHUPKTG\Administrator</ns0:Author>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:TimeTrigger>
+      <ns0:Repetition>
+        <ns0:Interval>PT18M</ns0:Interval>
+        <ns0:StopAtDurationEnd>false</ns0:StopAtDurationEnd>
+      </ns0:Repetition>
+      <ns0:StartBoundary>2016-07-04T08:53:47.0332</ns0:StartBoundary>
+      <ns0:ExecutionTimeLimit>PT16M</ns0:ExecutionTimeLimit>
+      <ns0:Enabled>true</ns0:Enabled>
+    </ns0:TimeTrigger>
+  </ns0:Triggers>
+  <ns0:Principals>
+    <ns0:Principal id="Author">
+      <ns0:RunLevel>LeastPrivilege</ns0:RunLevel>
+      <ns0:UserId>Administrator</ns0:UserId>
+      <ns0:LogonType>Password</ns0:LogonType>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Settings>
+    <ns0:MultipleInstancesPolicy>IgnoreNew</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>true</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>true</ns0:StopIfGoingOnBatteries>
+    <ns0:AllowHardTerminate>true</ns0:AllowHardTerminate>
+    <ns0:StartWhenAvailable>false</ns0:StartWhenAvailable>
+    <ns0:RunOnlyIfNetworkAvailable>false</ns0:RunOnlyIfNetworkAvailable>
+    <ns0:IdleSettings>
+      <ns0:StopOnIdleEnd>true</ns0:StopOnIdleEnd>
+      <ns0:RestartOnIdle>false</ns0:RestartOnIdle>
+    </ns0:IdleSettings>
+    <ns0:AllowStartOnDemand>true</ns0:AllowStartOnDemand>
+    <ns0:Enabled>true</ns0:Enabled>
+    <ns0:Hidden>false</ns0:Hidden>
+    <ns0:RunOnlyIfIdle>false</ns0:RunOnlyIfIdle>
+    <ns0:WakeToRun>false</ns0:WakeToRun>
+    <ns0:ExecutionTimeLimit>P3D</ns0:ExecutionTimeLimit>
+    <ns0:Priority>7</ns0:Priority>
+  </ns0:Settings>
+  <ns0:Actions Context="Author">
+    <ns0:Exec>
+      <ns0:Command>C:\ER\Perl\Batch\modis_events_response.bat</ns0:Command>
+      <ns0:Arguments>anz 0</ns0:Arguments>
+      <ns0:WorkingDirectory>c:\er\perl\batch\</ns0:WorkingDirectory>
+    </ns0:Exec>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.2">
+  <ns0:RegistrationInfo>
+    <ns0:Date>2016-07-05T08:17:25.9202</ns0:Date>
+    <ns0:Author>WIN-IU04NHUPKTG\Administrator</ns0:Author>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:TimeTrigger>
+      <ns0:Repetition>
+        <ns0:Interval>PT18M</ns0:Interval>
+        <ns0:StopAtDurationEnd>false</ns0:StopAtDurationEnd>
+      </ns0:Repetition>
+      <ns0:StartBoundary>2016-07-05T08:16:26.6474</ns0:StartBoundary>
+      <ns0:ExecutionTimeLimit>PT15M</ns0:ExecutionTimeLimit>
+      <ns0:Enabled>true</ns0:Enabled>
+    </ns0:TimeTrigger>
+  </ns0:Triggers>
+  <ns0:Principals>
+    <ns0:Principal id="Author">
+      <ns0:RunLevel>LeastPrivilege</ns0:RunLevel>
+      <ns0:UserId>Administrator</ns0:UserId>
+      <ns0:LogonType>Password</ns0:LogonType>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Settings>
+    <ns0:MultipleInstancesPolicy>IgnoreNew</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>true</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>true</ns0:StopIfGoingOnBatteries>
+    <ns0:AllowHardTerminate>true</ns0:AllowHardTerminate>
+    <ns0:StartWhenAvailable>false</ns0:StartWhenAvailable>
+    <ns0:RunOnlyIfNetworkAvailable>false</ns0:RunOnlyIfNetworkAvailable>
+    <ns0:IdleSettings>
+      <ns0:StopOnIdleEnd>true</ns0:StopOnIdleEnd>
+      <ns0:RestartOnIdle>false</ns0:RestartOnIdle>
+    </ns0:IdleSettings>
+    <ns0:AllowStartOnDemand>true</ns0:AllowStartOnDemand>
+    <ns0:Enabled>true</ns0:Enabled>
+    <ns0:Hidden>false</ns0:Hidden>
+    <ns0:RunOnlyIfIdle>false</ns0:RunOnlyIfIdle>
+    <ns0:WakeToRun>false</ns0:WakeToRun>
+    <ns0:ExecutionTimeLimit>P3D</ns0:ExecutionTimeLimit>
+    <ns0:Priority>7</ns0:Priority>
+  </ns0:Settings>
+  <ns0:Actions Context="Author">
+    <ns0:Exec>
+      <ns0:Command>C:\ER\Perl\Batch\modis_events_response.bat</ns0:Command>
+      <ns0:Arguments>anz 1</ns0:Arguments>
+      <ns0:WorkingDirectory>c:\er\perl\batch\</ns0:WorkingDirectory>
+    </ns0:Exec>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.2">
+  <ns0:RegistrationInfo>
+    <ns0:Date>2016-07-04T08:53:22.138</ns0:Date>
+    <ns0:Author>WIN-IU04NHUPKTG\Administrator</ns0:Author>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:TimeTrigger>
+      <ns0:Repetition>
+        <ns0:Interval>PT18M</ns0:Interval>
+        <ns0:StopAtDurationEnd>false</ns0:StopAtDurationEnd>
+      </ns0:Repetition>
+      <ns0:StartBoundary>2016-07-04T08:52:37.397</ns0:StartBoundary>
+      <ns0:ExecutionTimeLimit>PT16M</ns0:ExecutionTimeLimit>
+      <ns0:Enabled>true</ns0:Enabled>
+    </ns0:TimeTrigger>
+  </ns0:Triggers>
+  <ns0:Principals>
+    <ns0:Principal id="Author">
+      <ns0:RunLevel>LeastPrivilege</ns0:RunLevel>
+      <ns0:UserId>Administrator</ns0:UserId>
+      <ns0:LogonType>Password</ns0:LogonType>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Settings>
+    <ns0:MultipleInstancesPolicy>IgnoreNew</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>true</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>true</ns0:StopIfGoingOnBatteries>
+    <ns0:AllowHardTerminate>true</ns0:AllowHardTerminate>
+    <ns0:StartWhenAvailable>false</ns0:StartWhenAvailable>
+    <ns0:RunOnlyIfNetworkAvailable>false</ns0:RunOnlyIfNetworkAvailable>
+    <ns0:IdleSettings>
+      <ns0:StopOnIdleEnd>true</ns0:StopOnIdleEnd>
+      <ns0:RestartOnIdle>false</ns0:RestartOnIdle>
+    </ns0:IdleSettings>
+    <ns0:AllowStartOnDemand>true</ns0:AllowStartOnDemand>
+    <ns0:Enabled>true</ns0:Enabled>
+    <ns0:Hidden>false</ns0:Hidden>
+    <ns0:RunOnlyIfIdle>false</ns0:RunOnlyIfIdle>
+    <ns0:WakeToRun>false</ns0:WakeToRun>
+    <ns0:ExecutionTimeLimit>P3D</ns0:ExecutionTimeLimit>
+    <ns0:Priority>7</ns0:Priority>
+  </ns0:Settings>
+  <ns0:Actions Context="Author">
+    <ns0:Exec>
+      <ns0:Command>C:\ER\Perl\Batch\modis_events_response.bat</ns0:Command>
+      <ns0:Arguments>asia 0</ns0:Arguments>
+      <ns0:WorkingDirectory>c:\er\perl\batch\</ns0:WorkingDirectory>
+    </ns0:Exec>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.2">
+  <ns0:RegistrationInfo>
+    <ns0:Date>2016-07-05T08:18:52.2296</ns0:Date>
+    <ns0:Author>WIN-IU04NHUPKTG\Administrator</ns0:Author>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:TimeTrigger>
+      <ns0:Repetition>
+        <ns0:Interval>PT18M</ns0:Interval>
+        <ns0:StopAtDurationEnd>false</ns0:StopAtDurationEnd>
+      </ns0:Repetition>
+      <ns0:StartBoundary>2016-07-05T08:17:51.9826</ns0:StartBoundary>
+      <ns0:ExecutionTimeLimit>PT15M</ns0:ExecutionTimeLimit>
+      <ns0:Enabled>true</ns0:Enabled>
+    </ns0:TimeTrigger>
+  </ns0:Triggers>
+  <ns0:Principals>
+    <ns0:Principal id="Author">
+      <ns0:RunLevel>LeastPrivilege</ns0:RunLevel>
+      <ns0:UserId>Administrator</ns0:UserId>
+      <ns0:LogonType>Password</ns0:LogonType>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Settings>
+    <ns0:MultipleInstancesPolicy>IgnoreNew</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>true</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>true</ns0:StopIfGoingOnBatteries>
+    <ns0:AllowHardTerminate>true</ns0:AllowHardTerminate>
+    <ns0:StartWhenAvailable>false</ns0:StartWhenAvailable>
+    <ns0:RunOnlyIfNetworkAvailable>false</ns0:RunOnlyIfNetworkAvailable>
+    <ns0:IdleSettings>
+      <ns0:StopOnIdleEnd>true</ns0:StopOnIdleEnd>
+      <ns0:RestartOnIdle>false</ns0:RestartOnIdle>
+    </ns0:IdleSettings>
+    <ns0:AllowStartOnDemand>true</ns0:AllowStartOnDemand>
+    <ns0:Enabled>true</ns0:Enabled>
+    <ns0:Hidden>false</ns0:Hidden>
+    <ns0:RunOnlyIfIdle>false</ns0:RunOnlyIfIdle>
+    <ns0:WakeToRun>false</ns0:WakeToRun>
+    <ns0:ExecutionTimeLimit>P3D</ns0:ExecutionTimeLimit>
+    <ns0:Priority>7</ns0:Priority>
+  </ns0:Settings>
+  <ns0:Actions Context="Author">
+    <ns0:Exec>
+      <ns0:Command>C:\ER\Perl\Batch\modis_events_response.bat</ns0:Command>
+      <ns0:Arguments>asia 1</ns0:Arguments>
+      <ns0:WorkingDirectory>c:\er\perl\batch\</ns0:WorkingDirectory>
+    </ns0:Exec>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.2">
+  <ns0:RegistrationInfo>
+    <ns0:Date>2016-07-04T08:50:55.1564</ns0:Date>
+    <ns0:Author>WIN-IU04NHUPKTG\Administrator</ns0:Author>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:TimeTrigger>
+      <ns0:Repetition>
+        <ns0:Interval>PT18M</ns0:Interval>
+        <ns0:StopAtDurationEnd>false</ns0:StopAtDurationEnd>
+      </ns0:Repetition>
+      <ns0:StartBoundary>2016-07-04T08:49:56.9754</ns0:StartBoundary>
+      <ns0:ExecutionTimeLimit>PT16M</ns0:ExecutionTimeLimit>
+      <ns0:Enabled>true</ns0:Enabled>
+    </ns0:TimeTrigger>
+  </ns0:Triggers>
+  <ns0:Principals>
+    <ns0:Principal id="Author">
+      <ns0:RunLevel>LeastPrivilege</ns0:RunLevel>
+      <ns0:UserId>Administrator</ns0:UserId>
+      <ns0:LogonType>Password</ns0:LogonType>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Settings>
+    <ns0:MultipleInstancesPolicy>IgnoreNew</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>true</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>true</ns0:StopIfGoingOnBatteries>
+    <ns0:AllowHardTerminate>true</ns0:AllowHardTerminate>
+    <ns0:StartWhenAvailable>false</ns0:StartWhenAvailable>
+    <ns0:RunOnlyIfNetworkAvailable>false</ns0:RunOnlyIfNetworkAvailable>
+    <ns0:IdleSettings>
+      <ns0:StopOnIdleEnd>true</ns0:StopOnIdleEnd>
+      <ns0:RestartOnIdle>false</ns0:RestartOnIdle>
+    </ns0:IdleSettings>
+    <ns0:AllowStartOnDemand>true</ns0:AllowStartOnDemand>
+    <ns0:Enabled>true</ns0:Enabled>
+    <ns0:Hidden>false</ns0:Hidden>
+    <ns0:RunOnlyIfIdle>false</ns0:RunOnlyIfIdle>
+    <ns0:WakeToRun>false</ns0:WakeToRun>
+    <ns0:ExecutionTimeLimit>P3D</ns0:ExecutionTimeLimit>
+    <ns0:Priority>7</ns0:Priority>
+  </ns0:Settings>
+  <ns0:Actions Context="Author">
+    <ns0:Exec>
+      <ns0:Command>C:\ER\Perl\Batch\modis_events_response.bat</ns0:Command>
+      <ns0:Arguments>eur 0</ns0:Arguments>
+      <ns0:WorkingDirectory>c:\er\perl\batch\</ns0:WorkingDirectory>
+    </ns0:Exec>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.2">
+  <ns0:RegistrationInfo>
+    <ns0:Date>2016-07-05T08:20:55.905</ns0:Date>
+    <ns0:Author>WIN-IU04NHUPKTG\Administrator</ns0:Author>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:TimeTrigger>
+      <ns0:Repetition>
+        <ns0:Interval>PT18M</ns0:Interval>
+        <ns0:StopAtDurationEnd>false</ns0:StopAtDurationEnd>
+      </ns0:Repetition>
+      <ns0:StartBoundary>2016-07-05T08:19:40.0542</ns0:StartBoundary>
+      <ns0:ExecutionTimeLimit>PT15M</ns0:ExecutionTimeLimit>
+      <ns0:Enabled>true</ns0:Enabled>
+    </ns0:TimeTrigger>
+  </ns0:Triggers>
+  <ns0:Principals>
+    <ns0:Principal id="Author">
+      <ns0:RunLevel>LeastPrivilege</ns0:RunLevel>
+      <ns0:UserId>Administrator</ns0:UserId>
+      <ns0:LogonType>Password</ns0:LogonType>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Settings>
+    <ns0:MultipleInstancesPolicy>IgnoreNew</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>true</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>true</ns0:StopIfGoingOnBatteries>
+    <ns0:AllowHardTerminate>true</ns0:AllowHardTerminate>
+    <ns0:StartWhenAvailable>false</ns0:StartWhenAvailable>
+    <ns0:RunOnlyIfNetworkAvailable>false</ns0:RunOnlyIfNetworkAvailable>
+    <ns0:IdleSettings>
+      <ns0:StopOnIdleEnd>true</ns0:StopOnIdleEnd>
+      <ns0:RestartOnIdle>false</ns0:RestartOnIdle>
+    </ns0:IdleSettings>
+    <ns0:AllowStartOnDemand>true</ns0:AllowStartOnDemand>
+    <ns0:Enabled>true</ns0:Enabled>
+    <ns0:Hidden>false</ns0:Hidden>
+    <ns0:RunOnlyIfIdle>false</ns0:RunOnlyIfIdle>
+    <ns0:WakeToRun>false</ns0:WakeToRun>
+    <ns0:ExecutionTimeLimit>P3D</ns0:ExecutionTimeLimit>
+    <ns0:Priority>7</ns0:Priority>
+  </ns0:Settings>
+  <ns0:Actions Context="Author">
+    <ns0:Exec>
+      <ns0:Command>C:\ER\Perl\Batch\modis_events_response.bat</ns0:Command>
+      <ns0:Arguments>eur 1</ns0:Arguments>
+      <ns0:WorkingDirectory>c:\er\perl\batch\</ns0:WorkingDirectory>
+    </ns0:Exec>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.2">
+  <ns0:RegistrationInfo>
+    <ns0:Date>2016-07-04T08:47:54.9304</ns0:Date>
+    <ns0:Author>WIN-IU04NHUPKTG\Administrator</ns0:Author>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:TimeTrigger>
+      <ns0:Repetition>
+        <ns0:Interval>PT18M</ns0:Interval>
+        <ns0:StopAtDurationEnd>false</ns0:StopAtDurationEnd>
+      </ns0:Repetition>
+      <ns0:StartBoundary>2016-07-04T08:46:02.6724</ns0:StartBoundary>
+      <ns0:ExecutionTimeLimit>PT16M</ns0:ExecutionTimeLimit>
+      <ns0:Enabled>true</ns0:Enabled>
+    </ns0:TimeTrigger>
+  </ns0:Triggers>
+  <ns0:Principals>
+    <ns0:Principal id="Author">
+      <ns0:RunLevel>LeastPrivilege</ns0:RunLevel>
+      <ns0:UserId>Administrator</ns0:UserId>
+      <ns0:LogonType>Password</ns0:LogonType>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Settings>
+    <ns0:MultipleInstancesPolicy>IgnoreNew</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>true</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>true</ns0:StopIfGoingOnBatteries>
+    <ns0:AllowHardTerminate>true</ns0:AllowHardTerminate>
+    <ns0:StartWhenAvailable>false</ns0:StartWhenAvailable>
+    <ns0:RunOnlyIfNetworkAvailable>false</ns0:RunOnlyIfNetworkAvailable>
+    <ns0:IdleSettings>
+      <ns0:StopOnIdleEnd>true</ns0:StopOnIdleEnd>
+      <ns0:RestartOnIdle>false</ns0:RestartOnIdle>
+    </ns0:IdleSettings>
+    <ns0:AllowStartOnDemand>true</ns0:AllowStartOnDemand>
+    <ns0:Enabled>true</ns0:Enabled>
+    <ns0:Hidden>false</ns0:Hidden>
+    <ns0:RunOnlyIfIdle>false</ns0:RunOnlyIfIdle>
+    <ns0:WakeToRun>false</ns0:WakeToRun>
+    <ns0:ExecutionTimeLimit>P3D</ns0:ExecutionTimeLimit>
+    <ns0:Priority>7</ns0:Priority>
+  </ns0:Settings>
+  <ns0:Actions Context="Author">
+    <ns0:Exec>
+      <ns0:Command>C:\ER\Perl\Batch\modis_events_response.bat</ns0:Command>
+      <ns0:Arguments>na 0</ns0:Arguments>
+      <ns0:WorkingDirectory>c:\er\perl\batch\</ns0:WorkingDirectory>
+    </ns0:Exec>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.2">
+  <ns0:RegistrationInfo>
+    <ns0:Date>2016-07-05T08:22:19.3638</ns0:Date>
+    <ns0:Author>WIN-IU04NHUPKTG\Administrator</ns0:Author>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:TimeTrigger>
+      <ns0:Repetition>
+        <ns0:Interval>PT18M</ns0:Interval>
+        <ns0:StopAtDurationEnd>false</ns0:StopAtDurationEnd>
+      </ns0:Repetition>
+      <ns0:StartBoundary>2016-07-05T08:21:22.555</ns0:StartBoundary>
+      <ns0:ExecutionTimeLimit>PT15M</ns0:ExecutionTimeLimit>
+      <ns0:Enabled>true</ns0:Enabled>
+    </ns0:TimeTrigger>
+  </ns0:Triggers>
+  <ns0:Principals>
+    <ns0:Principal id="Author">
+      <ns0:RunLevel>LeastPrivilege</ns0:RunLevel>
+      <ns0:UserId>Administrator</ns0:UserId>
+      <ns0:LogonType>Password</ns0:LogonType>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Settings>
+    <ns0:MultipleInstancesPolicy>IgnoreNew</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>true</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>true</ns0:StopIfGoingOnBatteries>
+    <ns0:AllowHardTerminate>true</ns0:AllowHardTerminate>
+    <ns0:StartWhenAvailable>false</ns0:StartWhenAvailable>
+    <ns0:RunOnlyIfNetworkAvailable>false</ns0:RunOnlyIfNetworkAvailable>
+    <ns0:IdleSettings>
+      <ns0:StopOnIdleEnd>true</ns0:StopOnIdleEnd>
+      <ns0:RestartOnIdle>false</ns0:RestartOnIdle>
+    </ns0:IdleSettings>
+    <ns0:AllowStartOnDemand>true</ns0:AllowStartOnDemand>
+    <ns0:Enabled>true</ns0:Enabled>
+    <ns0:Hidden>false</ns0:Hidden>
+    <ns0:RunOnlyIfIdle>false</ns0:RunOnlyIfIdle>
+    <ns0:WakeToRun>false</ns0:WakeToRun>
+    <ns0:ExecutionTimeLimit>P3D</ns0:ExecutionTimeLimit>
+    <ns0:Priority>7</ns0:Priority>
+  </ns0:Settings>
+  <ns0:Actions Context="Author">
+    <ns0:Exec>
+      <ns0:Command>C:\ER\Perl\Batch\modis_events_response.bat</ns0:Command>
+      <ns0:Arguments>na 1</ns0:Arguments>
+      <ns0:WorkingDirectory>c:\er\perl\batch\</ns0:WorkingDirectory>
+    </ns0:Exec>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.2">
+  <ns0:RegistrationInfo>
+    <ns0:Date>2016-07-04T08:49:28.5712</ns0:Date>
+    <ns0:Author>WIN-IU04NHUPKTG\Administrator</ns0:Author>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:TimeTrigger>
+      <ns0:Repetition>
+        <ns0:Interval>PT18M</ns0:Interval>
+        <ns0:StopAtDurationEnd>false</ns0:StopAtDurationEnd>
+      </ns0:Repetition>
+      <ns0:StartBoundary>2016-07-04T08:48:30.3972</ns0:StartBoundary>
+      <ns0:ExecutionTimeLimit>PT16M</ns0:ExecutionTimeLimit>
+      <ns0:Enabled>true</ns0:Enabled>
+    </ns0:TimeTrigger>
+  </ns0:Triggers>
+  <ns0:Principals>
+    <ns0:Principal id="Author">
+      <ns0:RunLevel>LeastPrivilege</ns0:RunLevel>
+      <ns0:UserId>Administrator</ns0:UserId>
+      <ns0:LogonType>Password</ns0:LogonType>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Settings>
+    <ns0:MultipleInstancesPolicy>IgnoreNew</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>true</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>true</ns0:StopIfGoingOnBatteries>
+    <ns0:AllowHardTerminate>true</ns0:AllowHardTerminate>
+    <ns0:StartWhenAvailable>false</ns0:StartWhenAvailable>
+    <ns0:RunOnlyIfNetworkAvailable>false</ns0:RunOnlyIfNetworkAvailable>
+    <ns0:IdleSettings>
+      <ns0:StopOnIdleEnd>true</ns0:StopOnIdleEnd>
+      <ns0:RestartOnIdle>false</ns0:RestartOnIdle>
+    </ns0:IdleSettings>
+    <ns0:AllowStartOnDemand>true</ns0:AllowStartOnDemand>
+    <ns0:Enabled>true</ns0:Enabled>
+    <ns0:Hidden>false</ns0:Hidden>
+    <ns0:RunOnlyIfIdle>false</ns0:RunOnlyIfIdle>
+    <ns0:WakeToRun>false</ns0:WakeToRun>
+    <ns0:ExecutionTimeLimit>P3D</ns0:ExecutionTimeLimit>
+    <ns0:Priority>7</ns0:Priority>
+  </ns0:Settings>
+  <ns0:Actions Context="Author">
+    <ns0:Exec>
+      <ns0:Command>C:\ER\Perl\Batch\modis_events_response.bat</ns0:Command>
+      <ns0:Arguments>sa 0</ns0:Arguments>
+      <ns0:WorkingDirectory>c:\er\perl\batch\</ns0:WorkingDirectory>
+    </ns0:Exec>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.2">
+  <ns0:RegistrationInfo>
+    <ns0:Date>2016-07-05T08:23:57.5732</ns0:Date>
+    <ns0:Author>WIN-IU04NHUPKTG\Administrator</ns0:Author>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:TimeTrigger>
+      <ns0:Repetition>
+        <ns0:Interval>PT18M</ns0:Interval>
+        <ns0:StopAtDurationEnd>false</ns0:StopAtDurationEnd>
+      </ns0:Repetition>
+      <ns0:StartBoundary>2016-07-05T08:22:59.214</ns0:StartBoundary>
+      <ns0:ExecutionTimeLimit>PT15M</ns0:ExecutionTimeLimit>
+      <ns0:Enabled>true</ns0:Enabled>
+    </ns0:TimeTrigger>
+  </ns0:Triggers>
+  <ns0:Principals>
+    <ns0:Principal id="Author">
+      <ns0:RunLevel>LeastPrivilege</ns0:RunLevel>
+      <ns0:UserId>Administrator</ns0:UserId>
+      <ns0:LogonType>Password</ns0:LogonType>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Settings>
+    <ns0:MultipleInstancesPolicy>IgnoreNew</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>true</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>true</ns0:StopIfGoingOnBatteries>
+    <ns0:AllowHardTerminate>true</ns0:AllowHardTerminate>
+    <ns0:StartWhenAvailable>false</ns0:StartWhenAvailable>
+    <ns0:RunOnlyIfNetworkAvailable>false</ns0:RunOnlyIfNetworkAvailable>
+    <ns0:IdleSettings>
+      <ns0:StopOnIdleEnd>true</ns0:StopOnIdleEnd>
+      <ns0:RestartOnIdle>false</ns0:RestartOnIdle>
+    </ns0:IdleSettings>
+    <ns0:AllowStartOnDemand>true</ns0:AllowStartOnDemand>
+    <ns0:Enabled>true</ns0:Enabled>
+    <ns0:Hidden>false</ns0:Hidden>
+    <ns0:RunOnlyIfIdle>false</ns0:RunOnlyIfIdle>
+    <ns0:WakeToRun>false</ns0:WakeToRun>
+    <ns0:ExecutionTimeLimit>P3D</ns0:ExecutionTimeLimit>
+    <ns0:Priority>7</ns0:Priority>
+  </ns0:Settings>
+  <ns0:Actions Context="Author">
+    <ns0:Exec>
+      <ns0:Command>C:\ER\Perl\Batch\modis_events_response.bat</ns0:Command>
+      <ns0:Arguments>sa 1</ns0:Arguments>
+      <ns0:WorkingDirectory>c:\er\perl\batch\</ns0:WorkingDirectory>
+    </ns0:Exec>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.2">
+  <ns0:RegistrationInfo>
+    <ns0:Date>2017-05-11T10:51:34.4064</ns0:Date>
+    <ns0:Author>WIN-IU04NHUPKTG\Administrator</ns0:Author>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:TimeTrigger>
+      <ns0:Repetition>
+        <ns0:Interval>PT12H</ns0:Interval>
+        <ns0:StopAtDurationEnd>false</ns0:StopAtDurationEnd>
+      </ns0:Repetition>
+      <ns0:StartBoundary>2017-05-11T10:49:41.0256</ns0:StartBoundary>
+      <ns0:ExecutionTimeLimit>PT1H</ns0:ExecutionTimeLimit>
+      <ns0:Enabled>true</ns0:Enabled>
+    </ns0:TimeTrigger>
+  </ns0:Triggers>
+  <ns0:Principals>
+    <ns0:Principal id="Author">
+      <ns0:RunLevel>LeastPrivilege</ns0:RunLevel>
+      <ns0:UserId>WIN-IU04NHUPKTG\Administrator</ns0:UserId>
+      <ns0:LogonType>Password</ns0:LogonType>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Settings>
+    <ns0:MultipleInstancesPolicy>IgnoreNew</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>true</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>true</ns0:StopIfGoingOnBatteries>
+    <ns0:AllowHardTerminate>true</ns0:AllowHardTerminate>
+    <ns0:StartWhenAvailable>false</ns0:StartWhenAvailable>
+    <ns0:RunOnlyIfNetworkAvailable>false</ns0:RunOnlyIfNetworkAvailable>
+    <ns0:IdleSettings>
+      <ns0:StopOnIdleEnd>true</ns0:StopOnIdleEnd>
+      <ns0:RestartOnIdle>false</ns0:RestartOnIdle>
+    </ns0:IdleSettings>
+    <ns0:AllowStartOnDemand>true</ns0:AllowStartOnDemand>
+    <ns0:Enabled>true</ns0:Enabled>
+    <ns0:Hidden>false</ns0:Hidden>
+    <ns0:RunOnlyIfIdle>false</ns0:RunOnlyIfIdle>
+    <ns0:WakeToRun>false</ns0:WakeToRun>
+    <ns0:ExecutionTimeLimit>PT1H</ns0:ExecutionTimeLimit>
+    <ns0:Priority>7</ns0:Priority>
+  </ns0:Settings>
+  <ns0:Actions Context="Author">
+    <ns0:Exec>
+      <ns0:Command>C:\ER\Perl\Batch\ncep_hail_torn_events_response.bat</ns0:Command>
+      <ns0:WorkingDirectory>C:\ER\Perl\Batch\</ns0:WorkingDirectory>
+    </ns0:Exec>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.2">
+  <ns0:RegistrationInfo>
+    <ns0:Date>2015-12-23T15:01:43.902</ns0:Date>
+    <ns0:Author>WIN-IU04NHUPKTG\Administrator</ns0:Author>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:TimeTrigger>
+      <ns0:Repetition>
+        <ns0:Interval>PT1H</ns0:Interval>
+        <ns0:StopAtDurationEnd>false</ns0:StopAtDurationEnd>
+      </ns0:Repetition>
+      <ns0:StartBoundary>2015-12-23T15:02:11</ns0:StartBoundary>
+      <ns0:ExecutionTimeLimit>PT4H</ns0:ExecutionTimeLimit>
+      <ns0:Enabled>true</ns0:Enabled>
+    </ns0:TimeTrigger>
+  </ns0:Triggers>
+  <ns0:Principals>
+    <ns0:Principal id="Author">
+      <ns0:RunLevel>LeastPrivilege</ns0:RunLevel>
+      <ns0:UserId>Administrator</ns0:UserId>
+      <ns0:LogonType>Password</ns0:LogonType>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Settings>
+    <ns0:MultipleInstancesPolicy>IgnoreNew</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>true</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>true</ns0:StopIfGoingOnBatteries>
+    <ns0:AllowHardTerminate>true</ns0:AllowHardTerminate>
+    <ns0:StartWhenAvailable>false</ns0:StartWhenAvailable>
+    <ns0:RunOnlyIfNetworkAvailable>false</ns0:RunOnlyIfNetworkAvailable>
+    <ns0:IdleSettings>
+      <ns0:StopOnIdleEnd>true</ns0:StopOnIdleEnd>
+      <ns0:RestartOnIdle>false</ns0:RestartOnIdle>
+    </ns0:IdleSettings>
+    <ns0:AllowStartOnDemand>true</ns0:AllowStartOnDemand>
+    <ns0:Enabled>true</ns0:Enabled>
+    <ns0:Hidden>false</ns0:Hidden>
+    <ns0:RunOnlyIfIdle>false</ns0:RunOnlyIfIdle>
+    <ns0:WakeToRun>false</ns0:WakeToRun>
+    <ns0:ExecutionTimeLimit>P3D</ns0:ExecutionTimeLimit>
+    <ns0:Priority>7</ns0:Priority>
+  </ns0:Settings>
+  <ns0:Actions Context="Author">
+    <ns0:Exec>
+      <ns0:Command>C:\ER\Perl\Batch\nws_events_response.bat</ns0:Command>
+      <ns0:WorkingDirectory>C:\ER\Perl\Batch</ns0:WorkingDirectory>
+    </ns0:Exec>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.2">
+  <ns0:RegistrationInfo>
+    <ns0:Date>2019-12-24T10:39:56.9048</ns0:Date>
+    <ns0:Author>WIN-IU04NHUPKTG\Administrator</ns0:Author>
+    <ns0:Description>This script starts the BigTiff Automation script if it not running. This checks the process status every 5 minutes.</ns0:Description>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:TimeTrigger>
+      <ns0:Repetition>
+        <ns0:Interval>PT5M</ns0:Interval>
+        <ns0:StopAtDurationEnd>false</ns0:StopAtDurationEnd>
+      </ns0:Repetition>
+      <ns0:StartBoundary>2019-12-24T10:39:26.8592</ns0:StartBoundary>
+      <ns0:Enabled>true</ns0:Enabled>
+    </ns0:TimeTrigger>
+  </ns0:Triggers>
+  <ns0:Principals>
+    <ns0:Principal id="Author">
+      <ns0:RunLevel>LeastPrivilege</ns0:RunLevel>
+      <ns0:UserId>WIN-IU04NHUPKTG\Administrator</ns0:UserId>
+      <ns0:LogonType>Password</ns0:LogonType>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Settings>
+    <ns0:MultipleInstancesPolicy>IgnoreNew</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>true</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>true</ns0:StopIfGoingOnBatteries>
+    <ns0:AllowHardTerminate>true</ns0:AllowHardTerminate>
+    <ns0:StartWhenAvailable>false</ns0:StartWhenAvailable>
+    <ns0:RunOnlyIfNetworkAvailable>false</ns0:RunOnlyIfNetworkAvailable>
+    <ns0:IdleSettings>
+      <ns0:StopOnIdleEnd>true</ns0:StopOnIdleEnd>
+      <ns0:RestartOnIdle>false</ns0:RestartOnIdle>
+    </ns0:IdleSettings>
+    <ns0:AllowStartOnDemand>true</ns0:AllowStartOnDemand>
+    <ns0:Enabled>false</ns0:Enabled>
+    <ns0:Hidden>false</ns0:Hidden>
+    <ns0:RunOnlyIfIdle>false</ns0:RunOnlyIfIdle>
+    <ns0:WakeToRun>false</ns0:WakeToRun>
+    <ns0:ExecutionTimeLimit>P3D</ns0:ExecutionTimeLimit>
+    <ns0:Priority>7</ns0:Priority>
+  </ns0:Settings>
+  <ns0:Actions Context="Author">
+    <ns0:Exec>
+      <ns0:Command>C:\ER\batch\AutoStartAutomateBigTiff.bat</ns0:Command>
+    </ns0:Exec>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.2">
+  <ns0:RegistrationInfo>
+    <ns0:Date>2019-12-24T10:38:13.6328</ns0:Date>
+    <ns0:Author>WIN-IU04NHUPKTG\Administrator</ns0:Author>
+    <ns0:Description>This script will start the ETL Engine if it is not running. This checks the process status every 5 minutes.</ns0:Description>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:TimeTrigger>
+      <ns0:Repetition>
+        <ns0:Interval>PT5M</ns0:Interval>
+        <ns0:StopAtDurationEnd>false</ns0:StopAtDurationEnd>
+      </ns0:Repetition>
+      <ns0:StartBoundary>2019-12-24T10:37:31.0136</ns0:StartBoundary>
+      <ns0:Enabled>true</ns0:Enabled>
+    </ns0:TimeTrigger>
+  </ns0:Triggers>
+  <ns0:Principals>
+    <ns0:Principal id="Author">
+      <ns0:RunLevel>LeastPrivilege</ns0:RunLevel>
+      <ns0:UserId>WIN-IU04NHUPKTG\Administrator</ns0:UserId>
+      <ns0:LogonType>Password</ns0:LogonType>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Settings>
+    <ns0:MultipleInstancesPolicy>IgnoreNew</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>true</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>true</ns0:StopIfGoingOnBatteries>
+    <ns0:AllowHardTerminate>true</ns0:AllowHardTerminate>
+    <ns0:StartWhenAvailable>false</ns0:StartWhenAvailable>
+    <ns0:RunOnlyIfNetworkAvailable>false</ns0:RunOnlyIfNetworkAvailable>
+    <ns0:IdleSettings>
+      <ns0:StopOnIdleEnd>true</ns0:StopOnIdleEnd>
+      <ns0:RestartOnIdle>false</ns0:RestartOnIdle>
+    </ns0:IdleSettings>
+    <ns0:AllowStartOnDemand>true</ns0:AllowStartOnDemand>
+    <ns0:Enabled>false</ns0:Enabled>
+    <ns0:Hidden>false</ns0:Hidden>
+    <ns0:RunOnlyIfIdle>false</ns0:RunOnlyIfIdle>
+    <ns0:WakeToRun>false</ns0:WakeToRun>
+    <ns0:ExecutionTimeLimit>P3D</ns0:ExecutionTimeLimit>
+    <ns0:Priority>7</ns0:Priority>
+  </ns0:Settings>
+  <ns0:Actions Context="Author">
+    <ns0:Exec>
+      <ns0:Command>C:\ER\batch\AutoStartETLEngine.bat</ns0:Command>
+      <ns0:WorkingDirectory>D:\ER\ETL\src\ETL_Engine\Current\</ns0:WorkingDirectory>
+    </ns0:Exec>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.2">
+  <ns0:RegistrationInfo>
+    <ns0:Date>2019-09-06T22:34:36.8225738</ns0:Date>
+    <ns0:Author>WIN-IU04NHUPKTG\Administrator</ns0:Author>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:TimeTrigger>
+      <ns0:StartBoundary>2019-09-06T22:33:53.5793738</ns0:StartBoundary>
+      <ns0:Enabled>true</ns0:Enabled>
+    </ns0:TimeTrigger>
+  </ns0:Triggers>
+  <ns0:Principals>
+    <ns0:Principal id="Author">
+      <ns0:RunLevel>LeastPrivilege</ns0:RunLevel>
+      <ns0:UserId>WIN-IU04NHUPKTG\Administrator</ns0:UserId>
+      <ns0:LogonType>Password</ns0:LogonType>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Settings>
+    <ns0:MultipleInstancesPolicy>IgnoreNew</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>true</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>true</ns0:StopIfGoingOnBatteries>
+    <ns0:AllowHardTerminate>true</ns0:AllowHardTerminate>
+    <ns0:StartWhenAvailable>false</ns0:StartWhenAvailable>
+    <ns0:RunOnlyIfNetworkAvailable>false</ns0:RunOnlyIfNetworkAvailable>
+    <ns0:IdleSettings>
+      <ns0:StopOnIdleEnd>true</ns0:StopOnIdleEnd>
+      <ns0:RestartOnIdle>false</ns0:RestartOnIdle>
+    </ns0:IdleSettings>
+    <ns0:AllowStartOnDemand>true</ns0:AllowStartOnDemand>
+    <ns0:Enabled>true</ns0:Enabled>
+    <ns0:Hidden>false</ns0:Hidden>
+    <ns0:RunOnlyIfIdle>false</ns0:RunOnlyIfIdle>
+    <ns0:WakeToRun>false</ns0:WakeToRun>
+    <ns0:ExecutionTimeLimit>P3D</ns0:ExecutionTimeLimit>
+    <ns0:Priority>7</ns0:Priority>
+  </ns0:Settings>
+  <ns0:Actions Context="Author">
+    <ns0:Exec>
+      <ns0:Command>C:\ER\Perl\Test\sch.bat</ns0:Command>
+      <ns0:WorkingDirectory>C:\ER\Perl\Test</ns0:WorkingDirectory>
+    </ns0:Exec>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.2">
+  <ns0:RegistrationInfo>
+    <ns0:Date>2015-08-12T19:42:02.4302674</ns0:Date>
+    <ns0:Author>WIN-IU04NHUPKTG\Administrator</ns0:Author>
+    <ns0:Description>Hurricane mapping scraper</ns0:Description>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:CalendarTrigger>
+      <ns0:Repetition>
+        <ns0:Interval>PT5M</ns0:Interval>
+        <ns0:StopAtDurationEnd>false</ns0:StopAtDurationEnd>
+      </ns0:Repetition>
+      <ns0:StartBoundary>2015-08-13T00:00:00</ns0:StartBoundary>
+      <ns0:Enabled>true</ns0:Enabled>
+      <ns0:ScheduleByDay>
+        <ns0:DaysInterval>1</ns0:DaysInterval>
+      </ns0:ScheduleByDay>
+    </ns0:CalendarTrigger>
+  </ns0:Triggers>
+  <ns0:Principals>
+    <ns0:Principal id="Author">
+      <ns0:RunLevel>LeastPrivilege</ns0:RunLevel>
+      <ns0:UserId>Administrator</ns0:UserId>
+      <ns0:LogonType>Password</ns0:LogonType>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Settings>
+    <ns0:MultipleInstancesPolicy>IgnoreNew</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>true</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>true</ns0:StopIfGoingOnBatteries>
+    <ns0:AllowHardTerminate>true</ns0:AllowHardTerminate>
+    <ns0:StartWhenAvailable>false</ns0:StartWhenAvailable>
+    <ns0:RunOnlyIfNetworkAvailable>false</ns0:RunOnlyIfNetworkAvailable>
+    <ns0:IdleSettings>
+      <ns0:StopOnIdleEnd>true</ns0:StopOnIdleEnd>
+      <ns0:RestartOnIdle>false</ns0:RestartOnIdle>
+    </ns0:IdleSettings>
+    <ns0:AllowStartOnDemand>true</ns0:AllowStartOnDemand>
+    <ns0:Enabled>true</ns0:Enabled>
+    <ns0:Hidden>false</ns0:Hidden>
+    <ns0:RunOnlyIfIdle>false</ns0:RunOnlyIfIdle>
+    <ns0:WakeToRun>false</ns0:WakeToRun>
+    <ns0:ExecutionTimeLimit>PT1H</ns0:ExecutionTimeLimit>
+    <ns0:Priority>7</ns0:Priority>
+  </ns0:Settings>
+  <ns0:Actions Context="Author">
+    <ns0:Exec>
+      <ns0:Command>java</ns0:Command>
+      <ns0:Arguments>-Xmx4024M -Dlog4j.configuration=file:"C:\Scraper\resources\log4j.properties" -jar scraper.jar "C:/Scraper/config/config.properties"</ns0:Arguments>
+      <ns0:WorkingDirectory>C:/Scraper</ns0:WorkingDirectory>
+    </ns0:Exec>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.2">
+  <ns0:RegistrationInfo>
+    <ns0:Date>2016-07-11T11:31:43.668</ns0:Date>
+    <ns0:Author>WIN-IU04NHUPKTG\Administrator</ns0:Author>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:TimeTrigger>
+      <ns0:Repetition>
+        <ns0:Interval>PT30M</ns0:Interval>
+        <ns0:StopAtDurationEnd>false</ns0:StopAtDurationEnd>
+      </ns0:Repetition>
+      <ns0:StartBoundary>2016-07-11T11:30:42.135</ns0:StartBoundary>
+      <ns0:ExecutionTimeLimit>PT25M</ns0:ExecutionTimeLimit>
+      <ns0:Enabled>true</ns0:Enabled>
+    </ns0:TimeTrigger>
+  </ns0:Triggers>
+  <ns0:Principals>
+    <ns0:Principal id="Author">
+      <ns0:RunLevel>LeastPrivilege</ns0:RunLevel>
+      <ns0:UserId>Administrator</ns0:UserId>
+      <ns0:LogonType>Password</ns0:LogonType>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Settings>
+    <ns0:MultipleInstancesPolicy>IgnoreNew</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>true</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>true</ns0:StopIfGoingOnBatteries>
+    <ns0:AllowHardTerminate>true</ns0:AllowHardTerminate>
+    <ns0:StartWhenAvailable>false</ns0:StartWhenAvailable>
+    <ns0:RunOnlyIfNetworkAvailable>false</ns0:RunOnlyIfNetworkAvailable>
+    <ns0:IdleSettings>
+      <ns0:StopOnIdleEnd>true</ns0:StopOnIdleEnd>
+      <ns0:RestartOnIdle>false</ns0:RestartOnIdle>
+    </ns0:IdleSettings>
+    <ns0:AllowStartOnDemand>true</ns0:AllowStartOnDemand>
+    <ns0:Enabled>true</ns0:Enabled>
+    <ns0:Hidden>false</ns0:Hidden>
+    <ns0:RunOnlyIfIdle>false</ns0:RunOnlyIfIdle>
+    <ns0:WakeToRun>false</ns0:WakeToRun>
+    <ns0:ExecutionTimeLimit>P3D</ns0:ExecutionTimeLimit>
+    <ns0:Priority>7</ns0:Priority>
+  </ns0:Settings>
+  <ns0:Actions Context="Author">
+    <ns0:Exec>
+      <ns0:Command>C:\ER\Perl\Batch\spc_events_response.bat</ns0:Command>
+      <ns0:WorkingDirectory>c:\er\perl\batch\</ns0:WorkingDirectory>
+    </ns0:Exec>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.2">
+  <ns0:RegistrationInfo>
+    <ns0:Date>2018-09-21T14:32:38.9879967</ns0:Date>
+    <ns0:Author>WIN-IU04NHUPKTG\Administrator</ns0:Author>
+    <ns0:Description>Sync all files s3://p-e-er/BigTiffAutomation/Input/ to D:\BigTiff\ except bigtiff.trf. It then downloads bigtiff.trf and delete from s3 folder</ns0:Description>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:TimeTrigger>
+      <ns0:Repetition>
+        <ns0:Interval>PT1M</ns0:Interval>
+        <ns0:StopAtDurationEnd>false</ns0:StopAtDurationEnd>
+      </ns0:Repetition>
+      <ns0:StartBoundary>2018-09-21T14:30:00</ns0:StartBoundary>
+      <ns0:Enabled>true</ns0:Enabled>
+    </ns0:TimeTrigger>
+  </ns0:Triggers>
+  <ns0:Principals>
+    <ns0:Principal id="Author">
+      <ns0:RunLevel>LeastPrivilege</ns0:RunLevel>
+      <ns0:UserId>WIN-IU04NHUPKTG\Administrator</ns0:UserId>
+      <ns0:LogonType>Password</ns0:LogonType>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Settings>
+    <ns0:MultipleInstancesPolicy>IgnoreNew</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>true</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>true</ns0:StopIfGoingOnBatteries>
+    <ns0:AllowHardTerminate>true</ns0:AllowHardTerminate>
+    <ns0:StartWhenAvailable>false</ns0:StartWhenAvailable>
+    <ns0:RunOnlyIfNetworkAvailable>false</ns0:RunOnlyIfNetworkAvailable>
+    <ns0:IdleSettings>
+      <ns0:StopOnIdleEnd>true</ns0:StopOnIdleEnd>
+      <ns0:RestartOnIdle>false</ns0:RestartOnIdle>
+    </ns0:IdleSettings>
+    <ns0:AllowStartOnDemand>true</ns0:AllowStartOnDemand>
+    <ns0:Enabled>true</ns0:Enabled>
+    <ns0:Hidden>false</ns0:Hidden>
+    <ns0:RunOnlyIfIdle>false</ns0:RunOnlyIfIdle>
+    <ns0:WakeToRun>false</ns0:WakeToRun>
+    <ns0:ExecutionTimeLimit>P3D</ns0:ExecutionTimeLimit>
+    <ns0:Priority>7</ns0:Priority>
+  </ns0:Settings>
+  <ns0:Actions Context="Author">
+    <ns0:Exec>
+      <ns0:Command>C:\ER\AutomateBigTiff\SynchronizeS3ForTrf\SyncS3ForBigtiffAutomation.bat</ns0:Command>
+    </ns0:Exec>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.2">
+  <ns0:RegistrationInfo>
+    <ns0:Date>2015-12-27T16:09:47.9238089</ns0:Date>
+    <ns0:Author>WIN-IU04NHUPKTG\Administrator</ns0:Author>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:TimeTrigger>
+      <ns0:Repetition>
+        <ns0:Interval>PT15M</ns0:Interval>
+        <ns0:StopAtDurationEnd>false</ns0:StopAtDurationEnd>
+      </ns0:Repetition>
+      <ns0:StartBoundary>2015-12-27T16:11:00</ns0:StartBoundary>
+      <ns0:ExecutionTimeLimit>PT1H</ns0:ExecutionTimeLimit>
+      <ns0:Enabled>true</ns0:Enabled>
+    </ns0:TimeTrigger>
+  </ns0:Triggers>
+  <ns0:Principals>
+    <ns0:Principal id="Author">
+      <ns0:RunLevel>LeastPrivilege</ns0:RunLevel>
+      <ns0:UserId>Administrator</ns0:UserId>
+      <ns0:LogonType>Password</ns0:LogonType>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Settings>
+    <ns0:MultipleInstancesPolicy>IgnoreNew</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>true</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>true</ns0:StopIfGoingOnBatteries>
+    <ns0:AllowHardTerminate>true</ns0:AllowHardTerminate>
+    <ns0:StartWhenAvailable>false</ns0:StartWhenAvailable>
+    <ns0:RunOnlyIfNetworkAvailable>false</ns0:RunOnlyIfNetworkAvailable>
+    <ns0:IdleSettings>
+      <ns0:StopOnIdleEnd>true</ns0:StopOnIdleEnd>
+      <ns0:RestartOnIdle>false</ns0:RestartOnIdle>
+    </ns0:IdleSettings>
+    <ns0:AllowStartOnDemand>true</ns0:AllowStartOnDemand>
+    <ns0:Enabled>true</ns0:Enabled>
+    <ns0:Hidden>false</ns0:Hidden>
+    <ns0:RunOnlyIfIdle>false</ns0:RunOnlyIfIdle>
+    <ns0:WakeToRun>false</ns0:WakeToRun>
+    <ns0:ExecutionTimeLimit>P3D</ns0:ExecutionTimeLimit>
+    <ns0:Priority>7</ns0:Priority>
+  </ns0:Settings>
+  <ns0:Actions Context="Author">
+    <ns0:Exec>
+      <ns0:Command>C:\ER\Perl\Batch\to_noaa_events_response.bat</ns0:Command>
+      <ns0:WorkingDirectory>C:\ER\Perl\Batch\</ns0:WorkingDirectory>
+    </ns0:Exec>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.2">
+  <ns0:RegistrationInfo>
+    <ns0:Date>2015-12-10T01:22:36.725</ns0:Date>
+    <ns0:Author>WIN-IU04NHUPKTG\Administrator</ns0:Author>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:TimeTrigger>
+      <ns0:Repetition>
+        <ns0:Interval>PT10M</ns0:Interval>
+        <ns0:StopAtDurationEnd>false</ns0:StopAtDurationEnd>
+      </ns0:Repetition>
+      <ns0:StartBoundary>2015-12-10T00:00:00</ns0:StartBoundary>
+      <ns0:Enabled>true</ns0:Enabled>
+    </ns0:TimeTrigger>
+  </ns0:Triggers>
+  <ns0:Principals>
+    <ns0:Principal id="Author">
+      <ns0:RunLevel>LeastPrivilege</ns0:RunLevel>
+      <ns0:UserId>Administrator</ns0:UserId>
+      <ns0:LogonType>Password</ns0:LogonType>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Settings>
+    <ns0:MultipleInstancesPolicy>IgnoreNew</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>true</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>true</ns0:StopIfGoingOnBatteries>
+    <ns0:AllowHardTerminate>true</ns0:AllowHardTerminate>
+    <ns0:StartWhenAvailable>false</ns0:StartWhenAvailable>
+    <ns0:RunOnlyIfNetworkAvailable>false</ns0:RunOnlyIfNetworkAvailable>
+    <ns0:IdleSettings>
+      <ns0:StopOnIdleEnd>true</ns0:StopOnIdleEnd>
+      <ns0:RestartOnIdle>false</ns0:RestartOnIdle>
+    </ns0:IdleSettings>
+    <ns0:AllowStartOnDemand>true</ns0:AllowStartOnDemand>
+    <ns0:Enabled>true</ns0:Enabled>
+    <ns0:Hidden>false</ns0:Hidden>
+    <ns0:RunOnlyIfIdle>false</ns0:RunOnlyIfIdle>
+    <ns0:WakeToRun>false</ns0:WakeToRun>
+    <ns0:ExecutionTimeLimit>PT4H</ns0:ExecutionTimeLimit>
+    <ns0:Priority>7</ns0:Priority>
+  </ns0:Settings>
+  <ns0:Actions Context="Author">
+    <ns0:Exec>
+      <ns0:Command>C:\ER\Perl\Batch\usgs_events_response.bat</ns0:Command>
+      <ns0:WorkingDirectory>C:\ER\Perl\Batch\</ns0:WorkingDirectory>
+    </ns0:Exec>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.2">
+  <ns0:RegistrationInfo>
+    <ns0:Date>2016-05-10T07:21:21.5686</ns0:Date>
+    <ns0:Author>WIN-IU04NHUPKTG\Administrator</ns0:Author>
+    <ns0:Description>Wind NOAA Event Response</ns0:Description>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:TimeTrigger>
+      <ns0:Repetition>
+        <ns0:Interval>PT15M</ns0:Interval>
+        <ns0:StopAtDurationEnd>false</ns0:StopAtDurationEnd>
+      </ns0:Repetition>
+      <ns0:StartBoundary>2016-05-10T07:18:29.3758</ns0:StartBoundary>
+      <ns0:ExecutionTimeLimit>P3D</ns0:ExecutionTimeLimit>
+      <ns0:Enabled>true</ns0:Enabled>
+    </ns0:TimeTrigger>
+  </ns0:Triggers>
+  <ns0:Principals>
+    <ns0:Principal id="Author">
+      <ns0:RunLevel>LeastPrivilege</ns0:RunLevel>
+      <ns0:UserId>Administrator</ns0:UserId>
+      <ns0:LogonType>Password</ns0:LogonType>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Settings>
+    <ns0:MultipleInstancesPolicy>IgnoreNew</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>true</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>true</ns0:StopIfGoingOnBatteries>
+    <ns0:AllowHardTerminate>true</ns0:AllowHardTerminate>
+    <ns0:StartWhenAvailable>false</ns0:StartWhenAvailable>
+    <ns0:RunOnlyIfNetworkAvailable>false</ns0:RunOnlyIfNetworkAvailable>
+    <ns0:IdleSettings>
+      <ns0:StopOnIdleEnd>true</ns0:StopOnIdleEnd>
+      <ns0:RestartOnIdle>false</ns0:RestartOnIdle>
+    </ns0:IdleSettings>
+    <ns0:AllowStartOnDemand>true</ns0:AllowStartOnDemand>
+    <ns0:Enabled>true</ns0:Enabled>
+    <ns0:Hidden>false</ns0:Hidden>
+    <ns0:RunOnlyIfIdle>false</ns0:RunOnlyIfIdle>
+    <ns0:WakeToRun>false</ns0:WakeToRun>
+    <ns0:ExecutionTimeLimit>P3D</ns0:ExecutionTimeLimit>
+    <ns0:Priority>7</ns0:Priority>
+  </ns0:Settings>
+  <ns0:Actions Context="Author">
+    <ns0:Exec>
+      <ns0:Command>C:\ER\Perl\Batch\wind_noaa_events_response.bat</ns0:Command>
+    </ns0:Exec>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.2">
+  <ns0:RegistrationInfo>
+    <ns0:Date>2017-01-06T12:55:05.6888</ns0:Date>
+    <ns0:Author>WIN-IU04NHUPKTG\Administrator</ns0:Author>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:TimeTrigger>
+      <ns0:Repetition>
+        <ns0:Interval>PT5M</ns0:Interval>
+        <ns0:StopAtDurationEnd>false</ns0:StopAtDurationEnd>
+      </ns0:Repetition>
+      <ns0:StartBoundary>2017-03-29T10:00:00</ns0:StartBoundary>
+      <ns0:Enabled>true</ns0:Enabled>
+    </ns0:TimeTrigger>
+  </ns0:Triggers>
+  <ns0:Principals>
+    <ns0:Principal id="Author">
+      <ns0:RunLevel>LeastPrivilege</ns0:RunLevel>
+      <ns0:UserId>WIN-IU04NHUPKTG\Administrator</ns0:UserId>
+      <ns0:LogonType>Password</ns0:LogonType>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Settings>
+    <ns0:MultipleInstancesPolicy>IgnoreNew</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>true</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>true</ns0:StopIfGoingOnBatteries>
+    <ns0:AllowHardTerminate>true</ns0:AllowHardTerminate>
+    <ns0:StartWhenAvailable>false</ns0:StartWhenAvailable>
+    <ns0:RunOnlyIfNetworkAvailable>false</ns0:RunOnlyIfNetworkAvailable>
+    <ns0:IdleSettings>
+      <ns0:StopOnIdleEnd>true</ns0:StopOnIdleEnd>
+      <ns0:RestartOnIdle>false</ns0:RestartOnIdle>
+    </ns0:IdleSettings>
+    <ns0:AllowStartOnDemand>true</ns0:AllowStartOnDemand>
+    <ns0:Enabled>true</ns0:Enabled>
+    <ns0:Hidden>false</ns0:Hidden>
+    <ns0:RunOnlyIfIdle>false</ns0:RunOnlyIfIdle>
+    <ns0:WakeToRun>false</ns0:WakeToRun>
+    <ns0:ExecutionTimeLimit>P3D</ns0:ExecutionTimeLimit>
+    <ns0:Priority>7</ns0:Priority>
+  </ns0:Settings>
+  <ns0:Actions Context="Author">
+    <ns0:Exec>
+      <ns0:Command>java</ns0:Command>
+      <ns0:Arguments>-Xmx1024M -Dlog4j.configuration=file:"C:\WindProbScraper\resources\log4j.properties" -jar WindProbScraper.jar "C:/WindProbScraper/config/config.json"</ns0:Arguments>
+      <ns0:WorkingDirectory>C:/WindProbScraper/</ns0:WorkingDirectory>
+    </ns0:Exec>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.2">
+  <ns0:RegistrationInfo>
+    <ns0:Date>2017-12-28T14:22:25.29</ns0:Date>
+    <ns0:Author>WIN-IU04NHUPKTG\Administrator</ns0:Author>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:TimeTrigger>
+      <ns0:Repetition>
+        <ns0:Interval>PT1H</ns0:Interval>
+        <ns0:StopAtDurationEnd>false</ns0:StopAtDurationEnd>
+      </ns0:Repetition>
+      <ns0:StartBoundary>2017-12-28T14:32:00</ns0:StartBoundary>
+      <ns0:ExecutionTimeLimit>PT45M</ns0:ExecutionTimeLimit>
+      <ns0:Enabled>true</ns0:Enabled>
+    </ns0:TimeTrigger>
+  </ns0:Triggers>
+  <ns0:Principals>
+    <ns0:Principal id="Author">
+      <ns0:RunLevel>LeastPrivilege</ns0:RunLevel>
+      <ns0:UserId>WIN-IU04NHUPKTG\Administrator</ns0:UserId>
+      <ns0:LogonType>Password</ns0:LogonType>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Settings>
+    <ns0:MultipleInstancesPolicy>StopExisting</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>true</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>true</ns0:StopIfGoingOnBatteries>
+    <ns0:AllowHardTerminate>true</ns0:AllowHardTerminate>
+    <ns0:StartWhenAvailable>true</ns0:StartWhenAvailable>
+    <ns0:RunOnlyIfNetworkAvailable>false</ns0:RunOnlyIfNetworkAvailable>
+    <ns0:IdleSettings>
+      <ns0:StopOnIdleEnd>true</ns0:StopOnIdleEnd>
+      <ns0:RestartOnIdle>false</ns0:RestartOnIdle>
+    </ns0:IdleSettings>
+    <ns0:AllowStartOnDemand>true</ns0:AllowStartOnDemand>
+    <ns0:Enabled>true</ns0:Enabled>
+    <ns0:Hidden>false</ns0:Hidden>
+    <ns0:RunOnlyIfIdle>false</ns0:RunOnlyIfIdle>
+    <ns0:WakeToRun>false</ns0:WakeToRun>
+    <ns0:ExecutionTimeLimit>PT1H</ns0:ExecutionTimeLimit>
+    <ns0:Priority>7</ns0:Priority>
+  </ns0:Settings>
+  <ns0:Actions Context="Author">
+    <ns0:Exec>
+      <ns0:Command>C:\ER\Perl\Batch\winterstorm_events_response.bat</ns0:Command>
+      <ns0:WorkingDirectory>c:\er\perl\batch\</ns0:WorkingDirectory>
+    </ns0:Exec>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.2">
+  <ns0:RegistrationInfo>
+    <ns0:Date>2017-08-05T12:13:18.0043321</ns0:Date>
+    <ns0:Author>Microsoft Office</ns0:Author>
+    <ns0:Description>This task ensures that your Microsoft Office installation can check for updates.</ns0:Description>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:CalendarTrigger>
+      <ns0:StartBoundary>2010-12-16T03:00:00</ns0:StartBoundary>
+      <ns0:Enabled>true</ns0:Enabled>
+      <ns0:RandomDelay>PT12H</ns0:RandomDelay>
+      <ns0:ScheduleByWeek>
+        <ns0:DaysOfWeek>
+          <ns0:Sunday />
+          <ns0:Monday />
+          <ns0:Tuesday />
+          <ns0:Wednesday />
+          <ns0:Thursday />
+          <ns0:Friday />
+          <ns0:Saturday />
+        </ns0:DaysOfWeek>
+        <ns0:WeeksInterval>1</ns0:WeeksInterval>
+      </ns0:ScheduleByWeek>
+    </ns0:CalendarTrigger>
+    <ns0:LogonTrigger>
+      <ns0:ExecutionTimeLimit>PT1H</ns0:ExecutionTimeLimit>
+      <ns0:Enabled>true</ns0:Enabled>
+      <ns0:Delay>PT5M</ns0:Delay>
+    </ns0:LogonTrigger>
+    <ns0:IdleTrigger>
+      <ns0:ExecutionTimeLimit>PT1H</ns0:ExecutionTimeLimit>
+      <ns0:Enabled>true</ns0:Enabled>
+    </ns0:IdleTrigger>
+  </ns0:Triggers>
+  <ns0:Principals>
+    <ns0:Principal id="Author">
+      <ns0:UserId>S-1-5-18</ns0:UserId>
+      <ns0:RunLevel>HighestAvailable</ns0:RunLevel>
+      <ns0:LogonType>InteractiveToken</ns0:LogonType>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Settings>
+    <ns0:MultipleInstancesPolicy>IgnoreNew</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>false</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>false</ns0:StopIfGoingOnBatteries>
+    <ns0:AllowHardTerminate>true</ns0:AllowHardTerminate>
+    <ns0:StartWhenAvailable>true</ns0:StartWhenAvailable>
+    <ns0:RunOnlyIfNetworkAvailable>false</ns0:RunOnlyIfNetworkAvailable>
+    <ns0:IdleSettings>
+      <ns0:StopOnIdleEnd>false</ns0:StopOnIdleEnd>
+      <ns0:RestartOnIdle>false</ns0:RestartOnIdle>
+    </ns0:IdleSettings>
+    <ns0:AllowStartOnDemand>true</ns0:AllowStartOnDemand>
+    <ns0:Enabled>true</ns0:Enabled>
+    <ns0:Hidden>false</ns0:Hidden>
+    <ns0:RunOnlyIfIdle>false</ns0:RunOnlyIfIdle>
+    <ns0:WakeToRun>false</ns0:WakeToRun>
+    <ns0:ExecutionTimeLimit>PT1H</ns0:ExecutionTimeLimit>
+    <ns0:Priority>7</ns0:Priority>
+    <ns0:RestartOnFailure>
+      <ns0:Interval>PT30M</ns0:Interval>
+      <ns0:Count>3</ns0:Count>
+    </ns0:RestartOnFailure>
+  </ns0:Settings>
+  <ns0:Actions Context="Author">
+    <ns0:Exec>
+      <ns0:Command>C:\Program Files\Common Files\Microsoft Shared\ClickToRun\OfficeC2RClient.exe</ns0:Command>
+      <ns0:Arguments>/frequentupdate SCHEDULEDTASK displaylevel=False</ns0:Arguments>
+    </ns0:Exec>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.2">
+  <ns0:RegistrationInfo>
+    <ns0:Date>2005-10-11T13:21:17-08:00</ns0:Date>
+    <ns0:Author>Microsoft Office</ns0:Author>
+    <ns0:Description>This task monitors the state of your Microsoft Office ClickToRunSvc and sends crash and error logs to Microsoft.</ns0:Description>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:CalendarTrigger>
+      <ns0:Repetition>
+        <ns0:Interval>P1D</ns0:Interval>
+        <ns0:Duration>P1D</ns0:Duration>
+        <ns0:StopAtDurationEnd>true</ns0:StopAtDurationEnd>
+      </ns0:Repetition>
+      <ns0:StartBoundary>2010-12-16T04:00:00</ns0:StartBoundary>
+      <ns0:Enabled>true</ns0:Enabled>
+      <ns0:RandomDelay>PT6H</ns0:RandomDelay>
+      <ns0:ScheduleByDay>
+        <ns0:DaysInterval>1</ns0:DaysInterval>
+      </ns0:ScheduleByDay>
+    </ns0:CalendarTrigger>
+  </ns0:Triggers>
+  <ns0:Principals>
+    <ns0:Principal id="Author">
+      <ns0:UserId>S-1-5-18</ns0:UserId>
+      <ns0:RunLevel>HighestAvailable</ns0:RunLevel>
+      <ns0:LogonType>InteractiveToken</ns0:LogonType>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Settings>
+    <ns0:Enabled>true</ns0:Enabled>
+    <ns0:AllowStartOnDemand>true</ns0:AllowStartOnDemand>
+    <ns0:AllowHardTerminate>true</ns0:AllowHardTerminate>
+    <ns0:Hidden>false</ns0:Hidden>
+    <ns0:RunOnlyIfIdle>false</ns0:RunOnlyIfIdle>
+    <ns0:WakeToRun>false</ns0:WakeToRun>
+    <ns0:ExecutionTimeLimit>PT30M</ns0:ExecutionTimeLimit>
+    <ns0:Priority>7</ns0:Priority>
+    <ns0:StartWhenAvailable>true</ns0:StartWhenAvailable>
+    <ns0:RunOnlyIfNetworkAvailable>false</ns0:RunOnlyIfNetworkAvailable>
+    <ns0:IdleSettings>
+      <ns0:StopOnIdleEnd>false</ns0:StopOnIdleEnd>
+      <ns0:RestartOnIdle>false</ns0:RestartOnIdle>
+    </ns0:IdleSettings>
+    <ns0:MultipleInstancesPolicy>IgnoreNew</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>false</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>false</ns0:StopIfGoingOnBatteries>
+  </ns0:Settings>
+  <ns0:Actions Context="Author">
+    <ns0:Exec>
+      <ns0:Command>C:\Program Files\Common Files\Microsoft Shared\ClickToRun\OfficeC2RClient.exe</ns0:Command>
+      <ns0:Arguments>/WatchService</ns0:Arguments>
+    </ns0:Exec>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.3">
+  <ns0:RegistrationInfo>
+    <ns0:Date>2017-01-01T00:00:00</ns0:Date>
+    <ns0:Author>Microsoft Office</ns0:Author>
+    <ns0:Version>16.0.0</ns0:Version>
+    <ns0:Description>This task ensures that your Microsoft Office installation can check for feature updates.</ns0:Description>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:CalendarTrigger>
+      <ns0:StartBoundary>2017-01-01T02:10:00</ns0:StartBoundary>
+      <ns0:ExecutionTimeLimit>PT1H</ns0:ExecutionTimeLimit>
+      <ns0:Enabled>true</ns0:Enabled>
+      <ns0:RandomDelay>PT4H</ns0:RandomDelay>
+      <ns0:ScheduleByDay>
+        <ns0:DaysInterval>1</ns0:DaysInterval>
+      </ns0:ScheduleByDay>
+    </ns0:CalendarTrigger>
+    <ns0:CalendarTrigger>
+      <ns0:StartBoundary>2017-01-01T06:10:00</ns0:StartBoundary>
+      <ns0:ExecutionTimeLimit>PT1H</ns0:ExecutionTimeLimit>
+      <ns0:Enabled>true</ns0:Enabled>
+      <ns0:RandomDelay>PT4H</ns0:RandomDelay>
+      <ns0:ScheduleByDay>
+        <ns0:DaysInterval>1</ns0:DaysInterval>
+      </ns0:ScheduleByDay>
+    </ns0:CalendarTrigger>
+    <ns0:CalendarTrigger>
+      <ns0:StartBoundary>2017-01-01T10:10:00</ns0:StartBoundary>
+      <ns0:ExecutionTimeLimit>PT1H</ns0:ExecutionTimeLimit>
+      <ns0:Enabled>true</ns0:Enabled>
+      <ns0:RandomDelay>PT4H</ns0:RandomDelay>
+      <ns0:ScheduleByDay>
+        <ns0:DaysInterval>1</ns0:DaysInterval>
+      </ns0:ScheduleByDay>
+    </ns0:CalendarTrigger>
+    <ns0:CalendarTrigger>
+      <ns0:StartBoundary>2017-01-01T14:10:00</ns0:StartBoundary>
+      <ns0:ExecutionTimeLimit>PT1H</ns0:ExecutionTimeLimit>
+      <ns0:Enabled>true</ns0:Enabled>
+      <ns0:RandomDelay>PT4H</ns0:RandomDelay>
+      <ns0:ScheduleByDay>
+        <ns0:DaysInterval>1</ns0:DaysInterval>
+      </ns0:ScheduleByDay>
+    </ns0:CalendarTrigger>
+    <ns0:CalendarTrigger>
+      <ns0:StartBoundary>2017-01-01T18:10:00</ns0:StartBoundary>
+      <ns0:ExecutionTimeLimit>PT1H</ns0:ExecutionTimeLimit>
+      <ns0:Enabled>true</ns0:Enabled>
+      <ns0:RandomDelay>PT4H</ns0:RandomDelay>
+      <ns0:ScheduleByDay>
+        <ns0:DaysInterval>1</ns0:DaysInterval>
+      </ns0:ScheduleByDay>
+    </ns0:CalendarTrigger>
+    <ns0:CalendarTrigger>
+      <ns0:StartBoundary>2017-01-01T22:10:00</ns0:StartBoundary>
+      <ns0:ExecutionTimeLimit>PT1H</ns0:ExecutionTimeLimit>
+      <ns0:Enabled>true</ns0:Enabled>
+      <ns0:RandomDelay>PT4H</ns0:RandomDelay>
+      <ns0:ScheduleByDay>
+        <ns0:DaysInterval>1</ns0:DaysInterval>
+      </ns0:ScheduleByDay>
+    </ns0:CalendarTrigger>
+  </ns0:Triggers>
+  <ns0:Principals>
+    <ns0:Principal id="Author">
+      <ns0:GroupId>S-1-5-32-545</ns0:GroupId>
+      <ns0:RunLevel>LeastPrivilege</ns0:RunLevel>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Settings>
+    <ns0:MultipleInstancesPolicy>IgnoreNew</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>true</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>true</ns0:StopIfGoingOnBatteries>
+    <ns0:AllowHardTerminate>true</ns0:AllowHardTerminate>
+    <ns0:StartWhenAvailable>false</ns0:StartWhenAvailable>
+    <ns0:RunOnlyIfNetworkAvailable>true</ns0:RunOnlyIfNetworkAvailable>
+    <ns0:IdleSettings>
+      <ns0:StopOnIdleEnd>false</ns0:StopOnIdleEnd>
+      <ns0:RestartOnIdle>false</ns0:RestartOnIdle>
+    </ns0:IdleSettings>
+    <ns0:AllowStartOnDemand>true</ns0:AllowStartOnDemand>
+    <ns0:Enabled>true</ns0:Enabled>
+    <ns0:Hidden>false</ns0:Hidden>
+    <ns0:RunOnlyIfIdle>false</ns0:RunOnlyIfIdle>
+    <ns0:DisallowStartOnRemoteAppSession>false</ns0:DisallowStartOnRemoteAppSession>
+    <ns0:UseUnifiedSchedulingEngine>true</ns0:UseUnifiedSchedulingEngine>
+    <ns0:WakeToRun>false</ns0:WakeToRun>
+    <ns0:ExecutionTimeLimit>PT1H</ns0:ExecutionTimeLimit>
+    <ns0:Priority>7</ns0:Priority>
+  </ns0:Settings>
+  <ns0:Actions Context="Author">
+    <ns0:Exec>
+      <ns0:Command>C:\Program Files (x86)\Microsoft Office\root\Office16\sdxhelper.exe</ns0:Command>
+    </ns0:Exec>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.3">
+  <ns0:RegistrationInfo>
+    <ns0:Date>2017-01-01T00:00:00</ns0:Date>
+    <ns0:Author>Microsoft Office</ns0:Author>
+    <ns0:Version>16.0.0</ns0:Version>
+    <ns0:Description>This task ensures that your Microsoft Office installation can check for feature updates.</ns0:Description>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:LogonTrigger>
+      <ns0:ExecutionTimeLimit>PT30M</ns0:ExecutionTimeLimit>
+      <ns0:Enabled>true</ns0:Enabled>
+      <ns0:Delay>PT15M</ns0:Delay>
+    </ns0:LogonTrigger>
+    <ns0:SessionStateChangeTrigger>
+      <ns0:ExecutionTimeLimit>PT30M</ns0:ExecutionTimeLimit>
+      <ns0:Enabled>true</ns0:Enabled>
+      <ns0:StateChange>SessionUnlock</ns0:StateChange>
+      <ns0:Delay>PT15M</ns0:Delay>
+    </ns0:SessionStateChangeTrigger>
+  </ns0:Triggers>
+  <ns0:Principals>
+    <ns0:Principal id="Author">
+      <ns0:GroupId>S-1-5-32-545</ns0:GroupId>
+      <ns0:RunLevel>LeastPrivilege</ns0:RunLevel>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Settings>
+    <ns0:MultipleInstancesPolicy>IgnoreNew</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>true</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>true</ns0:StopIfGoingOnBatteries>
+    <ns0:AllowHardTerminate>true</ns0:AllowHardTerminate>
+    <ns0:StartWhenAvailable>false</ns0:StartWhenAvailable>
+    <ns0:RunOnlyIfNetworkAvailable>true</ns0:RunOnlyIfNetworkAvailable>
+    <ns0:IdleSettings>
+      <ns0:StopOnIdleEnd>false</ns0:StopOnIdleEnd>
+      <ns0:RestartOnIdle>false</ns0:RestartOnIdle>
+    </ns0:IdleSettings>
+    <ns0:AllowStartOnDemand>true</ns0:AllowStartOnDemand>
+    <ns0:Enabled>true</ns0:Enabled>
+    <ns0:Hidden>false</ns0:Hidden>
+    <ns0:RunOnlyIfIdle>false</ns0:RunOnlyIfIdle>
+    <ns0:DisallowStartOnRemoteAppSession>false</ns0:DisallowStartOnRemoteAppSession>
+    <ns0:UseUnifiedSchedulingEngine>true</ns0:UseUnifiedSchedulingEngine>
+    <ns0:WakeToRun>false</ns0:WakeToRun>
+    <ns0:ExecutionTimeLimit>PT30M</ns0:ExecutionTimeLimit>
+    <ns0:Priority>7</ns0:Priority>
+  </ns0:Settings>
+  <ns0:Actions Context="Author">
+    <ns0:Exec>
+      <ns0:Command>C:\Program Files (x86)\Microsoft Office\root\Office16\sdxhelper.exe</ns0:Command>
+      <ns0:Arguments>/onlogon</ns0:Arguments>
+    </ns0:Exec>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.3">
+  <ns0:RegistrationInfo>
+    <ns0:Date>2012-01-01T00:00:00</ns0:Date>
+    <ns0:Author>Microsoft Office</ns0:Author>
+    <ns0:Version>15.0.0</ns0:Version>
+    <ns0:Description>Task used to ensure that the Microsoft Office Subscription licensing is current.</ns0:Description>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:CalendarTrigger>
+      <ns0:StartBoundary>2010-01-01T07:16:42</ns0:StartBoundary>
+      <ns0:ExecutionTimeLimit>PT4H</ns0:ExecutionTimeLimit>
+      <ns0:Enabled>true</ns0:Enabled>
+      <ns0:ScheduleByDay>
+        <ns0:DaysInterval>1</ns0:DaysInterval>
+      </ns0:ScheduleByDay>
+    </ns0:CalendarTrigger>
+  </ns0:Triggers>
+  <ns0:Principals>
+    <ns0:Principal id="Author">
+      <ns0:UserId>S-1-5-18</ns0:UserId>
+      <ns0:RunLevel>LeastPrivilege</ns0:RunLevel>
+      <ns0:LogonType>InteractiveToken</ns0:LogonType>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Settings>
+    <ns0:MultipleInstancesPolicy>IgnoreNew</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>false</ns0:DisallowStartIfOnBatteries>
+    <ns0:AllowHardTerminate>true</ns0:AllowHardTerminate>
+    <ns0:StartWhenAvailable>true</ns0:StartWhenAvailable>
+    <ns0:RunOnlyIfNetworkAvailable>true</ns0:RunOnlyIfNetworkAvailable>
+    <ns0:RestartOnFailure>
+      <ns0:Interval>PT1M</ns0:Interval>
+      <ns0:Count>3</ns0:Count>
+    </ns0:RestartOnFailure>
+    <ns0:IdleSettings>
+      <ns0:StopOnIdleEnd>true</ns0:StopOnIdleEnd>
+      <ns0:RestartOnIdle>false</ns0:RestartOnIdle>
+    </ns0:IdleSettings>
+    <ns0:AllowStartOnDemand>true</ns0:AllowStartOnDemand>
+    <ns0:Enabled>true</ns0:Enabled>
+    <ns0:Hidden>false</ns0:Hidden>
+    <ns0:RunOnlyIfIdle>false</ns0:RunOnlyIfIdle>
+    <ns0:DisallowStartOnRemoteAppSession>false</ns0:DisallowStartOnRemoteAppSession>
+    <ns0:UseUnifiedSchedulingEngine>false</ns0:UseUnifiedSchedulingEngine>
+    <ns0:WakeToRun>false</ns0:WakeToRun>
+    <ns0:ExecutionTimeLimit>PT4H</ns0:ExecutionTimeLimit>
+    <ns0:Priority>7</ns0:Priority>
+  </ns0:Settings>
+  <ns0:Actions Context="Author">
+    <ns0:Exec>
+      <ns0:Command>C:\Program Files (x86)\Microsoft Office\root\vfs\ProgramFilesCommonx86\Microsoft Shared\Office16\OLicenseHeartbeat.exe</ns0:Command>
+    </ns0:Exec>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.2">
+  <ns0:RegistrationInfo>
+    <ns0:Description>This task initiates Office Background Task Handler, which updates relevant Office data.</ns0:Description>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:LogonTrigger>
+      <ns0:Enabled>true</ns0:Enabled>
+    </ns0:LogonTrigger>
+  </ns0:Triggers>
+  <ns0:Principals>
+    <ns0:Principal id="Author">
+      <ns0:GroupId>S-1-5-32-545</ns0:GroupId>
+      <ns0:RunLevel>LeastPrivilege</ns0:RunLevel>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Settings>
+    <ns0:MultipleInstancesPolicy>IgnoreNew</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>true</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>true</ns0:StopIfGoingOnBatteries>
+    <ns0:AllowHardTerminate>true</ns0:AllowHardTerminate>
+    <ns0:StartWhenAvailable>false</ns0:StartWhenAvailable>
+    <ns0:RunOnlyIfNetworkAvailable>true</ns0:RunOnlyIfNetworkAvailable>
+    <ns0:IdleSettings>
+      <ns0:StopOnIdleEnd>false</ns0:StopOnIdleEnd>
+      <ns0:WaitTimeout>PT10M</ns0:WaitTimeout>
+      <ns0:RestartOnIdle>false</ns0:RestartOnIdle>
+    </ns0:IdleSettings>
+    <ns0:AllowStartOnDemand>true</ns0:AllowStartOnDemand>
+    <ns0:Enabled>true</ns0:Enabled>
+    <ns0:RunOnlyIfIdle>true</ns0:RunOnlyIfIdle>
+    <ns0:WakeToRun>false</ns0:WakeToRun>
+    <ns0:Priority>7</ns0:Priority>
+  </ns0:Settings>
+  <ns0:Actions Context="Author">
+    <ns0:Exec>
+      <ns0:Command>C:\Program Files (x86)\Microsoft Office\root\Office16\officebackgroundtaskhandler.exe</ns0:Command>
+    </ns0:Exec>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.2">
+  <ns0:RegistrationInfo>
+    <ns0:Description>This task initiates Office Background Task Handler, which updates relevant Office data.</ns0:Description>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:RegistrationTrigger>
+      <ns0:Enabled>true</ns0:Enabled>
+      <ns0:Repetition>
+        <ns0:Interval>PT1H</ns0:Interval>
+        <ns0:StopAtDurationEnd>false</ns0:StopAtDurationEnd>
+      </ns0:Repetition>
+    </ns0:RegistrationTrigger>
+  </ns0:Triggers>
+  <ns0:Principals>
+    <ns0:Principal id="Author">
+      <ns0:GroupId>S-1-5-32-545</ns0:GroupId>
+      <ns0:RunLevel>LeastPrivilege</ns0:RunLevel>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Settings>
+    <ns0:MultipleInstancesPolicy>IgnoreNew</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>true</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>true</ns0:StopIfGoingOnBatteries>
+    <ns0:AllowHardTerminate>true</ns0:AllowHardTerminate>
+    <ns0:StartWhenAvailable>false</ns0:StartWhenAvailable>
+    <ns0:RunOnlyIfNetworkAvailable>true</ns0:RunOnlyIfNetworkAvailable>
+    <ns0:IdleSettings>
+      <ns0:StopOnIdleEnd>false</ns0:StopOnIdleEnd>
+      <ns0:RestartOnIdle>false</ns0:RestartOnIdle>
+    </ns0:IdleSettings>
+    <ns0:AllowStartOnDemand>true</ns0:AllowStartOnDemand>
+    <ns0:Enabled>true</ns0:Enabled>
+    <ns0:RunOnlyIfIdle>false</ns0:RunOnlyIfIdle>
+    <ns0:WakeToRun>false</ns0:WakeToRun>
+    <ns0:Priority>7</ns0:Priority>
+  </ns0:Settings>
+  <ns0:Actions Context="Author">
+    <ns0:Exec>
+      <ns0:Command>C:\Program Files (x86)\Microsoft Office\root\Office16\officebackgroundtaskhandler.exe</ns0:Command>
+    </ns0:Exec>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.3">
+  <ns0:RegistrationInfo>
+    <ns0:Date>2006-11-10T14:29:55.5851926</ns0:Date>
+    <ns0:Author>$(@%systemRoot%\System32\msdrm.dll,-6001)</ns0:Author>
+    <ns0:Description>$(@%systemRoot%\System32\msdrm.dll,-6002)</ns0:Description>
+    <ns0:URI>\Microsoft\Windows\Active Directory Rights Management Services Client\AD RMS Rights Policy Template Management (Automated)</ns0:URI>
+    <ns0:SecurityDescriptor>D:(A;;FA;;;BA)(A;;FA;;;SY)(A;;FRFX;;;WD)</ns0:SecurityDescriptor>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:CalendarTrigger id="7dba1862-fdda-4030-83de-895375c111d4">
+      <ns0:StartBoundary>2006-11-09T03:00:00</ns0:StartBoundary>
+      <ns0:Enabled>true</ns0:Enabled>
+      <ns0:RandomDelay>PT1H</ns0:RandomDelay>
+      <ns0:ScheduleByDay>
+        <ns0:DaysInterval>1</ns0:DaysInterval>
+      </ns0:ScheduleByDay>
+    </ns0:CalendarTrigger>
+    <ns0:LogonTrigger id="06b3f632-87ad-4ac0-9737-48ea5ddbaf11">
+      <ns0:Enabled>true</ns0:Enabled>
+      <ns0:Delay>PT1H</ns0:Delay>
+    </ns0:LogonTrigger>
+  </ns0:Triggers>
+  <ns0:Principals>
+    <ns0:Principal id="AllUsers">
+      <ns0:GroupId>S-1-1-0</ns0:GroupId>
+      <ns0:RunLevel>LeastPrivilege</ns0:RunLevel>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Settings>
+    <ns0:IdleSettings>
+      <ns0:Duration>PT10M</ns0:Duration>
+      <ns0:WaitTimeout>PT1H</ns0:WaitTimeout>
+      <ns0:StopOnIdleEnd>true</ns0:StopOnIdleEnd>
+      <ns0:RestartOnIdle>false</ns0:RestartOnIdle>
+    </ns0:IdleSettings>
+    <ns0:MultipleInstancesPolicy>Parallel</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>false</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>false</ns0:StopIfGoingOnBatteries>
+    <ns0:AllowHardTerminate>false</ns0:AllowHardTerminate>
+    <ns0:StartWhenAvailable>true</ns0:StartWhenAvailable>
+    <ns0:RunOnlyIfNetworkAvailable>true</ns0:RunOnlyIfNetworkAvailable>
+    <ns0:AllowStartOnDemand>true</ns0:AllowStartOnDemand>
+    <ns0:Enabled>false</ns0:Enabled>
+    <ns0:Hidden>false</ns0:Hidden>
+    <ns0:RunOnlyIfIdle>false</ns0:RunOnlyIfIdle>
+    <ns0:WakeToRun>false</ns0:WakeToRun>
+    <ns0:ExecutionTimeLimit>PT1H</ns0:ExecutionTimeLimit>
+    <ns0:Priority>7</ns0:Priority>
+    <ns0:UseUnifiedSchedulingEngine>true</ns0:UseUnifiedSchedulingEngine>
+  </ns0:Settings>
+  <ns0:Actions Context="AllUsers">
+    <ns0:ComHandler>
+      <ns0:ClassId>{CF2CF428-325B-48D3-8CA8-7633E36E5A32}</ns0:ClassId>
+    </ns0:ComHandler>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.3">
+  <ns0:RegistrationInfo>
+    <ns0:Date>2006-11-10T14:29:55.5851926</ns0:Date>
+    <ns0:Author>$(@%systemRoot%\System32\msdrm.dll,-6001)</ns0:Author>
+    <ns0:Description>$(@%systemRoot%\System32\msdrm.dll,-6003)</ns0:Description>
+    <ns0:URI>\Microsoft\Windows\Active Directory Rights Management Services Client\AD RMS Rights Policy Template Management (Manual)</ns0:URI>
+    <ns0:SecurityDescriptor>D:(A;;FA;;;BA)(A;;FA;;;SY)(A;;FRFX;;;WD)</ns0:SecurityDescriptor>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:LogonTrigger id="06b3f632-87ad-4ac0-9737-48ea5ddbaf11">
+      <ns0:Enabled>false</ns0:Enabled>
+      <ns0:Delay>PT1H</ns0:Delay>
+    </ns0:LogonTrigger>
+  </ns0:Triggers>
+  <ns0:Principals>
+    <ns0:Principal id="AllUsers">
+      <ns0:GroupId>S-1-1-0</ns0:GroupId>
+      <ns0:RunLevel>LeastPrivilege</ns0:RunLevel>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Settings>
+    <ns0:IdleSettings>
+      <ns0:Duration>PT10M</ns0:Duration>
+      <ns0:WaitTimeout>PT1H</ns0:WaitTimeout>
+      <ns0:StopOnIdleEnd>true</ns0:StopOnIdleEnd>
+      <ns0:RestartOnIdle>false</ns0:RestartOnIdle>
+    </ns0:IdleSettings>
+    <ns0:MultipleInstancesPolicy>Parallel</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>true</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>true</ns0:StopIfGoingOnBatteries>
+    <ns0:AllowHardTerminate>false</ns0:AllowHardTerminate>
+    <ns0:StartWhenAvailable>true</ns0:StartWhenAvailable>
+    <ns0:RunOnlyIfNetworkAvailable>true</ns0:RunOnlyIfNetworkAvailable>
+    <ns0:AllowStartOnDemand>true</ns0:AllowStartOnDemand>
+    <ns0:Enabled>true</ns0:Enabled>
+    <ns0:Hidden>false</ns0:Hidden>
+    <ns0:RunOnlyIfIdle>false</ns0:RunOnlyIfIdle>
+    <ns0:WakeToRun>false</ns0:WakeToRun>
+    <ns0:ExecutionTimeLimit>PT1H</ns0:ExecutionTimeLimit>
+    <ns0:Priority>7</ns0:Priority>
+    <ns0:UseUnifiedSchedulingEngine>true</ns0:UseUnifiedSchedulingEngine>
+  </ns0:Settings>
+  <ns0:Actions Context="AllUsers">
+    <ns0:ComHandler>
+      <ns0:ClassId>{BF5CB148-7C77-4d8a-A53E-D81C70CF743C}</ns0:ClassId>
+    </ns0:ComHandler>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.3">
+  <ns0:RegistrationInfo>
+    <ns0:SecurityDescriptor>D:(A;;FA;;;BA)(A;;FA;;;SY)(A;CI;FA;;;LS)(A;CI;FA;;;S-1-5-80-2078495744-2416903469-4072184685-3943858305-976987417)</ns0:SecurityDescriptor>
+    <ns0:Source>$(@%systemroot%\system32\appidsvc.dll,-300)</ns0:Source>
+    <ns0:Author>$(@%systemroot%\system32\appidsvc.dll,-301)</ns0:Author>
+    <ns0:Description>$(@%systemroot%\system32\appidsvc.dll,-302)</ns0:Description>
+    <ns0:URI>Microsoft\Windows\AppID\PolicyConverter</ns0:URI>
+  </ns0:RegistrationInfo>
+  <ns0:Settings>
+    <ns0:UseUnifiedSchedulingEngine>true</ns0:UseUnifiedSchedulingEngine>
+    <ns0:Enabled>false</ns0:Enabled>
+    <ns0:AllowStartOnDemand>true</ns0:AllowStartOnDemand>
+    <ns0:MultipleInstancesPolicy>Queue</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>false</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>false</ns0:StopIfGoingOnBatteries>
+    <ns0:StartWhenAvailable>true</ns0:StartWhenAvailable>
+    <ns0:RunOnlyIfIdle>false</ns0:RunOnlyIfIdle>
+    <ns0:WakeToRun>false</ns0:WakeToRun>
+    <ns0:AllowHardTerminate>true</ns0:AllowHardTerminate>
+    <ns0:RunOnlyIfNetworkAvailable>false</ns0:RunOnlyIfNetworkAvailable>
+    <ns0:Hidden>false</ns0:Hidden>
+  </ns0:Settings>
+  <ns0:Principals>
+    <ns0:Principal id="LocalService">
+      <ns0:UserId>S-1-5-19</ns0:UserId>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Actions Context="LocalService">
+    <ns0:Exec>
+      <ns0:Command>%windir%\system32\appidpolicyconverter.exe</ns0:Command>
+    </ns0:Exec>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.3">
+  <ns0:RegistrationInfo>
+    <ns0:SecurityDescriptor>D:(A;;FA;;;BA)(A;;FA;;;SY)(A;CI;FA;;;LS)(A;CI;FA;;;S-1-5-80-2078495744-2416903469-4072184685-3943858305-976987417)</ns0:SecurityDescriptor>
+    <ns0:Source>$(@%systemroot%\system32\appidsvc.dll,-200)</ns0:Source>
+    <ns0:Author>$(@%systemroot%\system32\appidsvc.dll,-201)</ns0:Author>
+    <ns0:Description>$(@%systemroot%\system32\appidsvc.dll,-202)</ns0:Description>
+    <ns0:URI>Microsoft\Windows\AppID\VerifiedPublisherCertStoreCheck</ns0:URI>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:BootTrigger>
+      <ns0:Enabled>true</ns0:Enabled>
+      <ns0:Delay>PT30M</ns0:Delay>
+      <ns0:Repetition>
+        <ns0:Interval>PT24H</ns0:Interval>
+      </ns0:Repetition>
+    </ns0:BootTrigger>
+  </ns0:Triggers>
+  <ns0:Settings>
+    <ns0:UseUnifiedSchedulingEngine>true</ns0:UseUnifiedSchedulingEngine>
+    <ns0:Priority>10</ns0:Priority>
+    <ns0:IdleSettings>
+      <ns0:Duration>PT3M</ns0:Duration>
+      <ns0:WaitTimeout>PT23H</ns0:WaitTimeout>
+      <ns0:StopOnIdleEnd>true</ns0:StopOnIdleEnd>
+      <ns0:RestartOnIdle>true</ns0:RestartOnIdle>
+    </ns0:IdleSettings>
+    <ns0:Enabled>false</ns0:Enabled>
+    <ns0:AllowStartOnDemand>true</ns0:AllowStartOnDemand>
+    <ns0:MultipleInstancesPolicy>Queue</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>true</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>true</ns0:StopIfGoingOnBatteries>
+    <ns0:StartWhenAvailable>true</ns0:StartWhenAvailable>
+    <ns0:RunOnlyIfIdle>true</ns0:RunOnlyIfIdle>
+    <ns0:WakeToRun>false</ns0:WakeToRun>
+    <ns0:AllowHardTerminate>true</ns0:AllowHardTerminate>
+    <ns0:RunOnlyIfNetworkAvailable>false</ns0:RunOnlyIfNetworkAvailable>
+    <ns0:Hidden>false</ns0:Hidden>
+  </ns0:Settings>
+  <ns0:Principals>
+    <ns0:Principal id="LocalService">
+      <ns0:UserId>S-1-5-19</ns0:UserId>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Actions Context="LocalService">
+    <ns0:Exec>
+      <ns0:Command>%windir%\system32\appidcertstorecheck.exe</ns0:Command>
+    </ns0:Exec>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.3">
+  <ns0:RegistrationInfo>
+    <ns0:Version>1.0</ns0:Version>
+    <ns0:URI>\Microsoft\Windows\Application Experience\AitAgent</ns0:URI>
+    <ns0:SecurityDescriptor>D:(A;;GA;;;BA)(A;;GA;;;SY)</ns0:SecurityDescriptor>
+    <ns0:Source>$(@%SystemRoot%\system32\aitagent.exe,-701)</ns0:Source>
+    <ns0:Author>$(@%SystemRoot%\system32\aitagent.exe,-701)</ns0:Author>
+    <ns0:Description>$(@%SystemRoot%\system32\aitagent.exe,-702)</ns0:Description>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:CalendarTrigger>
+      <ns0:StartBoundary>2007-10-08T02:30:00</ns0:StartBoundary>
+      <ns0:ScheduleByDay>
+        <ns0:DaysInterval>1</ns0:DaysInterval>
+      </ns0:ScheduleByDay>
+    </ns0:CalendarTrigger>
+  </ns0:Triggers>
+  <ns0:Settings>
+    <ns0:Enabled>true</ns0:Enabled>
+    <ns0:Hidden>false</ns0:Hidden>
+    <ns0:RunOnlyIfIdle>true</ns0:RunOnlyIfIdle>
+    <ns0:AllowStartOnDemand>true</ns0:AllowStartOnDemand>
+    <ns0:StartWhenAvailable>true</ns0:StartWhenAvailable>
+    <ns0:MultipleInstancesPolicy>IgnoreNew</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>true</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>true</ns0:StopIfGoingOnBatteries>
+    <ns0:RunOnlyIfNetworkAvailable>false</ns0:RunOnlyIfNetworkAvailable>
+    <ns0:UseUnifiedSchedulingEngine>true</ns0:UseUnifiedSchedulingEngine>
+    <ns0:IdleSettings>
+      <ns0:Duration>PT3M</ns0:Duration>
+      <ns0:WaitTimeout>PT22H</ns0:WaitTimeout>
+      <ns0:StopOnIdleEnd>true</ns0:StopOnIdleEnd>
+      <ns0:RestartOnIdle>true</ns0:RestartOnIdle>
+    </ns0:IdleSettings>
+    <ns0:Priority>9</ns0:Priority>
+  </ns0:Settings>
+  <ns0:Principals>
+    <ns0:Principal id="LocalSystem">
+      <ns0:UserId>S-1-5-18</ns0:UserId>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Actions Context="LocalSystem">
+    <ns0:Exec>
+      <ns0:Command>aitagent</ns0:Command>
+    </ns0:Exec>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.3">
+  <ns0:RegistrationInfo>
+    <ns0:Version>1.0</ns0:Version>
+    <ns0:URI>\Microsoft\Windows\Application Experience\ProgramDataUpdater</ns0:URI>
+    <ns0:SecurityDescriptor>D:(A;;GA;;;BA)(A;;GA;;;SY)</ns0:SecurityDescriptor>
+    <ns0:Source>$(@%SystemRoot%\system32\aepdu.dll,-701)</ns0:Source>
+    <ns0:Author>$(@%SystemRoot%\system32\aepdu.dll,-701)</ns0:Author>
+    <ns0:Description>$(@%SystemRoot%\system32\aepdu.dll,-702)</ns0:Description>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:CalendarTrigger>
+      <ns0:StartBoundary>2007-10-08T00:30:00</ns0:StartBoundary>
+      <ns0:ScheduleByDay>
+        <ns0:DaysInterval>1</ns0:DaysInterval>
+      </ns0:ScheduleByDay>
+    </ns0:CalendarTrigger>
+  </ns0:Triggers>
+  <ns0:Settings>
+    <ns0:Enabled>true</ns0:Enabled>
+    <ns0:Hidden>false</ns0:Hidden>
+    <ns0:RunOnlyIfIdle>true</ns0:RunOnlyIfIdle>
+    <ns0:AllowStartOnDemand>true</ns0:AllowStartOnDemand>
+    <ns0:StartWhenAvailable>true</ns0:StartWhenAvailable>
+    <ns0:MultipleInstancesPolicy>IgnoreNew</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>true</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>true</ns0:StopIfGoingOnBatteries>
+    <ns0:RunOnlyIfNetworkAvailable>false</ns0:RunOnlyIfNetworkAvailable>
+    <ns0:IdleSettings>
+      <ns0:Duration>PT3M</ns0:Duration>
+      <ns0:WaitTimeout>PT23H</ns0:WaitTimeout>
+      <ns0:StopOnIdleEnd>true</ns0:StopOnIdleEnd>
+      <ns0:RestartOnIdle>true</ns0:RestartOnIdle>
+    </ns0:IdleSettings>
+    <ns0:Priority>4</ns0:Priority>
+    <ns0:UseUnifiedSchedulingEngine>true</ns0:UseUnifiedSchedulingEngine>
+  </ns0:Settings>
+  <ns0:Principals>
+    <ns0:Principal id="LocalSystem">
+      <ns0:UserId>S-1-5-18</ns0:UserId>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Actions Context="LocalSystem">
+    <ns0:Exec>
+      <ns0:Command>%windir%\system32\rundll32.exe</ns0:Command>
+      <ns0:Arguments>aepdu.dll,AePduRunUpdate</ns0:Arguments>
+    </ns0:Exec>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.3">
+  <ns0:RegistrationInfo>
+    <ns0:Source>$(@%systemroot%\system32\acproxy.dll,-100)</ns0:Source>
+    <ns0:Author>$(@%systemroot%\system32\acproxy.dll,-101)</ns0:Author>
+    <ns0:Description>$(@%systemroot%\system32\acproxy.dll,-102)</ns0:Description>
+    <ns0:URI>Microsoft\Windows\Autochk\Proxy</ns0:URI>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:BootTrigger id="AutochkProxy">
+      <ns0:Delay>PT30M</ns0:Delay>
+      <ns0:Enabled>true</ns0:Enabled>
+    </ns0:BootTrigger>
+  </ns0:Triggers>
+  <ns0:Settings>
+    <ns0:IdleSettings>
+      <ns0:Duration>PT10M</ns0:Duration>
+      <ns0:WaitTimeout>PT31536000S</ns0:WaitTimeout>
+      <ns0:StopOnIdleEnd>false</ns0:StopOnIdleEnd>
+      <ns0:RestartOnIdle>false</ns0:RestartOnIdle>
+    </ns0:IdleSettings>
+    <ns0:Enabled>true</ns0:Enabled>
+    <ns0:AllowStartOnDemand>true</ns0:AllowStartOnDemand>
+    <ns0:MultipleInstancesPolicy>IgnoreNew</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>false</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>false</ns0:StopIfGoingOnBatteries>
+    <ns0:StartWhenAvailable>true</ns0:StartWhenAvailable>
+    <ns0:RunOnlyIfIdle>true</ns0:RunOnlyIfIdle>
+    <ns0:UseUnifiedSchedulingEngine>true</ns0:UseUnifiedSchedulingEngine>
+  </ns0:Settings>
+  <ns0:Principals>
+    <ns0:Principal id="LocalService">
+      <ns0:UserId>S-1-5-19</ns0:UserId>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Actions Context="LocalService">
+    <ns0:Exec>
+      <ns0:Command>%windir%\system32\rundll32.exe</ns0:Command>
+      <ns0:Arguments>/d acproxy.dll,PerformAutochkOperations</ns0:Arguments>
+    </ns0:Exec>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.3">
+  <ns0:RegistrationInfo>
+    <ns0:URI>\Microsoft\Windows\CertificateServicesClient\SystemTask</ns0:URI>
+    <ns0:Version>1.0</ns0:Version>
+    <ns0:SecurityDescriptor>D:P(A;;FA;;;BA)(A;;FA;;;SY)</ns0:SecurityDescriptor>
+    <ns0:Source>$(@%SystemRoot%\system32\dimsjob.dll,-100)</ns0:Source>
+    <ns0:Author>$(@%SystemRoot%\system32\dimsjob.dll,-101)</ns0:Author>
+    <ns0:Description>$(@%SystemRoot%\system32\dimsjob.dll,-102)</ns0:Description>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:EventTrigger id="5a33e62f-7fb9-41d8-bc94-4ac450677743">
+      <ns0:Enabled>true</ns0:Enabled>
+      <ns0:Subscription>&lt;QueryList&gt;
+                &lt;Query Id="0" Path="System"&gt;
+                    &lt;Select Path="System"&gt;
+                        *[System[Provider[@Name='Microsoft-Windows-GroupPolicy'] and EventID=1502]]
+                    &lt;/Select&gt;
+                &lt;/Query&gt;
+                &lt;/QueryList&gt;</ns0:Subscription>
+    </ns0:EventTrigger>
+    <ns0:RegistrationTrigger>
+      <ns0:Enabled>true</ns0:Enabled>
+    </ns0:RegistrationTrigger>
+    <ns0:BootTrigger>
+      <ns0:Delay>PT10S</ns0:Delay>
+      <ns0:Repetition>
+        <ns0:Interval>PT8H</ns0:Interval>
+      </ns0:Repetition>
+      <ns0:Enabled>true</ns0:Enabled>
+    </ns0:BootTrigger>
+  </ns0:Triggers>
+  <ns0:Principals>
+    <ns0:Principal id="LocalSystem">
+      <ns0:UserId>S-1-5-18</ns0:UserId>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Actions Context="LocalSystem">
+    <ns0:ComHandler>
+      <ns0:ClassId>{58fb76b9-ac85-4e55-ac04-427593b1d060}</ns0:ClassId>
+      <ns0:Data>SYSTEM</ns0:Data>
+    </ns0:ComHandler>
+  </ns0:Actions>
+  <ns0:Settings>
+    <ns0:MultipleInstancesPolicy>Parallel</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>false</ns0:DisallowStartIfOnBatteries>
+    <ns0:RunOnlyIfNetworkAvailable>true</ns0:RunOnlyIfNetworkAvailable>
+    <ns0:RestartOnFailure>
+      <ns0:Interval>PT1M</ns0:Interval>
+      <ns0:Count>5</ns0:Count>
+    </ns0:RestartOnFailure>
+    <ns0:StartWhenAvailable>true</ns0:StartWhenAvailable>
+    <ns0:ExecutionTimeLimit>PT0S</ns0:ExecutionTimeLimit>
+    <ns0:UseUnifiedSchedulingEngine>true</ns0:UseUnifiedSchedulingEngine>
+  </ns0:Settings>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.3">
+  <ns0:RegistrationInfo>
+    <ns0:URI>\Microsoft\Windows\CertificateServicesClient\UserTask</ns0:URI>
+    <ns0:Version>1.0</ns0:Version>
+    <ns0:SecurityDescriptor>D:P(A;;FA;;;BA)(A;;FA;;;SY)(A;;FR;;;IU)</ns0:SecurityDescriptor>
+    <ns0:Source>$(@%SystemRoot%\system32\dimsjob.dll,-100)</ns0:Source>
+    <ns0:Author>$(@%SystemRoot%\system32\dimsjob.dll,-101)</ns0:Author>
+    <ns0:Description>$(@%SystemRoot%\system32\dimsjob.dll,-102)</ns0:Description>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:EventTrigger id="5a33e62f-7fb9-41d8-bc94-4ac450677743">
+      <ns0:Enabled>true</ns0:Enabled>
+      <ns0:Subscription>&lt;QueryList&gt;&lt;Query Id="0" Path="System"&gt;&lt;Select Path="System"&gt;*[System[Provider[@Name='Microsoft-Windows-GroupPolicy'] and EventID=1503]]&lt;/Select&gt;&lt;/Query&gt;&lt;/QueryList&gt;</ns0:Subscription>
+    </ns0:EventTrigger>
+    <ns0:RegistrationTrigger>
+      <ns0:Enabled>true</ns0:Enabled>
+    </ns0:RegistrationTrigger>
+    <ns0:LogonTrigger>
+      <ns0:Repetition>
+        <ns0:Interval>PT8H</ns0:Interval>
+      </ns0:Repetition>
+      <ns0:Enabled>true</ns0:Enabled>
+    </ns0:LogonTrigger>
+  </ns0:Triggers>
+  <ns0:Principals>
+    <ns0:Principal id="InteractiveUsers">
+      <ns0:GroupId>S-1-5-4</ns0:GroupId>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Actions Context="InteractiveUsers">
+    <ns0:ComHandler>
+      <ns0:ClassId>{58fb76b9-ac85-4e55-ac04-427593b1d060}</ns0:ClassId>
+      <ns0:Data>USER</ns0:Data>
+    </ns0:ComHandler>
+  </ns0:Actions>
+  <ns0:Settings>
+    <ns0:MultipleInstancesPolicy>Parallel</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>false</ns0:DisallowStartIfOnBatteries>
+    <ns0:RunOnlyIfNetworkAvailable>true</ns0:RunOnlyIfNetworkAvailable>
+    <ns0:RestartOnFailure>
+      <ns0:Interval>PT1M</ns0:Interval>
+      <ns0:Count>5</ns0:Count>
+    </ns0:RestartOnFailure>
+    <ns0:StartWhenAvailable>true</ns0:StartWhenAvailable>
+    <ns0:ExecutionTimeLimit>PT0S</ns0:ExecutionTimeLimit>
+    <ns0:UseUnifiedSchedulingEngine>true</ns0:UseUnifiedSchedulingEngine>
+  </ns0:Settings>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.3">
+  <ns0:RegistrationInfo>
+    <ns0:URI>\Microsoft\Windows\CertificateServicesClient\UserTask-Roam</ns0:URI>
+    <ns0:Version>1.0</ns0:Version>
+    <ns0:SecurityDescriptor>D:P(A;;FA;;;BA)(A;;FA;;;SY)(A;;FRFW;;;IU)</ns0:SecurityDescriptor>
+    <ns0:Source>$(@%SystemRoot%\system32\dimsjob.dll,-100)</ns0:Source>
+    <ns0:Author>$(@%SystemRoot%\system32\dimsjob.dll,-101)</ns0:Author>
+    <ns0:Description>$(@%SystemRoot%\system32\dimsjob.dll,-102)</ns0:Description>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:SessionStateChangeTrigger>
+      <ns0:StateChange>SessionLock</ns0:StateChange>
+    </ns0:SessionStateChangeTrigger>
+    <ns0:SessionStateChangeTrigger>
+      <ns0:StateChange>SessionUnlock</ns0:StateChange>
+    </ns0:SessionStateChangeTrigger>
+  </ns0:Triggers>
+  <ns0:Principals>
+    <ns0:Principal id="InteractiveUsers">
+      <ns0:GroupId>S-1-5-4</ns0:GroupId>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Actions Context="InteractiveUsers">
+    <ns0:ComHandler>
+      <ns0:ClassId>{58fb76b9-ac85-4e55-ac04-427593b1d060}</ns0:ClassId>
+      <ns0:Data>KEYROAMING</ns0:Data>
+    </ns0:ComHandler>
+  </ns0:Actions>
+  <ns0:Settings>
+    <ns0:MultipleInstancesPolicy>Parallel</ns0:MultipleInstancesPolicy>
+    <ns0:RunOnlyIfNetworkAvailable>true</ns0:RunOnlyIfNetworkAvailable>
+    <ns0:RestartOnFailure>
+      <ns0:Interval>PT1M</ns0:Interval>
+      <ns0:Count>5</ns0:Count>
+    </ns0:RestartOnFailure>
+    <ns0:ExecutionTimeLimit>PT0S</ns0:ExecutionTimeLimit>
+    <ns0:UseUnifiedSchedulingEngine>true</ns0:UseUnifiedSchedulingEngine>
+    <ns0:Enabled>false</ns0:Enabled>
+  </ns0:Settings>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.3">
+  <ns0:RegistrationInfo>
+    <ns0:SecurityDescriptor>D:(A;OICI;FA;;;BA)(A;OICI;FA;;;SY)(A;OICI;GRGX;;;AU)</ns0:SecurityDescriptor>
+    <ns0:URI>\Microsoft\Windows\Customer Experience Improvement Program\Consolidator</ns0:URI>
+    <ns0:Source>$(@%systemRoot%\system32\wsqmcons.exe,-106)</ns0:Source>
+    <ns0:Author>Microsoft Corporation</ns0:Author>
+    <ns0:Description>$(@%systemRoot%\system32\wsqmcons.exe,-107)</ns0:Description>
+    <ns0:Version>1.0</ns0:Version>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:TimeTrigger>
+      <ns0:StartBoundary>2004-01-02T00:00:00</ns0:StartBoundary>
+      <ns0:Repetition>
+        <ns0:Interval>PT19H</ns0:Interval>
+      </ns0:Repetition>
+    </ns0:TimeTrigger>
+  </ns0:Triggers>
+  <ns0:Settings>
+    <ns0:Enabled>true</ns0:Enabled>
+    <ns0:UseUnifiedSchedulingEngine>true</ns0:UseUnifiedSchedulingEngine>
+    <ns0:AllowStartOnDemand>true</ns0:AllowStartOnDemand>
+    <ns0:MultipleInstancesPolicy>IgnoreNew</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>false</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>false</ns0:StopIfGoingOnBatteries>
+    <ns0:StartWhenAvailable>true</ns0:StartWhenAvailable>
+    <ns0:Hidden>false</ns0:Hidden>
+    <ns0:WakeToRun>false</ns0:WakeToRun>
+  </ns0:Settings>
+  <ns0:Principals>
+    <ns0:Principal id="WinSQMAccount">
+      <ns0:UserId>S-1-5-18</ns0:UserId>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Actions Context="WinSQMAccount">
+    <ns0:Exec>
+      <ns0:Command>%SystemRoot%\System32\wsqmcons.exe</ns0:Command>
+    </ns0:Exec>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.3">
+  <ns0:RegistrationInfo>
+    <ns0:Author>$(@%SystemRoot%\system32\kernelceip.dll,-600)</ns0:Author>
+    <ns0:Source>$(@%SystemRoot%\system32\kernelceip.dll,-601)</ns0:Source>
+    <ns0:URI>\Microsoft\Windows\Customer Experience Improvement Program\KernelCeipTask</ns0:URI>
+    <ns0:Description>$(@%SystemRoot%\system32\kernelceip.dll,-602)</ns0:Description>
+    <ns0:SecurityDescriptor>D:(A;OICI;FA;;;BA)(A;OICI;FA;;;SY)(A;OICI;GRGX;;;AU)(A;OICI;SD;;;LS)</ns0:SecurityDescriptor>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:CalendarTrigger>
+      <ns0:StartBoundary>2008-09-01T03:30:00</ns0:StartBoundary>
+      <ns0:ScheduleByWeek>
+        <ns0:DaysOfWeek>
+          <ns0:Thursday />
+        </ns0:DaysOfWeek>
+        <ns0:WeeksInterval>1</ns0:WeeksInterval>
+      </ns0:ScheduleByWeek>
+    </ns0:CalendarTrigger>
+  </ns0:Triggers>
+  <ns0:Settings>
+    <ns0:UseUnifiedSchedulingEngine>true</ns0:UseUnifiedSchedulingEngine>
+    <ns0:AllowStartOnDemand>true</ns0:AllowStartOnDemand>
+    <ns0:RestartOnFailure>
+      <ns0:Interval>PT45M</ns0:Interval>
+      <ns0:Count>1</ns0:Count>
+    </ns0:RestartOnFailure>
+    <ns0:MultipleInstancesPolicy>IgnoreNew</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>true</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>false</ns0:StopIfGoingOnBatteries>
+    <ns0:Enabled>true</ns0:Enabled>
+    <ns0:Hidden>true</ns0:Hidden>
+    <ns0:RunOnlyIfIdle>true</ns0:RunOnlyIfIdle>
+    <ns0:IdleSettings>
+      <ns0:Duration>PT3M</ns0:Duration>
+      <ns0:WaitTimeout>PT17H</ns0:WaitTimeout>
+      <ns0:StopOnIdleEnd>false</ns0:StopOnIdleEnd>
+    </ns0:IdleSettings>
+    <ns0:StartWhenAvailable>true</ns0:StartWhenAvailable>
+  </ns0:Settings>
+  <ns0:Principals>
+    <ns0:Principal id="LocalService">
+      <ns0:UserId>S-1-5-19</ns0:UserId>
+      <ns0:RequiredPrivileges>
+        <ns0:Privilege>SeChangeNotifyPrivilege</ns0:Privilege>
+      </ns0:RequiredPrivileges>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Actions Context="LocalService">
+    <ns0:ComHandler>
+      <ns0:ClassId>{e7ed314f-2816-4c26-aeb5-54a34d02404c}</ns0:ClassId>
+    </ns0:ComHandler>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.3">
+  <ns0:RegistrationInfo>
+    <ns0:Source>$(@%SystemRoot%\system32\usbceip.dll,-601)</ns0:Source>
+    <ns0:Author>$(@%SystemRoot%\system32\usbceip.dll,-600)</ns0:Author>
+    <ns0:Description>$(@%SystemRoot%\system32\usbceip.dll,-602)</ns0:Description>
+    <ns0:URI>Microsoft\Windows\Customer Experience Improvement Program\UsbCeip</ns0:URI>
+    <ns0:SecurityDescriptor>D:(A;OICI;FA;;;BA)(A;OICI;FA;;;SY)(A;OICI;GRGX;;;AU)(A;OICI;SD;;;S-1-5-87-1060603329-121822201-3452730971-4292368946-61207722)</ns0:SecurityDescriptor>
+    <ns0:Version>1.0</ns0:Version>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:CalendarTrigger>
+      <ns0:StartBoundary>2008-04-25T01:30:00</ns0:StartBoundary>
+      <ns0:Enabled>true</ns0:Enabled>
+      <ns0:ScheduleByDay>
+        <ns0:DaysInterval>3</ns0:DaysInterval>
+      </ns0:ScheduleByDay>
+    </ns0:CalendarTrigger>
+  </ns0:Triggers>
+  <ns0:Settings>
+    <ns0:AllowStartOnDemand>true</ns0:AllowStartOnDemand>
+    <ns0:RestartOnFailure>
+      <ns0:Interval>PT45M</ns0:Interval>
+      <ns0:Count>1</ns0:Count>
+    </ns0:RestartOnFailure>
+    <ns0:MultipleInstancesPolicy>IgnoreNew</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>true</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>true</ns0:StopIfGoingOnBatteries>
+    <ns0:Enabled>true</ns0:Enabled>
+    <ns0:Hidden>true</ns0:Hidden>
+    <ns0:RunOnlyIfIdle>false</ns0:RunOnlyIfIdle>
+    <ns0:UseUnifiedSchedulingEngine>true</ns0:UseUnifiedSchedulingEngine>
+    <ns0:StartWhenAvailable>true</ns0:StartWhenAvailable>
+  </ns0:Settings>
+  <ns0:Principals>
+    <ns0:Principal id="LocalService">
+      <ns0:UserId>S-1-5-19</ns0:UserId>
+      <ns0:RunLevel>LeastPrivilege</ns0:RunLevel>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Actions Context="LocalService">
+    <ns0:ComHandler>
+      <ns0:ClassId>{c27f6b1d-fe0b-45e4-9257-38799fa69bc8}</ns0:ClassId>
+      <ns0:Data>SYSTEM</ns0:Data>
+    </ns0:ComHandler>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.3">
+  <ns0:RegistrationInfo>
+    <ns0:Source>$(@%SystemRoot%\system32\ceipdata.exe,-102)</ns0:Source>
+    <ns0:Author>$(@%SystemRoot%\system32\ceipdata.exe,-101)</ns0:Author>
+    <ns0:Version>1.0</ns0:Version>
+    <ns0:Description>$(@%SystemRoot%\system32\ceipdata.exe,-103)</ns0:Description>
+    <ns0:URI>\Microsoft\Windows\Customer Experience Improvement Program\Server\ServerCeipAssistant</ns0:URI>
+    <ns0:SecurityDescriptor>D:(A;;FA;;;BA)(A;;FA;;;SY)</ns0:SecurityDescriptor>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:TimeTrigger>
+      <ns0:Repetition>
+        <ns0:Interval>PT6H</ns0:Interval>
+        <ns0:StopAtDurationEnd>false</ns0:StopAtDurationEnd>
+      </ns0:Repetition>
+      <ns0:StartBoundary>2020-02-15T10:29:26</ns0:StartBoundary>
+      <ns0:Enabled>true</ns0:Enabled>
+      <ns0:RandomDelay>PT10M</ns0:RandomDelay>
+    </ns0:TimeTrigger>
+  </ns0:Triggers>
+  <ns0:Principals>
+    <ns0:Principal id="LocalSystem">
+      <ns0:UserId>S-1-5-18</ns0:UserId>
+      <ns0:RunLevel>LeastPrivilege</ns0:RunLevel>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Settings>
+    <ns0:MultipleInstancesPolicy>IgnoreNew</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>true</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>true</ns0:StopIfGoingOnBatteries>
+    <ns0:AllowHardTerminate>true</ns0:AllowHardTerminate>
+    <ns0:StartWhenAvailable>false</ns0:StartWhenAvailable>
+    <ns0:RunOnlyIfNetworkAvailable>false</ns0:RunOnlyIfNetworkAvailable>
+    <ns0:IdleSettings>
+      <ns0:StopOnIdleEnd>true</ns0:StopOnIdleEnd>
+      <ns0:RestartOnIdle>false</ns0:RestartOnIdle>
+    </ns0:IdleSettings>
+    <ns0:AllowStartOnDemand>false</ns0:AllowStartOnDemand>
+    <ns0:Enabled>true</ns0:Enabled>
+    <ns0:Hidden>false</ns0:Hidden>
+    <ns0:RunOnlyIfIdle>false</ns0:RunOnlyIfIdle>
+    <ns0:DisallowStartOnRemoteAppSession>false</ns0:DisallowStartOnRemoteAppSession>
+    <ns0:UseUnifiedSchedulingEngine>true</ns0:UseUnifiedSchedulingEngine>
+    <ns0:WakeToRun>false</ns0:WakeToRun>
+    <ns0:ExecutionTimeLimit>PT1H</ns0:ExecutionTimeLimit>
+    <ns0:Priority>7</ns0:Priority>
+  </ns0:Settings>
+  <ns0:Actions Context="LocalSystem">
+    <ns0:Exec>
+      <ns0:Command>%windir%\system32\ceipdata.exe</ns0:Command>
+    </ns0:Exec>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.3">
+  <ns0:RegistrationInfo>
+    <ns0:SecurityDescriptor>D:(A;;FA;;;BA)(A;;FA;;;SY)</ns0:SecurityDescriptor>
+    <ns0:URI>\Microsoft\Windows\Customer Experience Improvement Program\Server\ServerRoleCollector</ns0:URI>
+    <ns0:Source>$(@%SystemRoot%\system32\ceiprole.exe,-101)</ns0:Source>
+    <ns0:Author>$(@%SystemRoot%\system32\ceiprole.exe,-100)</ns0:Author>
+    <ns0:Description>$(@%SystemRoot%\system32\ceiprole.exe,-102)</ns0:Description>
+    <ns0:Version>1.0</ns0:Version>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:CalendarTrigger>
+      <ns0:StartBoundary>2004-01-01T00:30:00</ns0:StartBoundary>
+      <ns0:ScheduleByDay>
+        <ns0:DaysInterval>7</ns0:DaysInterval>
+      </ns0:ScheduleByDay>
+      <ns0:RandomDelay>PT1H</ns0:RandomDelay>
+    </ns0:CalendarTrigger>
+  </ns0:Triggers>
+  <ns0:Settings>
+    <ns0:AllowStartOnDemand>false</ns0:AllowStartOnDemand>
+    <ns0:RestartOnFailure>
+      <ns0:Interval>PT45M</ns0:Interval>
+      <ns0:Count>1</ns0:Count>
+    </ns0:RestartOnFailure>
+    <ns0:MultipleInstancesPolicy>IgnoreNew</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>true</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>true</ns0:StopIfGoingOnBatteries>
+    <ns0:Enabled>true</ns0:Enabled>
+    <ns0:Hidden>false</ns0:Hidden>
+    <ns0:RunOnlyIfIdle>false</ns0:RunOnlyIfIdle>
+    <ns0:UseUnifiedSchedulingEngine>true</ns0:UseUnifiedSchedulingEngine>
+  </ns0:Settings>
+  <ns0:Principals>
+    <ns0:Principal id="SYSTEM">
+      <ns0:UserId>S-1-5-18</ns0:UserId>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Actions Context="SYSTEM">
+    <ns0:Exec>
+      <ns0:Command>%windir%\system32\ceiprole.exe</ns0:Command>
+    </ns0:Exec>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.3">
+  <ns0:RegistrationInfo>
+    <ns0:Source>$(@%SystemRoot%\system32\ceipdata.exe,-102)</ns0:Source>
+    <ns0:Author>$(@%SystemRoot%\system32\ceipdata.exe,-101)</ns0:Author>
+    <ns0:Version>1.0</ns0:Version>
+    <ns0:Description>$(@%SystemRoot%\system32\ceipdata.exe,-103)</ns0:Description>
+    <ns0:URI>\Microsoft\Windows\Customer Experience Improvement Program\Server\ServerRoleUsageCollector</ns0:URI>
+    <ns0:SecurityDescriptor>D:(A;;FA;;;BA)(A;;FA;;;SY)</ns0:SecurityDescriptor>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:TimeTrigger>
+      <ns0:Repetition>
+        <ns0:Interval>PT12H</ns0:Interval>
+        <ns0:StopAtDurationEnd>false</ns0:StopAtDurationEnd>
+      </ns0:Repetition>
+      <ns0:StartBoundary>2020-02-14T21:35:40</ns0:StartBoundary>
+      <ns0:Enabled>true</ns0:Enabled>
+      <ns0:RandomDelay>PT12H</ns0:RandomDelay>
+    </ns0:TimeTrigger>
+  </ns0:Triggers>
+  <ns0:Principals>
+    <ns0:Principal id="LocalSystem">
+      <ns0:UserId>S-1-5-18</ns0:UserId>
+      <ns0:RunLevel>LeastPrivilege</ns0:RunLevel>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Settings>
+    <ns0:MultipleInstancesPolicy>IgnoreNew</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>true</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>true</ns0:StopIfGoingOnBatteries>
+    <ns0:AllowHardTerminate>true</ns0:AllowHardTerminate>
+    <ns0:StartWhenAvailable>false</ns0:StartWhenAvailable>
+    <ns0:RunOnlyIfNetworkAvailable>false</ns0:RunOnlyIfNetworkAvailable>
+    <ns0:IdleSettings>
+      <ns0:StopOnIdleEnd>true</ns0:StopOnIdleEnd>
+      <ns0:RestartOnIdle>false</ns0:RestartOnIdle>
+    </ns0:IdleSettings>
+    <ns0:AllowStartOnDemand>false</ns0:AllowStartOnDemand>
+    <ns0:Enabled>true</ns0:Enabled>
+    <ns0:Hidden>false</ns0:Hidden>
+    <ns0:RunOnlyIfIdle>false</ns0:RunOnlyIfIdle>
+    <ns0:DisallowStartOnRemoteAppSession>false</ns0:DisallowStartOnRemoteAppSession>
+    <ns0:UseUnifiedSchedulingEngine>true</ns0:UseUnifiedSchedulingEngine>
+    <ns0:WakeToRun>false</ns0:WakeToRun>
+    <ns0:ExecutionTimeLimit>PT1H</ns0:ExecutionTimeLimit>
+    <ns0:Priority>6</ns0:Priority>
+    <ns0:RestartOnFailure>
+      <ns0:Interval>PT1H</ns0:Interval>
+      <ns0:Count>1</ns0:Count>
+    </ns0:RestartOnFailure>
+  </ns0:Settings>
+  <ns0:Actions Context="LocalSystem">
+    <ns0:Exec>
+      <ns0:Command>%windir%\system32\ceipdata.exe</ns0:Command>
+      <ns0:Arguments>-roleusage</ns0:Arguments>
+    </ns0:Exec>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.3">
+  <ns0:RegistrationInfo>
+    <ns0:Source>$(@%systemroot%\system32\defragsvc.dll,-800)</ns0:Source>
+    <ns0:Author>$(@%systemroot%\system32\defragsvc.dll,-801)</ns0:Author>
+    <ns0:Description>$(@%systemroot%\system32\defragsvc.dll,-802)</ns0:Description>
+    <ns0:URI>Microsoft\Windows\Defrag\ScheduledDefrag</ns0:URI>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:CalendarTrigger id="DefragWeeklyTrigger">
+      <ns0:StartBoundary>2005-01-01T01:00:00</ns0:StartBoundary>
+      <ns0:Enabled>false</ns0:Enabled>
+      <ns0:ScheduleByWeek>
+        <ns0:DaysOfWeek>
+          <ns0:Wednesday />
+        </ns0:DaysOfWeek>
+        <ns0:WeeksInterval>1</ns0:WeeksInterval>
+      </ns0:ScheduleByWeek>
+      <ns0:RandomDelay>PT2H</ns0:RandomDelay>
+    </ns0:CalendarTrigger>
+  </ns0:Triggers>
+  <ns0:Settings>
+    <ns0:IdleSettings>
+      <ns0:Duration>PT3M</ns0:Duration>
+      <ns0:WaitTimeout>P7D</ns0:WaitTimeout>
+      <ns0:StopOnIdleEnd>true</ns0:StopOnIdleEnd>
+      <ns0:RestartOnIdle>true</ns0:RestartOnIdle>
+    </ns0:IdleSettings>
+    <ns0:Enabled>true</ns0:Enabled>
+    <ns0:UseUnifiedSchedulingEngine>true</ns0:UseUnifiedSchedulingEngine>
+    <ns0:AllowStartOnDemand>true</ns0:AllowStartOnDemand>
+    <ns0:MultipleInstancesPolicy>IgnoreNew</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>true</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>true</ns0:StopIfGoingOnBatteries>
+    <ns0:StartWhenAvailable>true</ns0:StartWhenAvailable>
+    <ns0:RunOnlyIfIdle>true</ns0:RunOnlyIfIdle>
+    <ns0:WakeToRun>false</ns0:WakeToRun>
+    <ns0:AllowHardTerminate>true</ns0:AllowHardTerminate>
+    <ns0:RunOnlyIfNetworkAvailable>false</ns0:RunOnlyIfNetworkAvailable>
+    <ns0:Hidden>false</ns0:Hidden>
+  </ns0:Settings>
+  <ns0:Principals>
+    <ns0:Principal id="LocalSystem">
+      <ns0:UserId>S-1-5-18</ns0:UserId>
+      <ns0:RunLevel>HighestAvailable</ns0:RunLevel>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Actions Context="LocalSystem">
+    <ns0:Exec>
+      <ns0:Command>%windir%\system32\defrag.exe</ns0:Command>
+      <ns0:Arguments>-c</ns0:Arguments>
+    </ns0:Exec>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.3">
+  <ns0:RegistrationInfo>
+    <ns0:Author>$(@%SystemRoot%\system32\memdiag.dll,-230)</ns0:Author>
+    <ns0:Source>$(@%SystemRoot%\system32\memdiag.dll,-231)</ns0:Source>
+    <ns0:URI>\Microsoft\Windows\MemoryDiagnostic\CorruptionDetector</ns0:URI>
+    <ns0:SecurityDescriptor>O:BAG:BAD:P(D;;GA;;;BG)(D;;GA;;;AN)(A;;FA;;;BA)(A;;FA;;;SY)(A;;FRSD;;;BU)</ns0:SecurityDescriptor>
+    <ns0:Version>1.0</ns0:Version>
+    <ns0:Description>$(@%SystemRoot%\system32\memdiag.dll,-232)</ns0:Description>
+  </ns0:RegistrationInfo>
+  <ns0:Settings>
+    <ns0:Enabled>true</ns0:Enabled>
+    <ns0:MultipleInstancesPolicy>IgnoreNew</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>false</ns0:DisallowStartIfOnBatteries>
+    <ns0:UseUnifiedSchedulingEngine>true</ns0:UseUnifiedSchedulingEngine>
+    <ns0:StopIfGoingOnBatteries>false</ns0:StopIfGoingOnBatteries>
+    <ns0:AllowStartOnDemand>false</ns0:AllowStartOnDemand>
+    <ns0:Hidden>true</ns0:Hidden>
+  </ns0:Settings>
+  <ns0:Triggers>
+    <ns0:EventTrigger id="9ab90857-0ac9-49d3-845f-c235144fb537">
+      <ns0:Enabled>true</ns0:Enabled>
+      <ns0:Subscription>&lt;QueryList&gt;&lt;Query Id="0" Path="System"&gt;&lt;Select Path="System"&gt;*[System[Provider[@Name='Application Popup'] and EventID=1801]]&lt;/Select&gt;&lt;/Query&gt;&lt;/QueryList&gt;</ns0:Subscription>
+    </ns0:EventTrigger>
+  </ns0:Triggers>
+  <ns0:Principals>
+    <ns0:Principal id="Group">
+      <ns0:GroupId>S-1-5-32-545</ns0:GroupId>
+      <ns0:RunLevel>LeastPrivilege</ns0:RunLevel>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Actions Context="Group">
+    <ns0:ComHandler>
+      <ns0:ClassId>{190BA3F6-0205-4f46-B589-95C6822899D2}</ns0:ClassId>
+      <ns0:Data>PageNotZero</ns0:Data>
+    </ns0:ComHandler>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.3">
+  <ns0:RegistrationInfo>
+    <ns0:Author>$(@%SystemRoot%\system32\memdiag.dll,-230)</ns0:Author>
+    <ns0:Source>$(@%SystemRoot%\system32\memdiag.dll,-231)</ns0:Source>
+    <ns0:URI>\Microsoft\Windows\MemoryDiagnostic\DecompressionFailureDetector</ns0:URI>
+    <ns0:SecurityDescriptor>O:BAG:BAD:P(D;;GA;;;BG)(D;;GA;;;AN)(A;;FA;;;BA)(A;;FA;;;SY)(A;;FRSD;;;BU)</ns0:SecurityDescriptor>
+    <ns0:Version>1.0</ns0:Version>
+    <ns0:Description>$(@%SystemRoot%\system32\memdiag.dll,-232)</ns0:Description>
+  </ns0:RegistrationInfo>
+  <ns0:Settings>
+    <ns0:Enabled>true</ns0:Enabled>
+    <ns0:MultipleInstancesPolicy>IgnoreNew</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>false</ns0:DisallowStartIfOnBatteries>
+    <ns0:UseUnifiedSchedulingEngine>true</ns0:UseUnifiedSchedulingEngine>
+    <ns0:StopIfGoingOnBatteries>false</ns0:StopIfGoingOnBatteries>
+    <ns0:AllowStartOnDemand>false</ns0:AllowStartOnDemand>
+    <ns0:Hidden>true</ns0:Hidden>
+  </ns0:Settings>
+  <ns0:Triggers>
+    <ns0:EventTrigger id="9DC9BDAA-AA47-4bca-8848-B96A2A5E0197">
+      <ns0:Enabled>true</ns0:Enabled>
+      <ns0:Subscription>&lt;QueryList&gt;&lt;Query Id="0" Path="Microsoft-Windows-Kernel-StoreMgr/Operational"&gt;&lt;Select Path="Microsoft-Windows-Kernel-StoreMgr/Operational"&gt;*[System[Provider[@Name='Microsoft-Windows-Kernel-StoreMgr'] and EventID=6]]&lt;/Select&gt;&lt;/Query&gt;&lt;/QueryList&gt;</ns0:Subscription>
+    </ns0:EventTrigger>
+  </ns0:Triggers>
+  <ns0:Principals>
+    <ns0:Principal id="Group">
+      <ns0:GroupId>S-1-5-32-545</ns0:GroupId>
+      <ns0:RunLevel>LeastPrivilege</ns0:RunLevel>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Actions Context="Group">
+    <ns0:ComHandler>
+      <ns0:ClassId>{190BA3F6-0205-4f46-B589-95C6822899D2}</ns0:ClassId>
+      <ns0:Data>Decompression</ns0:Data>
+    </ns0:ComHandler>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.3">
+  <ns0:RegistrationInfo>
+    <ns0:Author>$(@%systemRoot%\System32\lpremove.exe,-100)</ns0:Author>
+    <ns0:Source>$(@%systemRoot%\System32\lpremove.exe,-100)</ns0:Source>
+    <ns0:Description>$(@%systemRoot%\System32\lpremove.exe,-101)</ns0:Description>
+    <ns0:URI>Microsoft\Windows\MUI\LPRemove</ns0:URI>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:BootTrigger id="BootTrigger">
+      <ns0:Delay>PT25M</ns0:Delay>
+      <ns0:Enabled>true</ns0:Enabled>
+    </ns0:BootTrigger>
+  </ns0:Triggers>
+  <ns0:Principals>
+    <ns0:Principal id="LocalSystem">
+      <ns0:UserId>S-1-5-18</ns0:UserId>
+      <ns0:RunLevel>HighestAvailable</ns0:RunLevel>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Settings>
+    <ns0:IdleSettings>
+      <ns0:Duration>PT10M</ns0:Duration>
+    </ns0:IdleSettings>
+    <ns0:MultipleInstancesPolicy>IgnoreNew</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>true</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>false</ns0:StopIfGoingOnBatteries>
+    <ns0:AllowHardTerminate>false</ns0:AllowHardTerminate>
+    <ns0:StartWhenAvailable>false</ns0:StartWhenAvailable>
+    <ns0:RunOnlyIfNetworkAvailable>false</ns0:RunOnlyIfNetworkAvailable>
+    <ns0:AllowStartOnDemand>true</ns0:AllowStartOnDemand>
+    <ns0:Enabled>true</ns0:Enabled>
+    <ns0:Hidden>false</ns0:Hidden>
+    <ns0:RunOnlyIfIdle>true</ns0:RunOnlyIfIdle>
+    <ns0:WakeToRun>false</ns0:WakeToRun>
+    <ns0:UseUnifiedSchedulingEngine>true</ns0:UseUnifiedSchedulingEngine>
+    <ns0:ExecutionTimeLimit>PT9H</ns0:ExecutionTimeLimit>
+  </ns0:Settings>
+  <ns0:Actions Context="LocalSystem">
+    <ns0:Exec>
+      <ns0:Command>%windir%\system32\lpremove.exe</ns0:Command>
+    </ns0:Exec>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.3">
+  <ns0:RegistrationInfo>
+    <ns0:Date>2005-06-23T13:48:00-08:00</ns0:Date>
+    <ns0:Description>$(@%systemRoot%\System32\PlaySndSrv.Dll,-105)</ns0:Description>
+    <ns0:URI>Microsoft\Windows\Multimedia\SystemSoundsService</ns0:URI>
+    <ns0:SecurityDescriptor>D:P(A;;FA;;;BA)(A;;FA;;;SY)(A;;FR;;;AU)</ns0:SecurityDescriptor>
+    <ns0:Source>$(@%systemRoot%\System32\PlaySndSrv.Dll,-106)</ns0:Source>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:LogonTrigger />
+  </ns0:Triggers>
+  <ns0:Settings>
+    <ns0:Enabled>false</ns0:Enabled>
+    <ns0:AllowStartOnDemand>true</ns0:AllowStartOnDemand>
+    <ns0:MultipleInstancesPolicy>Parallel</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>false</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>false</ns0:StopIfGoingOnBatteries>
+    <ns0:AllowHardTerminate>true</ns0:AllowHardTerminate>
+    <ns0:StartWhenAvailable>false</ns0:StartWhenAvailable>
+    <ns0:ExecutionTimeLimit>PT0S</ns0:ExecutionTimeLimit>
+    <ns0:UseUnifiedSchedulingEngine>true</ns0:UseUnifiedSchedulingEngine>
+  </ns0:Settings>
+  <ns0:Principals>
+    <ns0:Principal id="Group">
+      <ns0:GroupId>S-1-5-32-545</ns0:GroupId>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Actions Context="Group">
+    <ns0:ComHandler>
+      <ns0:ClassId>{2DEA658F-54C1-4227-AF9B-260AB5FC3543}</ns0:ClassId>
+    </ns0:ComHandler>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.3">
+  <ns0:RegistrationInfo>
+    <ns0:URI>\Microsoft\Windows\NetTrace\GatherNetworkInfo</ns0:URI>
+    <ns0:Source>$(@%SystemRoot%\system32\nettrace.dll,-6910)</ns0:Source>
+    <ns0:Author>$(@%SystemRoot%\system32\nettrace.dll,-6911)</ns0:Author>
+    <ns0:Description>$(@%SystemRoot%\system32\nettrace.dll,-6912)</ns0:Description>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers />
+  <ns0:Settings>
+    <ns0:MultipleInstancesPolicy>Parallel</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>false</ns0:DisallowStartIfOnBatteries>
+    <ns0:UseUnifiedSchedulingEngine>true</ns0:UseUnifiedSchedulingEngine>
+    <ns0:Priority>7</ns0:Priority>
+  </ns0:Settings>
+  <ns0:Principals>
+    <ns0:Principal id="AnyUser">
+      <ns0:GroupId>S-1-5-32-545</ns0:GroupId>
+      <ns0:RunLevel>HighestAvailable</ns0:RunLevel>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Actions Context="AnyUser">
+    <ns0:Exec>
+      <ns0:Command>%windir%\system32\gatherNetworkInfo.vbs</ns0:Command>
+      <ns0:WorkingDirectory>$(Arg1)</ns0:WorkingDirectory>
+    </ns0:Exec>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.3">
+  <ns0:RegistrationInfo>
+    <ns0:Version>1.0</ns0:Version>
+    <ns0:URI>\Microsoft\Windows\PLA\Server Manager Performance Monitor</ns0:URI>
+    <ns0:Source>$(@%systemroot%\system32\wbem\mgmtprovider.dll,-101)</ns0:Source>
+    <ns0:Author>$(@%systemroot%\system32\wbem\mgmtprovider.dll,-102)</ns0:Author>
+    <ns0:SecurityDescriptor>D:(A;;FA;;;SY)(A;;FA;;;BA)(A;;0x1301ff;;;S-1-5-80-2661322625-712705077-2999183737-3043590567-590698655)(A;;FRFX;;;LU)</ns0:SecurityDescriptor>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:BootTrigger>
+      <ns0:Enabled>true</ns0:Enabled>
+    </ns0:BootTrigger>
+  </ns0:Triggers>
+  <ns0:Settings>
+    <ns0:MultipleInstancesPolicy>IgnoreNew</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>false</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>false</ns0:StopIfGoingOnBatteries>
+    <ns0:AllowHardTerminate>false</ns0:AllowHardTerminate>
+    <ns0:StartWhenAvailable>false</ns0:StartWhenAvailable>
+    <ns0:RunOnlyIfNetworkAvailable>false</ns0:RunOnlyIfNetworkAvailable>
+    <ns0:AllowStartOnDemand>true</ns0:AllowStartOnDemand>
+    <ns0:Enabled>false</ns0:Enabled>
+    <ns0:Hidden>true</ns0:Hidden>
+    <ns0:RunOnlyIfIdle>false</ns0:RunOnlyIfIdle>
+    <ns0:DisallowStartOnRemoteAppSession>false</ns0:DisallowStartOnRemoteAppSession>
+    <ns0:UseUnifiedSchedulingEngine>true</ns0:UseUnifiedSchedulingEngine>
+    <ns0:WakeToRun>false</ns0:WakeToRun>
+    <ns0:ExecutionTimeLimit>PT0S</ns0:ExecutionTimeLimit>
+    <ns0:Priority>2</ns0:Priority>
+  </ns0:Settings>
+  <ns0:Data>&lt;DataCollectorSet&gt;
+              &lt;Status&gt;0&lt;/Status&gt;
+            &lt;Duration&gt;0&lt;/Duration&gt;
+            &lt;Description&gt;Server Manager performance monitoring data collector set&lt;/Description&gt;
+            &lt;DescriptionUnresolved&gt;Server Manager performance monitoring data collector set&lt;/DescriptionUnresolved&gt;   
+            &lt;DisplayName&gt;Server Manager Performance Monitor&lt;/DisplayName&gt;
+            &lt;DisplayNameUnresolved&gt;Server Manager Performance Monitor&lt;/DisplayNameUnresolved&gt;
+            &lt;SchedulesEnabled&gt;-1&lt;/SchedulesEnabled&gt;
+            &lt;LatestOutputLocation/&gt;
+            &lt;Name&gt;Server Manager Performance Monitor&lt;/Name&gt;
+            &lt;OutputLocation&gt;%systemdrive%\PerfLogs\Admin\ServerManager&lt;/OutputLocation&gt;
+            &lt;RootPath&gt;%systemdrive%\PerfLogs\Admin\ServerManager&lt;/RootPath&gt;
+            &lt;Segment&gt;-1&lt;/Segment&gt;
+            &lt;SegmentMaxDuration&gt;86395&lt;/SegmentMaxDuration&gt;
+            &lt;SegmentMaxSize&gt;0&lt;/SegmentMaxSize&gt;
+            &lt;SerialNumber&gt;1&lt;/SerialNumber&gt;
+            &lt;Server/&gt;
+            &lt;Subdirectory/&gt;
+            &lt;SubdirectoryFormat&gt;1&lt;/SubdirectoryFormat&gt;
+            &lt;SubdirectoryFormatPattern/&gt;
+            &lt;Task&gt;Microsoft\Windows\Server Manager\CleanupOldPerfLogs&lt;/Task&gt;
+            &lt;TaskRunAsSelf&gt;1&lt;/TaskRunAsSelf&gt;
+            &lt;TaskArguments&gt;{usertext}&lt;/TaskArguments&gt;
+            &lt;TaskUserTextArguments&gt;RemoveServerPerformanceLog "Server Manager Performance Monitor" 604800000&lt;/TaskUserTextArguments&gt;
+            &lt;UserAccount&gt;SYSTEM&lt;/UserAccount&gt;
+            &lt;Security&gt;O:BAG:DUD:AI(A;;FA;;;SY)(A;;FA;;;BA)(A;;FR;;;LU)(A;;0x1301ff;;;S-1-5-80-2661322625-712705077-2999183737-3043590567-590698655)(A;;FR;;;SY)(A;ID;FA;;;SY)(A;ID;FA;;;BA)(A;ID;0x1200ab;;;LU)(A;ID;FR;;;AU)(A;ID;FR;;;LS)(A;ID;FR;;;NS)&lt;/Security&gt;
+            &lt;StopOnCompletion&gt;0&lt;/StopOnCompletion&gt;
+            &lt;PerformanceCounterDataCollector&gt;
+              &lt;DataCollectorType&gt;0&lt;/DataCollectorType&gt;
+              &lt;Name&gt;Performance Counters&lt;/Name&gt;
+              &lt;FileName&gt;SNPerfMon-&lt;/FileName&gt;
+              &lt;FileNameFormat&gt;1&lt;/FileNameFormat&gt;
+              &lt;FileNameFormatPattern&gt;yyyyMMddHHmmss\-N&lt;/FileNameFormatPattern&gt;
+              &lt;LogAppend&gt;0&lt;/LogAppend&gt;
+              &lt;LogCircular&gt;0&lt;/LogCircular&gt;
+              &lt;LogOverwrite&gt;0&lt;/LogOverwrite&gt;
+              &lt;LatestOutputLocation/&gt;
+              &lt;DataSourceName/&gt;
+              &lt;SampleInterval&gt;300&lt;/SampleInterval&gt;
+              &lt;SegmentMaxRecords&gt;0&lt;/SegmentMaxRecords&gt;
+              &lt;LogFileFormat&gt;3&lt;/LogFileFormat&gt;
+              &lt;Counter&gt;\Processor(_Total)\% Processor Time&lt;/Counter&gt;
+              &lt;Counter&gt;\Memory\Available KBytes&lt;/Counter&gt;
+              &lt;Counter&gt;\Process(*)\% Processor Time&lt;/Counter&gt;
+              &lt;Counter&gt;\Process(*)\IO Data Bytes/sec&lt;/Counter&gt;
+              &lt;Counter&gt;\Process(*)\Private Bytes&lt;/Counter&gt;
+              &lt;Counter&gt;\Process(*)\Thread Count&lt;/Counter&gt;
+              &lt;Counter&gt;\Process(*)\ID Process&lt;/Counter&gt;
+              &lt;CounterDisplayName&gt;\Processor(_Total)\% Processor Time&lt;/CounterDisplayName&gt;
+              &lt;CounterDisplayName&gt;\Memory\Available KBytes&lt;/CounterDisplayName&gt;
+              &lt;CounterDisplayName&gt;\Process(*)\% Processor Time&lt;/CounterDisplayName&gt;
+              &lt;CounterDisplayName&gt;\Process(*)\IO Data Bytes/sec&lt;/CounterDisplayName&gt;
+              &lt;CounterDisplayName&gt;\Process(*)\Private Bytes&lt;/CounterDisplayName&gt;
+              &lt;CounterDisplayName&gt;\Process(*)\Thread Count&lt;/CounterDisplayName&gt;
+              &lt;CounterDisplayName&gt;\Process(*)\ID Process&lt;/CounterDisplayName&gt;
+            &lt;/PerformanceCounterDataCollector&gt;
+            &lt;DataManager&gt;
+              &lt;Enabled&gt;0&lt;/Enabled&gt;
+              &lt;CheckBeforeRunning&gt;0&lt;/CheckBeforeRunning&gt;
+              &lt;MinFreeDisk&gt;0&lt;/MinFreeDisk&gt;
+              &lt;MaxSize&gt;0&lt;/MaxSize&gt;
+              &lt;MaxFolderCount&gt;0&lt;/MaxFolderCount&gt;
+              &lt;ResourcePolicy&gt;1&lt;/ResourcePolicy&gt;
+              &lt;ReportFileName&gt;report.html&lt;/ReportFileName&gt;
+              &lt;RuleTargetFileName&gt;report.xml&lt;/RuleTargetFileName&gt;
+              &lt;EventsFileName/&gt;
+            &lt;/DataManager&gt;
+          &lt;/DataCollectorSet&gt;</ns0:Data>
+  <ns0:Principals>
+    <ns0:Principal id="Author">
+      <ns0:GroupId>NT AUTHORITY\SYSTEM</ns0:GroupId>
+      <ns0:RunLevel>LeastPrivilege</ns0:RunLevel>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Actions Context="Author">
+    <ns0:Exec>
+      <ns0:Command>%systemroot%\system32\rundll32.exe</ns0:Command>
+      <ns0:Arguments>%systemroot%\system32\pla.dll,PlaHost "Server Manager Performance Monitor" "$(Arg0)"</ns0:Arguments>
+    </ns0:Exec>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.3">
+  <ns0:RegistrationInfo>
+    <ns0:SecurityDescriptor>D:(A;OICI;FA;;;BA)(A;OICI;FA;;;SY)(A;OICI;GR;;;AU)</ns0:SecurityDescriptor>
+    <ns0:URI>\Microsoft\Windows\Power Efficiency Diagnostics\AnalyzeSystem</ns0:URI>
+    <ns0:Source>$(@%systemRoot%\system32\energy.dll,-101)</ns0:Source>
+    <ns0:Author>$(@%systemRoot%\system32\energy.dll,-103)</ns0:Author>
+    <ns0:Description>$(@%systemRoot%\system32\energy.dll,-102)</ns0:Description>
+    <ns0:Version>1.0</ns0:Version>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:CalendarTrigger>
+      <ns0:StartBoundary>2008-01-01T06:00:00</ns0:StartBoundary>
+      <ns0:RandomDelay>PT8H</ns0:RandomDelay>
+      <ns0:ScheduleByDay>
+        <ns0:DaysInterval>14</ns0:DaysInterval>
+      </ns0:ScheduleByDay>
+    </ns0:CalendarTrigger>
+  </ns0:Triggers>
+  <ns0:Settings>
+    <ns0:Enabled>true</ns0:Enabled>
+    <ns0:AllowStartOnDemand>true</ns0:AllowStartOnDemand>
+    <ns0:MultipleInstancesPolicy>IgnoreNew</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>false</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>false</ns0:StopIfGoingOnBatteries>
+    <ns0:StartWhenAvailable>true</ns0:StartWhenAvailable>
+    <ns0:Hidden>false</ns0:Hidden>
+    <ns0:WakeToRun>false</ns0:WakeToRun>
+    <ns0:IdleSettings>
+      <ns0:Duration>PT5M</ns0:Duration>
+      <ns0:WaitTimeout>PT2H</ns0:WaitTimeout>
+      <ns0:StopOnIdleEnd>false</ns0:StopOnIdleEnd>
+      <ns0:RestartOnIdle>false</ns0:RestartOnIdle>
+    </ns0:IdleSettings>
+    <ns0:RunOnlyIfIdle>true</ns0:RunOnlyIfIdle>
+    <ns0:UseUnifiedSchedulingEngine>true</ns0:UseUnifiedSchedulingEngine>
+    <ns0:ExecutionTimeLimit>PT5M</ns0:ExecutionTimeLimit>
+  </ns0:Settings>
+  <ns0:Principals>
+    <ns0:Principal id="LocalSystemAccount">
+      <ns0:UserId>S-1-5-18</ns0:UserId>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Actions Context="LocalSystemAccount">
+    <ns0:Exec>
+      <ns0:Command>%SystemRoot%\System32\powercfg.exe</ns0:Command>
+      <ns0:Arguments>-energy -auto</ns0:Arguments>
+    </ns0:Exec>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.3">
+  <ns0:RegistrationInfo>
+    <ns0:SecurityDescriptor>D:(A;;FA;;;BA)(A;;FA;;;SY)(A;;FA;;;LS)(A;;FR;;;BU)</ns0:SecurityDescriptor>
+    <ns0:Source>$(@%SystemRoot%\system32\RacEngn.dll,-501)</ns0:Source>
+    <ns0:Author>$(@%SystemRoot%\system32\RacEngn.dll,-501)</ns0:Author>
+    <ns0:Description>$(@%SystemRoot%\system32\RacEngn.dll,-502)</ns0:Description>
+    <ns0:URI>Microsoft\Windows\RAC\RacTask</ns0:URI>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:EventTrigger id="RACSQMTrigger">
+      <ns0:Enabled>true</ns0:Enabled>
+      <ns0:Subscription>&lt;QueryList&gt;&lt;Query Id="0" Path="Application"&gt;&lt;Select Path="Application"&gt;*[System[Provider[@Name='Microsoft-Windows-CEIP'] and EventID=1007]]&lt;/Select&gt;&lt;/Query&gt;&lt;/QueryList&gt;</ns0:Subscription>
+    </ns0:EventTrigger>
+    <ns0:TimeTrigger id="RACTimeTrigger">
+      <ns0:Repetition>
+        <ns0:Interval>PT1H</ns0:Interval>
+        <ns0:StopAtDurationEnd>false</ns0:StopAtDurationEnd>
+      </ns0:Repetition>
+      <ns0:StartBoundary>2008-03-31T00:00:00Z</ns0:StartBoundary>
+      <ns0:Enabled>false</ns0:Enabled>
+      <ns0:RandomDelay>PT15M</ns0:RandomDelay>
+    </ns0:TimeTrigger>
+  </ns0:Triggers>
+  <ns0:Settings>
+    <ns0:Enabled>true</ns0:Enabled>
+    <ns0:Hidden>false</ns0:Hidden>
+    <ns0:AllowStartOnDemand>true</ns0:AllowStartOnDemand>
+    <ns0:MultipleInstancesPolicy>IgnoreNew</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>false</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>false</ns0:StopIfGoingOnBatteries>
+    <ns0:AllowHardTerminate>true</ns0:AllowHardTerminate>
+    <ns0:StartWhenAvailable>true</ns0:StartWhenAvailable>
+    <ns0:RunOnlyIfNetworkAvailable>false</ns0:RunOnlyIfNetworkAvailable>
+    <ns0:RunOnlyIfIdle>false</ns0:RunOnlyIfIdle>
+    <ns0:WakeToRun>false</ns0:WakeToRun>
+    <ns0:UseUnifiedSchedulingEngine>true</ns0:UseUnifiedSchedulingEngine>
+    <ns0:ExecutionTimeLimit>PT0S</ns0:ExecutionTimeLimit>
+  </ns0:Settings>
+  <ns0:Principals>
+    <ns0:Principal id="LocalService">
+      <ns0:UserId>S-1-5-19</ns0:UserId>
+      <ns0:RunLevel>LeastPrivilege</ns0:RunLevel>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Actions Context="LocalService">
+    <ns0:ComHandler>
+      <ns0:ClassId>{42060D27-CA53-41f5-96E4-B1E8169308A6}</ns0:ClassId>
+      <ns0:Data>$(Arg0)</ns0:Data>
+    </ns0:ComHandler>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.3">
+  <ns0:RegistrationInfo>
+    <ns0:URI>Microsoft\Windows\Ras\MobilityManager</ns0:URI>
+    <ns0:SecurityDescriptor>D:P(A;;FA;;;BA)(A;;FA;;;SY)(A;;FR;;;LS)</ns0:SecurityDescriptor>
+    <ns0:Author>$(@%SystemRoot%\system32\rasmbmgr.dll,-201)</ns0:Author>
+    <ns0:Description>$(@%SystemRoot%\system32\rasmbmgr.dll,-202)</ns0:Description>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:EventTrigger>
+      <ns0:Enabled>true</ns0:Enabled>
+      <ns0:Subscription>&lt;QueryList&gt;
+              &lt;Query
+                  Id="0"
+                  Path="Application"
+                  &gt;
+                &lt;Select Path="Application"&gt;*[System[Provider[@Name='RasClient'] and (Level=4 or Level=0) and (EventID=20281)]]&lt;/Select&gt;
+              &lt;/Query&gt;
+            &lt;/QueryList&gt;</ns0:Subscription>
+    </ns0:EventTrigger>
+  </ns0:Triggers>
+  <ns0:Principals>
+    <ns0:Principal id="LocalService">
+      <ns0:GroupId>S-1-5-19</ns0:GroupId>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Actions Context="LocalService">
+    <ns0:ComHandler>
+      <ns0:ClassId>{c463a0fc-794f-4fdf-9201-01938ceacafa}</ns0:ClassId>
+    </ns0:ComHandler>
+  </ns0:Actions>
+  <ns0:Settings>
+    <ns0:Enabled>true</ns0:Enabled>
+    <ns0:MultipleInstancesPolicy>Parallel</ns0:MultipleInstancesPolicy>
+    <ns0:StartWhenAvailable>true</ns0:StartWhenAvailable>
+    <ns0:DisallowStartIfOnBatteries>false</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>false</ns0:StopIfGoingOnBatteries>
+    <ns0:UseUnifiedSchedulingEngine>true</ns0:UseUnifiedSchedulingEngine>
+  </ns0:Settings>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.3">
+  <ns0:RegistrationInfo>
+    <ns0:Author>$(@%systemroot%\system32\regidle.dll,-600)</ns0:Author>
+    <ns0:Version>1.0</ns0:Version>
+    <ns0:Source>$(@%systemroot%\system32\regidle.dll,-601)</ns0:Source>
+    <ns0:URI>Microsoft\Windows\Registry\RegIdleBackup</ns0:URI>
+    <ns0:Description>$(@%systemroot%\system32\regidle.dll,-602)</ns0:Description>
+    <ns0:SecurityDescriptor>O:BAG:BAD:P(A;;FA;;;BA)(A;;FA;;;SY)(A;;FR;;;IU)(A;;FRFX;;;S-1-5-80-2970612574-78537857-698502321-558674196-1451644582)</ns0:SecurityDescriptor>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:CalendarTrigger>
+      <ns0:StartBoundary>2008-01-01T00:00:00</ns0:StartBoundary>
+      <ns0:ScheduleByDay>
+        <ns0:DaysInterval>10</ns0:DaysInterval>
+      </ns0:ScheduleByDay>
+      <ns0:RandomDelay>PT1H</ns0:RandomDelay>
+    </ns0:CalendarTrigger>
+  </ns0:Triggers>
+  <ns0:Settings>
+    <ns0:Enabled>true</ns0:Enabled>
+    <ns0:MultipleInstancesPolicy>IgnoreNew</ns0:MultipleInstancesPolicy>
+    <ns0:AllowStartOnDemand>false</ns0:AllowStartOnDemand>
+    <ns0:DisallowStartIfOnBatteries>false</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>false</ns0:StopIfGoingOnBatteries>
+    <ns0:RunOnlyIfNetworkAvailable>false</ns0:RunOnlyIfNetworkAvailable>
+    <ns0:ExecutionTimeLimit>PT0S</ns0:ExecutionTimeLimit>
+    <ns0:Hidden>true</ns0:Hidden>
+    <ns0:WakeToRun>false</ns0:WakeToRun>
+    <ns0:StartWhenAvailable>true</ns0:StartWhenAvailable>
+    <ns0:Priority>5</ns0:Priority>
+    <ns0:RunOnlyIfIdle>true</ns0:RunOnlyIfIdle>
+    <ns0:UseUnifiedSchedulingEngine>true</ns0:UseUnifiedSchedulingEngine>
+    <ns0:IdleSettings>
+      <ns0:Duration>PT3M</ns0:Duration>
+      <ns0:WaitTimeout>PT23H</ns0:WaitTimeout>
+      <ns0:StopOnIdleEnd>true</ns0:StopOnIdleEnd>
+      <ns0:RestartOnIdle>true</ns0:RestartOnIdle>
+    </ns0:IdleSettings>
+  </ns0:Settings>
+  <ns0:Principals>
+    <ns0:Principal id="LocalSystem">
+      <ns0:UserId>S-1-5-18</ns0:UserId>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Actions Context="LocalSystem">
+    <ns0:ComHandler>
+      <ns0:ClassId>{ca767aa8-9157-4604-b64b-40747123d5f2}</ns0:ClassId>
+    </ns0:ComHandler>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.3">
+  <ns0:RegistrationInfo>
+    <ns0:Version>1.0</ns0:Version>
+    <ns0:URI>\Microsoft\Windows\Server Manager\CleanupOldPerfLogs</ns0:URI>
+    <ns0:Source>$(@%systemroot%\system32\wbem\mgmtprovider.dll,-101)</ns0:Source>
+    <ns0:Author>$(@%systemroot%\system32\wbem\mgmtprovider.dll,-102)</ns0:Author>
+    <ns0:SecurityDescriptor>O:SYD:P(A;;FA;;;BA)(A;;FA;;;SY)(A;;FRFX;;;AU)(A;;FRFX;;;LU)</ns0:SecurityDescriptor>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers />
+  <ns0:Settings>
+    <ns0:MultipleInstancesPolicy>IgnoreNew</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>true</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>true</ns0:StopIfGoingOnBatteries>
+    <ns0:AllowHardTerminate>true</ns0:AllowHardTerminate>
+    <ns0:StartWhenAvailable>false</ns0:StartWhenAvailable>
+    <ns0:RunOnlyIfNetworkAvailable>false</ns0:RunOnlyIfNetworkAvailable>
+    <ns0:IdleSettings>
+      <ns0:StopOnIdleEnd>true</ns0:StopOnIdleEnd>
+      <ns0:RestartOnIdle>false</ns0:RestartOnIdle>
+    </ns0:IdleSettings>
+    <ns0:AllowStartOnDemand>true</ns0:AllowStartOnDemand>
+    <ns0:Enabled>true</ns0:Enabled>
+    <ns0:Hidden>true</ns0:Hidden>
+    <ns0:RunOnlyIfIdle>false</ns0:RunOnlyIfIdle>
+    <ns0:UseUnifiedSchedulingEngine>true</ns0:UseUnifiedSchedulingEngine>
+    <ns0:WakeToRun>false</ns0:WakeToRun>
+    <ns0:ExecutionTimeLimit>PT2M</ns0:ExecutionTimeLimit>
+    <ns0:Priority>7</ns0:Priority>
+  </ns0:Settings>
+  <ns0:Principals>
+    <ns0:Principal id="Author">
+      <ns0:GroupId>NT AUTHORITY\SYSTEM</ns0:GroupId>
+      <ns0:RunLevel>LeastPrivilege</ns0:RunLevel>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Actions Context="Author">
+    <ns0:Exec>
+      <ns0:Command>%systemroot%\system32\cscript.exe</ns0:Command>
+      <ns0:Arguments>/B /nologo %systemroot%\system32\calluxxprovider.vbs $(Arg0) $(Arg1) $(Arg2)</ns0:Arguments>
+    </ns0:Exec>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.3">
+  <ns0:RegistrationInfo>
+    <ns0:URI>\Microsoft\Windows\Server Manager\ServerManager</ns0:URI>
+    <ns0:SecurityDescriptor>D:P(A;;FA;;;BA)(A;;FA;;;SY)(A;;FR;;;BU)</ns0:SecurityDescriptor>
+    <ns0:Source>$(@%SystemRoot%\system32\svrmgrnc.dll,-101)</ns0:Source>
+    <ns0:Author>$(@%SystemRoot%\system32\svrmgrnc.dll,-103)</ns0:Author>
+    <ns0:Description>$(@%SystemRoot%\system32\svrmgrnc.dll,-104)</ns0:Description>
+    <ns0:Version>1.0</ns0:Version>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:LogonTrigger id="26a8b275-6e6b-419d-9d59-b7806b540c3b">
+      <ns0:Enabled>true</ns0:Enabled>
+    </ns0:LogonTrigger>
+  </ns0:Triggers>
+  <ns0:Principals>
+    <ns0:Principal id="Administrators">
+      <ns0:RunLevel>HighestAvailable</ns0:RunLevel>
+      <ns0:GroupId>S-1-5-32-544</ns0:GroupId>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Settings>
+    <ns0:UseUnifiedSchedulingEngine>true</ns0:UseUnifiedSchedulingEngine>
+    <ns0:IdleSettings>
+      <ns0:StopOnIdleEnd>true</ns0:StopOnIdleEnd>
+      <ns0:RestartOnIdle>false</ns0:RestartOnIdle>
+    </ns0:IdleSettings>
+    <ns0:MultipleInstancesPolicy>IgnoreNew</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>false</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>true</ns0:StopIfGoingOnBatteries>
+    <ns0:AllowHardTerminate>false</ns0:AllowHardTerminate>
+    <ns0:StartWhenAvailable>false</ns0:StartWhenAvailable>
+    <ns0:RunOnlyIfNetworkAvailable>false</ns0:RunOnlyIfNetworkAvailable>
+    <ns0:AllowStartOnDemand>true</ns0:AllowStartOnDemand>
+    <ns0:Enabled>true</ns0:Enabled>
+    <ns0:Hidden>false</ns0:Hidden>
+    <ns0:RunOnlyIfIdle>false</ns0:RunOnlyIfIdle>
+    <ns0:WakeToRun>false</ns0:WakeToRun>
+    <ns0:ExecutionTimeLimit>PT0S</ns0:ExecutionTimeLimit>
+    <ns0:Priority>5</ns0:Priority>
+  </ns0:Settings>
+  <ns0:Actions Context="Administrators">
+    <ns0:Exec>
+      <ns0:Command>%windir%\system32\ServerManagerLauncher.exe</ns0:Command>
+    </ns0:Exec>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.3">
+  <ns0:RegistrationInfo>
+    <ns0:Source>$(@%systemroot%\system32\sppc.dll,-200)</ns0:Source>
+    <ns0:Author>$(@%systemroot%\system32\sppc.dll,-200)</ns0:Author>
+    <ns0:Version>1.0</ns0:Version>
+    <ns0:Description>$(@%systemroot%\system32\sppc.dll,-201)</ns0:Description>
+    <ns0:URI>\Microsoft\Windows\SoftwareProtectionPlatform\SvcRestartTask</ns0:URI>
+    <ns0:SecurityDescriptor>D:P(A;;FA;;;SY)(A;;FA;;;BA)(A;;FA;;;S-1-5-80-123231216-2592883651-3715271367-3753151631-4175906628)</ns0:SecurityDescriptor>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:CalendarTrigger>
+      <ns0:StartBoundary>2020-02-22T02:08:28Z</ns0:StartBoundary>
+      <ns0:Enabled>true</ns0:Enabled>
+      <ns0:ScheduleByDay>
+        <ns0:DaysInterval>1</ns0:DaysInterval>
+      </ns0:ScheduleByDay>
+    </ns0:CalendarTrigger>
+  </ns0:Triggers>
+  <ns0:Principals>
+    <ns0:Principal id="NetworkService">
+      <ns0:UserId>S-1-5-20</ns0:UserId>
+      <ns0:RunLevel>LeastPrivilege</ns0:RunLevel>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Settings>
+    <ns0:MultipleInstancesPolicy>IgnoreNew</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>false</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>false</ns0:StopIfGoingOnBatteries>
+    <ns0:AllowHardTerminate>false</ns0:AllowHardTerminate>
+    <ns0:StartWhenAvailable>true</ns0:StartWhenAvailable>
+    <ns0:RunOnlyIfNetworkAvailable>false</ns0:RunOnlyIfNetworkAvailable>
+    <ns0:IdleSettings>
+      <ns0:StopOnIdleEnd>true</ns0:StopOnIdleEnd>
+      <ns0:RestartOnIdle>false</ns0:RestartOnIdle>
+    </ns0:IdleSettings>
+    <ns0:AllowStartOnDemand>true</ns0:AllowStartOnDemand>
+    <ns0:Enabled>true</ns0:Enabled>
+    <ns0:Hidden>true</ns0:Hidden>
+    <ns0:RunOnlyIfIdle>false</ns0:RunOnlyIfIdle>
+    <ns0:DisallowStartOnRemoteAppSession>false</ns0:DisallowStartOnRemoteAppSession>
+    <ns0:UseUnifiedSchedulingEngine>true</ns0:UseUnifiedSchedulingEngine>
+    <ns0:WakeToRun>false</ns0:WakeToRun>
+    <ns0:ExecutionTimeLimit>PT0S</ns0:ExecutionTimeLimit>
+    <ns0:Priority>7</ns0:Priority>
+    <ns0:RestartOnFailure>
+      <ns0:Interval>PT1M</ns0:Interval>
+      <ns0:Count>3</ns0:Count>
+    </ns0:RestartOnFailure>
+  </ns0:Settings>
+  <ns0:Actions Context="NetworkService">
+    <ns0:Exec>
+      <ns0:Command>sc.exe</ns0:Command>
+      <ns0:Arguments>start sppsvc</ns0:Arguments>
+    </ns0:Exec>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.3">
+  <ns0:RegistrationInfo>
+    <ns0:Author>$(@%systemroot%\system32\wdc.dll,-10041)</ns0:Author>
+    <ns0:Version>1.0</ns0:Version>
+    <ns0:Source>$(@%systemroot%\system32\wdc.dll,-10042)</ns0:Source>
+    <ns0:URI>Microsoft\Windows\Task Manager\Interactive</ns0:URI>
+    <ns0:Description>$(@%systemroot%\system32\wdc.dll,-10043)</ns0:Description>
+    <ns0:SecurityDescriptor>O:BAG:BAD:P(A;;FA;;;BA)(A;;FA;;;SY)(A;;FR;;;IU)</ns0:SecurityDescriptor>
+  </ns0:RegistrationInfo>
+  <ns0:Settings>
+    <ns0:Enabled>true</ns0:Enabled>
+    <ns0:MultipleInstancesPolicy>Parallel</ns0:MultipleInstancesPolicy>
+    <ns0:AllowStartOnDemand>true</ns0:AllowStartOnDemand>
+    <ns0:DisallowStartIfOnBatteries>false</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>false</ns0:StopIfGoingOnBatteries>
+    <ns0:ExecutionTimeLimit>PT0S</ns0:ExecutionTimeLimit>
+    <ns0:Hidden>true</ns0:Hidden>
+    <ns0:Priority>5</ns0:Priority>
+    <ns0:UseUnifiedSchedulingEngine>true</ns0:UseUnifiedSchedulingEngine>
+  </ns0:Settings>
+  <ns0:Principals>
+    <ns0:Principal id="Users">
+      <ns0:GroupId>S-1-5-4</ns0:GroupId>
+      <ns0:RunLevel>LeastPrivilege</ns0:RunLevel>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Actions Context="Users">
+    <ns0:ComHandler>
+      <ns0:ClassId>{855fec53-d2e4-4999-9e87-3414e9cf0ff4}</ns0:ClassId>
+      <ns0:Data>$(Arg0)</ns0:Data>
+    </ns0:ComHandler>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.3">
+  <ns0:RegistrationInfo>
+    <ns0:URI>\Microsoft\Windows\Tcpip\IpAddressConflict1</ns0:URI>
+    <ns0:Date>2006-02-23T15:00:57</ns0:Date>
+    <ns0:Author>$(@%SystemRoot%\system32\drivers\tcpip.sys,-10000)</ns0:Author>
+    <ns0:Description>$(@%SystemRoot%\system32\drivers\tcpip.sys,-10002)</ns0:Description>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:EventTrigger id="9f81d7ff-8026-44de-94b1-14321e8b9641">
+      <ns0:Enabled>true</ns0:Enabled>
+      <ns0:Subscription>&lt;QueryList&gt;&lt;Query Id="0" Path="System"&gt;&lt;Select Path="System"&gt;*[System[Provider[@Name='Tcpip'] and EventID=4198]]&lt;/Select&gt;&lt;/Query&gt;&lt;/QueryList&gt;</ns0:Subscription>
+    </ns0:EventTrigger>
+  </ns0:Triggers>
+  <ns0:Principals>
+    <ns0:Principal id="AllUsers">
+      <ns0:GroupId>S-1-5-32-545</ns0:GroupId>
+      <ns0:RunLevel>HighestAvailable</ns0:RunLevel>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Settings>
+    <ns0:IdleSettings>
+      <ns0:Duration>PT10M</ns0:Duration>
+      <ns0:WaitTimeout>PT1H</ns0:WaitTimeout>
+      <ns0:StopOnIdleEnd>true</ns0:StopOnIdleEnd>
+      <ns0:RestartOnIdle>false</ns0:RestartOnIdle>
+    </ns0:IdleSettings>
+    <ns0:UseUnifiedSchedulingEngine>true</ns0:UseUnifiedSchedulingEngine>
+    <ns0:MultipleInstancesPolicy>IgnoreNew</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>true</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>true</ns0:StopIfGoingOnBatteries>
+    <ns0:AllowHardTerminate>true</ns0:AllowHardTerminate>
+    <ns0:StartWhenAvailable>false</ns0:StartWhenAvailable>
+    <ns0:RunOnlyIfNetworkAvailable>false</ns0:RunOnlyIfNetworkAvailable>
+    <ns0:AllowStartOnDemand>true</ns0:AllowStartOnDemand>
+    <ns0:Enabled>true</ns0:Enabled>
+    <ns0:Hidden>false</ns0:Hidden>
+    <ns0:RunOnlyIfIdle>false</ns0:RunOnlyIfIdle>
+    <ns0:WakeToRun>false</ns0:WakeToRun>
+    <ns0:Priority>7</ns0:Priority>
+  </ns0:Settings>
+  <ns0:Actions Context="AllUsers">
+    <ns0:Exec>
+      <ns0:Command>%windir%\system32\rundll32.exe</ns0:Command>
+      <ns0:Arguments>ndfapi.dll,NdfRunDllDuplicateIPOffendingSystem</ns0:Arguments>
+    </ns0:Exec>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.3">
+  <ns0:RegistrationInfo>
+    <ns0:URI>\Microsoft\Windows\Tcpip\IpAddressConflict2</ns0:URI>
+    <ns0:Date>2006-02-23T15:00:57</ns0:Date>
+    <ns0:Author>$(@%SystemRoot%\system32\drivers\tcpip.sys,-10000)</ns0:Author>
+    <ns0:Description>$(@%SystemRoot%\system32\drivers\tcpip.sys,-10002)</ns0:Description>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:EventTrigger id="ef402a22-96ec-4526-a70a-85d0c36c85f6">
+      <ns0:StartBoundary>2006-02-23T16:27:43</ns0:StartBoundary>
+      <ns0:Enabled>true</ns0:Enabled>
+      <ns0:Subscription>&lt;QueryList&gt;&lt;Query Id="0" Path="System"&gt;&lt;Select Path="System"&gt;*[System[Provider[@Name='Tcpip'] and EventID=4199]]&lt;/Select&gt;&lt;/Query&gt;&lt;/QueryList&gt;</ns0:Subscription>
+    </ns0:EventTrigger>
+  </ns0:Triggers>
+  <ns0:Principals>
+    <ns0:Principal id="AllUsers">
+      <ns0:GroupId>S-1-5-32-545</ns0:GroupId>
+      <ns0:RunLevel>HighestAvailable</ns0:RunLevel>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Settings>
+    <ns0:IdleSettings>
+      <ns0:Duration>PT10M</ns0:Duration>
+      <ns0:WaitTimeout>PT1H</ns0:WaitTimeout>
+      <ns0:StopOnIdleEnd>true</ns0:StopOnIdleEnd>
+      <ns0:RestartOnIdle>false</ns0:RestartOnIdle>
+    </ns0:IdleSettings>
+    <ns0:UseUnifiedSchedulingEngine>true</ns0:UseUnifiedSchedulingEngine>
+    <ns0:MultipleInstancesPolicy>IgnoreNew</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>true</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>true</ns0:StopIfGoingOnBatteries>
+    <ns0:AllowHardTerminate>true</ns0:AllowHardTerminate>
+    <ns0:StartWhenAvailable>false</ns0:StartWhenAvailable>
+    <ns0:RunOnlyIfNetworkAvailable>false</ns0:RunOnlyIfNetworkAvailable>
+    <ns0:AllowStartOnDemand>true</ns0:AllowStartOnDemand>
+    <ns0:Enabled>true</ns0:Enabled>
+    <ns0:Hidden>false</ns0:Hidden>
+    <ns0:RunOnlyIfIdle>false</ns0:RunOnlyIfIdle>
+    <ns0:WakeToRun>false</ns0:WakeToRun>
+    <ns0:Priority>7</ns0:Priority>
+  </ns0:Settings>
+  <ns0:Actions Context="AllUsers">
+    <ns0:Exec>
+      <ns0:Command>%windir%\system32\rundll32.exe</ns0:Command>
+      <ns0:Arguments>ndfapi.dll,NdfRunDllDuplicateIPDefendingSystem</ns0:Arguments>
+    </ns0:Exec>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.3">
+  <ns0:RegistrationInfo>
+    <ns0:SecurityDescriptor>D:(A;;FA;;;BA)(A;;FA;;;SY)(A;;FR;;;BU)</ns0:SecurityDescriptor>
+    <ns0:Source>$(@%systemRoot%\system32\MsCtfMonitor.dll,-1000)</ns0:Source>
+    <ns0:URI>Microsoft\Windows\TextServicesFramework\MsCtfMonitor</ns0:URI>
+    <ns0:Description>$(@%systemRoot%\system32\MsCtfMonitor.dll,-1001)</ns0:Description>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:LogonTrigger>
+      <ns0:Enabled>true</ns0:Enabled>
+    </ns0:LogonTrigger>
+  </ns0:Triggers>
+  <ns0:Settings>
+    <ns0:MultipleInstancesPolicy>Parallel</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>false</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>false</ns0:StopIfGoingOnBatteries>
+    <ns0:AllowHardTerminate>true</ns0:AllowHardTerminate>
+    <ns0:StartWhenAvailable>false</ns0:StartWhenAvailable>
+    <ns0:RunOnlyIfNetworkAvailable>false</ns0:RunOnlyIfNetworkAvailable>
+    <ns0:AllowStartOnDemand>true</ns0:AllowStartOnDemand>
+    <ns0:Enabled>true</ns0:Enabled>
+    <ns0:Hidden>true</ns0:Hidden>
+    <ns0:RunOnlyIfIdle>false</ns0:RunOnlyIfIdle>
+    <ns0:WakeToRun>false</ns0:WakeToRun>
+    <ns0:ExecutionTimeLimit>PT0S</ns0:ExecutionTimeLimit>
+    <ns0:UseUnifiedSchedulingEngine>true</ns0:UseUnifiedSchedulingEngine>
+  </ns0:Settings>
+  <ns0:Principals>
+    <ns0:Principal id="AnyUser">
+      <ns0:GroupId>S-1-5-32-545</ns0:GroupId>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Actions Context="AnyUser">
+    <ns0:ComHandler>
+      <ns0:ClassId>{01575cfe-9a55-4003-a5e1-f38d1ebdcbe1}</ns0:ClassId>
+    </ns0:ComHandler>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.3">
+  <ns0:RegistrationInfo>
+    <ns0:Source>$(@%systemroot%\system32\w32time.dll,-200)</ns0:Source>
+    <ns0:Author>$(@%systemroot%\system32\w32time.dll,-202)</ns0:Author>
+    <ns0:Description>$(@%systemroot%\system32\w32time.dll,-201)</ns0:Description>
+    <ns0:URI>Microsoft\Windows\Time Synchronization\SynchronizeTime</ns0:URI>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:CalendarTrigger id="TimeSyncWeeklyTrigger">
+      <ns0:StartBoundary>2005-01-01T01:00:00</ns0:StartBoundary>
+      <ns0:Enabled>true</ns0:Enabled>
+      <ns0:ScheduleByWeek>
+        <ns0:DaysOfWeek>
+          <ns0:Sunday />
+        </ns0:DaysOfWeek>
+        <ns0:WeeksInterval>1</ns0:WeeksInterval>
+      </ns0:ScheduleByWeek>
+    </ns0:CalendarTrigger>
+  </ns0:Triggers>
+  <ns0:Settings>
+    <ns0:Enabled>true</ns0:Enabled>
+    <ns0:UseUnifiedSchedulingEngine>true</ns0:UseUnifiedSchedulingEngine>
+    <ns0:AllowStartOnDemand>true</ns0:AllowStartOnDemand>
+    <ns0:MultipleInstancesPolicy>IgnoreNew</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>false</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>true</ns0:StopIfGoingOnBatteries>
+    <ns0:StartWhenAvailable>true</ns0:StartWhenAvailable>
+    <ns0:WakeToRun>false</ns0:WakeToRun>
+    <ns0:AllowHardTerminate>true</ns0:AllowHardTerminate>
+    <ns0:RunOnlyIfNetworkAvailable>true</ns0:RunOnlyIfNetworkAvailable>
+    <ns0:Hidden>false</ns0:Hidden>
+  </ns0:Settings>
+  <ns0:Principals>
+    <ns0:Principal id="LocalService">
+      <ns0:UserId>S-1-5-19</ns0:UserId>
+      <ns0:RunLevel>HighestAvailable</ns0:RunLevel>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Actions Context="LocalService">
+    <ns0:Exec>
+      <ns0:Command>%windir%\system32\sc.exe</ns0:Command>
+      <ns0:Arguments>start w32time task_started</ns0:Arguments>
+    </ns0:Exec>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.3">
+  <ns0:RegistrationInfo>
+    <ns0:Author>$(@%systemroot%\system32\upnphost.dll,-215)</ns0:Author>
+    <ns0:Description>$(@%systemroot%\system32\upnphost.dll,-216)</ns0:Description>
+    <ns0:SecurityDescriptor>D:(A;;FA;;;BA)(A;;FA;;;SY)(A;;FRFX;;;LS)</ns0:SecurityDescriptor>
+    <ns0:URI>Microsoft\Windows\UPnP\UPnPHostConfig</ns0:URI>
+  </ns0:RegistrationInfo>
+  <ns0:Principals>
+    <ns0:Principal id="LocalSystem">
+      <ns0:UserId>S-1-5-18</ns0:UserId>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Settings>
+    <ns0:Enabled>true</ns0:Enabled>
+    <ns0:UseUnifiedSchedulingEngine>true</ns0:UseUnifiedSchedulingEngine>
+    <ns0:AllowStartOnDemand>true</ns0:AllowStartOnDemand>
+  </ns0:Settings>
+  <ns0:Actions Context="LocalSystem">
+    <ns0:Exec>
+      <ns0:Command>sc.exe</ns0:Command>
+      <ns0:Arguments>config upnphost start= auto</ns0:Arguments>
+    </ns0:Exec>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.3">
+  <ns0:RegistrationInfo>
+    <ns0:URI>\Microsoft\Windows\User Profile Service\HiveUploadTask</ns0:URI>
+    <ns0:Version>1.0</ns0:Version>
+    <ns0:SecurityDescriptor>D:P(A;;FA;;;BA)(A;;FA;;;SY)</ns0:SecurityDescriptor>
+    <ns0:Source>$(@%SystemRoot%\system32\profsvc,-500)</ns0:Source>
+    <ns0:Author>$(@%SystemRoot%\system32\profsvc,-500)</ns0:Author>
+    <ns0:Description>$(@%SystemRoot%\system32\profsvc,-501)</ns0:Description>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:TimeTrigger>
+      <ns0:StartBoundary>2007-08-28T00:00:00</ns0:StartBoundary>
+      <ns0:RandomDelay>PT1H</ns0:RandomDelay>
+      <ns0:Repetition>
+        <ns0:Interval>PT12H</ns0:Interval>
+      </ns0:Repetition>
+    </ns0:TimeTrigger>
+  </ns0:Triggers>
+  <ns0:Principals>
+    <ns0:Principal id="LocalSystem">
+      <ns0:UserId>S-1-5-18</ns0:UserId>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Settings>
+    <ns0:Enabled>false</ns0:Enabled>
+    <ns0:AllowStartOnDemand>true</ns0:AllowStartOnDemand>
+    <ns0:RunOnlyIfNetworkAvailable>true</ns0:RunOnlyIfNetworkAvailable>
+    <ns0:DisallowStartIfOnBatteries>false</ns0:DisallowStartIfOnBatteries>
+    <ns0:RunOnlyIfIdle>true</ns0:RunOnlyIfIdle>
+    <ns0:IdleSettings>
+      <ns0:Duration>PT10M</ns0:Duration>
+      <ns0:WaitTimeout>PT2H</ns0:WaitTimeout>
+      <ns0:StopOnIdleEnd>false</ns0:StopOnIdleEnd>
+      <ns0:RestartOnIdle>false</ns0:RestartOnIdle>
+    </ns0:IdleSettings>
+    <ns0:RestartOnFailure>
+      <ns0:Interval>PT2M</ns0:Interval>
+      <ns0:Count>3</ns0:Count>
+    </ns0:RestartOnFailure>
+    <ns0:StartWhenAvailable>true</ns0:StartWhenAvailable>
+    <ns0:UseUnifiedSchedulingEngine>true</ns0:UseUnifiedSchedulingEngine>
+  </ns0:Settings>
+  <ns0:Actions Context="LocalSystem">
+    <ns0:ComHandler>
+      <ns0:ClassId>{BA677074-762C-444b-94C8-8C83F93F6605}</ns0:ClassId>
+    </ns0:ComHandler>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.3">
+  <ns0:RegistrationInfo>
+    <ns0:Author>$(@%systemroot%\system32\dps.dll,-600)</ns0:Author>
+    <ns0:Version>1.0</ns0:Version>
+    <ns0:Source>$(@%systemroot%\system32\dps.dll,-601)</ns0:Source>
+    <ns0:URI>Microsoft\Windows\WDI\ResolutionHost</ns0:URI>
+    <ns0:Description>$(@%systemroot%\system32\dps.dll,-602)</ns0:Description>
+    <ns0:SecurityDescriptor>O:BAG:BAD:P(A;;FA;;;BA)(A;;FA;;;SY)(A;;FR;;;IU)(A;;FRFX;;;S-1-5-80-2970612574-78537857-698502321-558674196-1451644582)</ns0:SecurityDescriptor>
+  </ns0:RegistrationInfo>
+  <ns0:Settings>
+    <ns0:Enabled>true</ns0:Enabled>
+    <ns0:MultipleInstancesPolicy>Parallel</ns0:MultipleInstancesPolicy>
+    <ns0:AllowStartOnDemand>true</ns0:AllowStartOnDemand>
+    <ns0:DisallowStartIfOnBatteries>false</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>false</ns0:StopIfGoingOnBatteries>
+    <ns0:ExecutionTimeLimit>PT0S</ns0:ExecutionTimeLimit>
+    <ns0:Hidden>true</ns0:Hidden>
+    <ns0:Priority>10</ns0:Priority>
+    <ns0:UseUnifiedSchedulingEngine>true</ns0:UseUnifiedSchedulingEngine>
+  </ns0:Settings>
+  <ns0:Principals>
+    <ns0:Principal id="Users">
+      <ns0:GroupId>S-1-5-4</ns0:GroupId>
+      <ns0:RunLevel>HighestAvailable</ns0:RunLevel>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Actions Context="Users">
+    <ns0:ComHandler>
+      <ns0:ClassId>{900be39d-6be8-461a-bc4d-b0fa71f5ecb1}</ns0:ClassId>
+    </ns0:ComHandler>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.3">
+  <ns0:RegistrationInfo>
+    <ns0:SecurityDescriptor>D:(A;;FA;;;BA)(A;;FA;;;SY)(A;;FRFX;;;WD)</ns0:SecurityDescriptor>
+    <ns0:URI>\Microsoft\Windows\Windows Error Reporting\QueueReporting</ns0:URI>
+    <ns0:Source>$(@%SystemRoot%\system32\wer.dll,-292)</ns0:Source>
+    <ns0:Author>$(@%SystemRoot%\system32\wer.dll,-293)</ns0:Author>
+    <ns0:Description>$(@%SystemRoot%\system32\wer.dll,-294)</ns0:Description>
+    <ns0:Version>1.0</ns0:Version>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:LogonTrigger>
+      <ns0:Delay>PT13M</ns0:Delay>
+    </ns0:LogonTrigger>
+  </ns0:Triggers>
+  <ns0:Settings>
+    <ns0:Enabled>true</ns0:Enabled>
+    <ns0:UseUnifiedSchedulingEngine>true</ns0:UseUnifiedSchedulingEngine>
+    <ns0:MultipleInstancesPolicy>Parallel</ns0:MultipleInstancesPolicy>
+    <ns0:StartWhenAvailable>true</ns0:StartWhenAvailable>
+    <ns0:DisallowStartIfOnBatteries>false</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>false</ns0:StopIfGoingOnBatteries>
+    <ns0:AllowHardTerminate>true</ns0:AllowHardTerminate>
+    <ns0:AllowStartOnDemand>true</ns0:AllowStartOnDemand>
+    <ns0:Priority>5</ns0:Priority>
+    <ns0:IdleSettings>
+      <ns0:StopOnIdleEnd>false</ns0:StopOnIdleEnd>
+      <ns0:RestartOnIdle>false</ns0:RestartOnIdle>
+    </ns0:IdleSettings>
+  </ns0:Settings>
+  <ns0:Principals>
+    <ns0:Principal id="AllUsers">
+      <ns0:GroupId>S-1-5-32-545</ns0:GroupId>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Actions Context="AllUsers">
+    <ns0:Exec>
+      <ns0:Command>%windir%\system32\wermgr.exe</ns0:Command>
+      <ns0:Arguments>-queuereporting</ns0:Arguments>
+    </ns0:Exec>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.3">
+  <ns0:RegistrationInfo>
+    <ns0:URI>\Microsoft\Windows\Windows Filtering Platform\BfeOnServiceStartTypeChange</ns0:URI>
+    <ns0:Author>$(@%SystemRoot%\system32\bfe.dll,-2001)</ns0:Author>
+    <ns0:Description>$(@%SystemRoot%\system32\bfe.dll,-2002)</ns0:Description>
+  </ns0:RegistrationInfo>
+  <ns0:Principals>
+    <ns0:Principal id="LocalSystem">
+      <ns0:UserId>S-1-5-18</ns0:UserId>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Triggers>
+    <ns0:EventTrigger id="06688f40-e0af-4efa-8a89-2617bd993d71">
+      <ns0:Subscription>&lt;QueryList&gt;&lt;Query Id="0" Path="System"&gt;&lt;Select Path="System"&gt;*/System/Provider[@Name='Service Control Manager'] and */System/EventID='7040' and */EventData/Data[@Name='param4']='BFE'&lt;/Select&gt;&lt;/Query&gt;&lt;/QueryList&gt;</ns0:Subscription>
+    </ns0:EventTrigger>
+  </ns0:Triggers>
+  <ns0:Settings>
+    <ns0:DisallowStartIfOnBatteries>false</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>false</ns0:StopIfGoingOnBatteries>
+    <ns0:AllowHardTerminate>false</ns0:AllowHardTerminate>
+    <ns0:RunOnlyIfNetworkAvailable>false</ns0:RunOnlyIfNetworkAvailable>
+    <ns0:AllowStartOnDemand>false</ns0:AllowStartOnDemand>
+    <ns0:Hidden>true</ns0:Hidden>
+    <ns0:RunOnlyIfIdle>false</ns0:RunOnlyIfIdle>
+    <ns0:WakeToRun>false</ns0:WakeToRun>
+    <ns0:Priority>7</ns0:Priority>
+    <ns0:MultipleInstancesPolicy>Queue</ns0:MultipleInstancesPolicy>
+    <ns0:UseUnifiedSchedulingEngine>true</ns0:UseUnifiedSchedulingEngine>
+  </ns0:Settings>
+  <ns0:Actions Context="LocalSystem">
+    <ns0:Exec>
+      <ns0:Command>%windir%\system32\rundll32.exe</ns0:Command>
+      <ns0:Arguments>bfe.dll,BfeOnServiceStartTypeChange</ns0:Arguments>
+    </ns0:Exec>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.3">
+  <ns0:RegistrationInfo>
+    <ns0:SecurityDescriptor>D:(A;;FA;;;BA)(A;;FA;;;SY)(A;;FWFR;;;BU)</ns0:SecurityDescriptor>
+    <ns0:URI>\Microsoft\Windows\WindowsColorSystem\Calibration Loader</ns0:URI>
+    <ns0:Source>$(@%SystemRoot%\system32\mscms.dll,-200)</ns0:Source>
+    <ns0:Author>$(@%SystemRoot%\system32\mscms.dll,-201)</ns0:Author>
+    <ns0:Description>$(@%SystemRoot%\system32\mscms.dll,-202)</ns0:Description>
+    <ns0:Version>1.0</ns0:Version>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:LogonTrigger id="C3B270C8-8291-4326-92F6-2FF65DE39010">
+      <ns0:Enabled>true</ns0:Enabled>
+    </ns0:LogonTrigger>
+    <ns0:SessionStateChangeTrigger id="79B8DA54-F688-4a18-B2D4-7AA891A193E8">
+      <ns0:Enabled>true</ns0:Enabled>
+      <ns0:StateChange>ConsoleConnect</ns0:StateChange>
+    </ns0:SessionStateChangeTrigger>
+  </ns0:Triggers>
+  <ns0:Settings>
+    <ns0:MultipleInstancesPolicy>Queue</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>false</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>false</ns0:StopIfGoingOnBatteries>
+    <ns0:AllowHardTerminate>false</ns0:AllowHardTerminate>
+    <ns0:RunOnlyIfNetworkAvailable>false</ns0:RunOnlyIfNetworkAvailable>
+    <ns0:AllowStartOnDemand>true</ns0:AllowStartOnDemand>
+    <ns0:Enabled>false</ns0:Enabled>
+    <ns0:Hidden>false</ns0:Hidden>
+    <ns0:RunOnlyIfIdle>false</ns0:RunOnlyIfIdle>
+    <ns0:ExecutionTimeLimit>PT0S</ns0:ExecutionTimeLimit>
+    <ns0:UseUnifiedSchedulingEngine>true</ns0:UseUnifiedSchedulingEngine>
+  </ns0:Settings>
+  <ns0:Principals>
+    <ns0:Principal id="Group">
+      <ns0:GroupId>S-1-5-32-545</ns0:GroupId>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Actions Context="Group">
+    <ns0:ComHandler>
+      <ns0:ClassId>{B210D694-C8DF-490d-9576-9E20CDBC20BD}</ns0:ClassId>
+    </ns0:ComHandler>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.3">
+  <ns0:RegistrationInfo>
+    <ns0:Author>$(@%systemroot%\system32\wininet.dll,-16000)</ns0:Author>
+    <ns0:Description>$(@%systemroot%\system32\wininet.dll,-16001)</ns0:Description>
+    <ns0:URI>\Microsoft\Windows\Wininet\CacheTask</ns0:URI>
+    <ns0:SecurityDescriptor>D:P(A;;FA;;;BA)(A;;FA;;;SY)(A;;0x001200a9;;;BU)(A;;0x001200a9;;;WD)(A;;0x001200a9;;;LW)</ns0:SecurityDescriptor>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:LogonTrigger>
+      <ns0:Enabled>true</ns0:Enabled>
+    </ns0:LogonTrigger>
+  </ns0:Triggers>
+  <ns0:Principals>
+    <ns0:Principal id="AnyUser">
+      <ns0:GroupId>S-1-5-32-545</ns0:GroupId>
+      <ns0:RunLevel>LeastPrivilege</ns0:RunLevel>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Settings>
+    <ns0:UseUnifiedSchedulingEngine>true</ns0:UseUnifiedSchedulingEngine>
+    <ns0:MultipleInstancesPolicy>Parallel</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>false</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>false</ns0:StopIfGoingOnBatteries>
+    <ns0:AllowHardTerminate>true</ns0:AllowHardTerminate>
+    <ns0:StartWhenAvailable>false</ns0:StartWhenAvailable>
+    <ns0:RunOnlyIfNetworkAvailable>false</ns0:RunOnlyIfNetworkAvailable>
+    <ns0:IdleSettings>
+      <ns0:StopOnIdleEnd>false</ns0:StopOnIdleEnd>
+      <ns0:RestartOnIdle>false</ns0:RestartOnIdle>
+    </ns0:IdleSettings>
+    <ns0:AllowStartOnDemand>true</ns0:AllowStartOnDemand>
+    <ns0:Enabled>true</ns0:Enabled>
+    <ns0:Hidden>false</ns0:Hidden>
+    <ns0:RunOnlyIfIdle>false</ns0:RunOnlyIfIdle>
+    <ns0:WakeToRun>false</ns0:WakeToRun>
+    <ns0:ExecutionTimeLimit>PT0S</ns0:ExecutionTimeLimit>
+    <ns0:Priority>7</ns0:Priority>
+  </ns0:Settings>
+  <ns0:Actions Context="AnyUser">
+    <ns0:ComHandler>
+      <ns0:ClassId>{0358b920-0ac7-461f-98f4-58e32cd89148}</ns0:ClassId>
+    </ns0:ComHandler>
+  </ns0:Actions>
+</ns0:Task>
+
+
+
+
+<ns0:Task version="1.3">
+  <ns0:RegistrationInfo>
+    <ns0:Source>$(@%ProgramFiles%\Common Files\Microsoft Shared\OfficeSoftwareProtectionPlatform\osppc.dll,-200)</ns0:Source>
+    <ns0:Author>$(@%ProgramFiles%\Common Files\Microsoft Shared\OfficeSoftwareProtectionPlatform\osppc.dll,-200)</ns0:Author>
+    <ns0:Version>1.0</ns0:Version>
+    <ns0:Description>$(@%ProgramFiles%\Common Files\Microsoft Shared\OfficeSoftwareProtectionPlatform\osppc.dll,-201)</ns0:Description>
+    <ns0:SecurityDescriptor>D:P(A;;FA;;;SY)(A;;FA;;;BA)(A;;FA;;;S-1-5-20)</ns0:SecurityDescriptor>
+  </ns0:RegistrationInfo>
+  <ns0:Triggers>
+    <ns0:CalendarTrigger>
+      <ns0:StartBoundary>2004-01-01T00:00:00</ns0:StartBoundary>
+      <ns0:Enabled>true</ns0:Enabled>
+      <ns0:ScheduleByDay>
+        <ns0:DaysInterval>1</ns0:DaysInterval>
+      </ns0:ScheduleByDay>
+    </ns0:CalendarTrigger>
+  </ns0:Triggers>
+  <ns0:Principals>
+    <ns0:Principal id="NetworkService">
+      <ns0:RunLevel>LeastPrivilege</ns0:RunLevel>
+      <ns0:UserId>S-1-5-20</ns0:UserId>
+    </ns0:Principal>
+  </ns0:Principals>
+  <ns0:Settings>
+    <ns0:MultipleInstancesPolicy>IgnoreNew</ns0:MultipleInstancesPolicy>
+    <ns0:DisallowStartIfOnBatteries>false</ns0:DisallowStartIfOnBatteries>
+    <ns0:StopIfGoingOnBatteries>false</ns0:StopIfGoingOnBatteries>
+    <ns0:AllowHardTerminate>false</ns0:AllowHardTerminate>
+    <ns0:StartWhenAvailable>true</ns0:StartWhenAvailable>
+    <ns0:RunOnlyIfNetworkAvailable>false</ns0:RunOnlyIfNetworkAvailable>
+    <ns0:IdleSettings>
+      <ns0:Duration>PT10M</ns0:Duration>
+      <ns0:WaitTimeout>PT1H</ns0:WaitTimeout>
+      <ns0:StopOnIdleEnd>true</ns0:StopOnIdleEnd>
+      <ns0:RestartOnIdle>false</ns0:RestartOnIdle>
+    </ns0:IdleSettings>
+    <ns0:AllowStartOnDemand>true</ns0:AllowStartOnDemand>
+    <ns0:Enabled>false</ns0:Enabled>
+    <ns0:Hidden>true</ns0:Hidden>
+    <ns0:RunOnlyIfIdle>false</ns0:RunOnlyIfIdle>
+    <ns0:DisallowStartOnRemoteAppSession>false</ns0:DisallowStartOnRemoteAppSession>
+    <ns0:UseUnifiedSchedulingEngine>true</ns0:UseUnifiedSchedulingEngine>
+    <ns0:WakeToRun>false</ns0:WakeToRun>
+    <ns0:ExecutionTimeLimit>PT0S</ns0:ExecutionTimeLimit>
+    <ns0:Priority>7</ns0:Priority>
+    <ns0:RestartOnFailure>
+      <ns0:Interval>PT1M</ns0:Interval>
+      <ns0:Count>3</ns0:Count>
+    </ns0:RestartOnFailure>
+  </ns0:Settings>
+  <ns0:Actions Context="NetworkService">
+    <ns0:Exec>
+      <ns0:Command>%systemroot%\system32\sc.exe</ns0:Command>
+      <ns0:Arguments>start osppsvc</ns0:Arguments>
+    </ns0:Exec>
+  </ns0:Actions>
+</ns0:Task>
+</Tasks>

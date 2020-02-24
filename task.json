@@ -1,0 +1,303 @@
+{
+    "gid": "1162183369370561",
+    "assignee": {
+        "gid": "1134642526387753",
+        "name": "Subbu",
+        "resource_type": "user"
+    },
+    "assignee_status": "inbox",
+    "completed": false,
+    "completed_at": null,
+    "created_at": "2020-02-17T04:37:50.407Z",
+    "custom_fields": [
+        {
+            "gid": "1134372226151418",
+            "enabled": true,
+            "enum_options": [
+                {
+                    "gid": "1134372226151419",
+                    "color": "aqua",
+                    "enabled": true,
+                    "name": "Low",
+                    "resource_type": "enum_option"
+                },
+                {
+                    "gid": "1134372226151420",
+                    "color": "indigo",
+                    "enabled": true,
+                    "name": "Medium",
+                    "resource_type": "enum_option"
+                },
+                {
+                    "gid": "1134372226151421",
+                    "color": "yellow-orange",
+                    "enabled": true,
+                    "name": "High",
+                    "resource_type": "enum_option"
+                },
+                {
+                    "gid": "1134372226151422",
+                    "color": "orange",
+                    "enabled": true,
+                    "name": "Critical",
+                    "resource_type": "enum_option"
+                },
+                {
+                    "gid": "1134372226151423",
+                    "color": "red",
+                    "enabled": true,
+                    "name": "Blocker",
+                    "resource_type": "enum_option"
+                }
+            ],
+            "enum_value": {
+                "gid": "1134372226151423",
+                "color": "red",
+                "enabled": true,
+                "name": "Blocker",
+                "resource_type": "enum_option"
+            },
+            "name": "Priority",
+            "resource_subtype": "enum",
+            "resource_type": "custom_field",
+            "type": "enum"
+        },
+        {
+            "gid": "1134372673332170",
+            "enabled": true,
+            "enum_options": [
+                {
+                    "gid": "1134372673332171",
+                    "color": "purple",
+                    "enabled": true,
+                    "name": "New feature",
+                    "resource_type": "enum_option"
+                },
+                {
+                    "gid": "1134372673332172",
+                    "color": "red",
+                    "enabled": true,
+                    "name": "Bug",
+                    "resource_type": "enum_option"
+                },
+                {
+                    "gid": "1134372673332173",
+                    "color": "yellow",
+                    "enabled": true,
+                    "name": "Enhancement",
+                    "resource_type": "enum_option"
+                },
+                {
+                    "gid": "1134496639383502",
+                    "color": "cool-gray",
+                    "enabled": true,
+                    "name": "Chore",
+                    "resource_type": "enum_option"
+                }
+            ],
+            "enum_value": null,
+            "name": "Type",
+            "resource_subtype": "enum",
+            "resource_type": "custom_field",
+            "type": "enum"
+        },
+        {
+            "gid": "1134378274473381",
+            "enabled": true,
+            "name": "UI Estimate",
+            "number_value": null,
+            "precision": 1,
+            "resource_subtype": "number",
+            "resource_type": "custom_field",
+            "type": "number"
+        },
+        {
+            "gid": "1134378274473383",
+            "enabled": true,
+            "name": "DB estimate",
+            "number_value": null,
+            "precision": 1,
+            "resource_subtype": "number",
+            "resource_type": "custom_field",
+            "type": "number"
+        },
+        {
+            "gid": "1134378274473385",
+            "enabled": true,
+            "name": "RACE estimate",
+            "number_value": null,
+            "precision": 1,
+            "resource_subtype": "number",
+            "resource_type": "custom_field",
+            "type": "number"
+        },
+        {
+            "gid": "1134372226151431",
+            "enabled": true,
+            "name": "Customer codes",
+            "resource_subtype": "text",
+            "resource_type": "custom_field",
+            "text_value": null,
+            "type": "text"
+        },
+        {
+            "gid": "1134496639383489",
+            "enabled": true,
+            "enum_options": [
+                {
+                    "gid": "1134496639383490",
+                    "color": "indigo",
+                    "enabled": true,
+                    "name": "Home Page",
+                    "resource_type": "enum_option"
+                },
+                {
+                    "gid": "1134496639383491",
+                    "color": "pink",
+                    "enabled": true,
+                    "name": "EigenExpress",
+                    "resource_type": "enum_option"
+                },
+                {
+                    "gid": "1134496639383492",
+                    "color": "yellow-orange",
+                    "enabled": true,
+                    "name": "EigenAlert",
+                    "resource_type": "enum_option"
+                },
+                {
+                    "gid": "1134496639383493",
+                    "color": "green",
+                    "enabled": true,
+                    "name": "EigenProfile",
+                    "resource_type": "enum_option"
+                },
+                {
+                    "gid": "1134496639383494",
+                    "color": "cool-gray",
+                    "enabled": true,
+                    "name": "Exposure Analytics",
+                    "resource_type": "enum_option"
+                },
+                {
+                    "gid": "1134496639383495",
+                    "color": "yellow",
+                    "enabled": true,
+                    "name": "Program Builder",
+                    "resource_type": "enum_option"
+                },
+                {
+                    "gid": "1134496639383496",
+                    "color": "yellow-green",
+                    "enabled": true,
+                    "name": "Technical Pricing",
+                    "resource_type": "enum_option"
+                },
+                {
+                    "gid": "1134496639383497",
+                    "color": "blue-green",
+                    "enabled": true,
+                    "name": "EMM",
+                    "resource_type": "enum_option"
+                },
+                {
+                    "gid": "1134496639383498",
+                    "color": "aqua",
+                    "enabled": true,
+                    "name": "DMM",
+                    "resource_type": "enum_option"
+                },
+                {
+                    "gid": "1156656078910230",
+                    "color": "red",
+                    "enabled": true,
+                    "name": "Mobile_App",
+                    "resource_type": "enum_option"
+                },
+                {
+                    "gid": "1134496639383499",
+                    "color": "blue",
+                    "enabled": true,
+                    "name": "General",
+                    "resource_type": "enum_option"
+                }
+            ],
+            "enum_value": {
+                "gid": "1134496639383493",
+                "color": "green",
+                "enabled": true,
+                "name": "EigenProfile",
+                "resource_type": "enum_option"
+            },
+            "name": "Module",
+            "resource_subtype": "enum",
+            "resource_type": "custom_field",
+            "type": "enum"
+        }
+    ],
+    "due_at": null,
+    "due_on": "2020-02-25",
+    "followers": [
+        {
+            "gid": "1133223367536978",
+            "name": "Karthika Kalaivani",
+            "resource_type": "user"
+        },
+        {
+            "gid": "1133325186641944",
+            "name": "Jeff Walker",
+            "resource_type": "user"
+        },
+        {
+            "gid": "1134642526387753",
+            "name": "Subbu",
+            "resource_type": "user"
+        }
+    ],
+    "hearted": false,
+    "hearts": [],
+    "liked": false,
+    "likes": [],
+    "memberships": [
+        {
+            "project": {
+                "gid": "1134367795571121",
+                "name": "EigenPrism Release Mgmt",
+                "resource_type": "project"
+            },
+            "section": {
+                "gid": "1134367795571126",
+                "name": "In Progress",
+                "resource_type": "section"
+            }
+        }
+    ],
+    "modified_at": "2020-02-20T10:15:53.032Z",
+    "name": "EP - Make TopN grid dynamic ",
+    "notes": "1. Make the top n grid more flexible, user can select any column (upto 6 columns )\n2. show the first selected measure as the primary sorting measure (under primary measure heading)\n3. show the 2nd selected measure as the secondary measure (under secondary measure heading). user can clear the secondary selection measure. but they cant clear the primary measure selection\n4. allow user to clear a selection \n5. at the time of saving check for following two cases \na. either asset number or asset name should have got selected for each topn grid\nb. primary measure column cant be null\nif above one or both cases are failing. show a message box \"< Slide #> Asset number or Asset Name selection is mandatory. Primary measure cannot be null\" (note: validate for all slides, and show the consolidated error message)\n\n\n",
+    "num_hearts": 0,
+    "num_likes": 0,
+    "parent": null,
+    "projects": [
+        {
+            "gid": "1134367795571121",
+            "name": "EigenPrism Release Mgmt",
+            "resource_type": "project"
+        }
+    ],
+    "resource_type": "task",
+    "start_on": null,
+    "tags": [
+        {
+            "gid": "1156015942350737",
+            "name": "AJG Punchlist",
+            "resource_type": "tag"
+        }
+    ],
+    "resource_subtype": "default_task",
+    "workspace": {
+        "gid": "1133222869435808",
+        "name": "eigenrisk.com",
+        "resource_type": "workspace"
+    }
+}
