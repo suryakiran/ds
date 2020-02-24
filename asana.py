@@ -5,12 +5,18 @@ import concurrent.futures
 import numpy as np
 import pandas as pd
 
+from jinja2 import FileSystemLoader, Environment
+
 token = os.environ['ASANA_ACCESS_TOKEN']
 url = 'https://app.asana.com/api/1.0'
 request_header = {
     'Authorization': 'Bearer {}'.format(token),
     'Accept': 'application/json'
 }
+
+loader = FileSystemLoader('.')
+jenv = Environment(loader=loader)
+template = jenv.get_template('table.html')
 
 
 def get_json_response(route):
@@ -42,11 +48,11 @@ def task_as_record(task):
     if assignee is not None:
         td['Assigned To'] = assignee['name']
     else:
-        td['Assigned To'] = np.NaN
-    td['Url'] = 'https://app.asana.com/0/{}/{}'.format(project_id, task['gid'])
-    td['Name'] = task['name']
+        td['Assigned To'] = np.nan
+    url = 'https://app.asana.com/0/{}/{}'.format(project_id, task['gid'])
+    td['Name'] = '<a href="{}">{}</a>'.format(url, task['name'])
     td['Due Date'] = task['due_on']
-    td['Status'] = np.NaN
+    td['Status'] = np.nan
 
     membership = task.get('memberships')
     if membership is not None and len(membership) > 0:
@@ -57,7 +63,7 @@ def task_as_record(task):
     for f in task['custom_fields']:
         key = f.get('name')
         if key == 'Priority' or key == 'Module':
-            value = np.NaN
+            value = np.nan
             enum = f.get('enum_value')
             if enum is not None:
                 value = enum.get('name')
@@ -93,6 +99,12 @@ with tpe(max_workers=50) as executor:
 
 records = [task_as_record(t) for t in net_tasks]
 df = pd.DataFrame(records)
-df.to_csv('records.csv', index=False)
+# df.to_csv('records.csv', index=False)
 
-print(df.dropna(subset=['Status']).sort_values(['Status', 'Priority']))
+# df = pd.read_csv('records.csv')
+new_df = df.dropna(subset=['Status']).sort_values(['Priority', 'Status'
+                                                   ]).replace(np.nan, '')
+out_html = template.render(df=new_df)
+
+# with open('out.html', 'w') as f:
+# f.write(template.render(df=new_df))
