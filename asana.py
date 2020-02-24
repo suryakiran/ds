@@ -42,9 +42,6 @@ def get_project_id(name):
     return get_id_by_route('projects', name)
 
 
-project_id = get_project_id('EigenPrism Release Mgmt')
-
-
 def task_as_record(task):
     td = {}
     assignee = task.get('assignee')
@@ -76,6 +73,8 @@ def task_as_record(task):
 
 
 def do_it(event, context):
+    project_id = get_project_id('EigenPrism Release Mgmt')
+
     with tpe(max_workers=50) as executor:
         tag_id = executor.submit(get_id_by_route, 'tags', tag_name)
 
