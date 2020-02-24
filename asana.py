@@ -14,9 +14,12 @@ request_header = {
     'Accept': 'application/json'
 }
 
+project_id = None
 loader = FileSystemLoader('.')
 jenv = Environment(loader=loader)
 template = jenv.get_template('table.html')
+tag_name = 'AJG Punchlist'
+net_tasks = []
 
 
 def get_json_response(route):
@@ -72,39 +75,40 @@ def task_as_record(task):
     return td
 
 
-tag_name = 'AJG Punchlist'
-net_tasks = []
+def do_it(event, context):
+    with tpe(max_workers=50) as executor:
+        tag_id = executor.submit(get_id_by_route, 'tags', tag_name)
 
-with tpe(max_workers=50) as executor:
-    tag_id = executor.submit(get_id_by_route, 'tags', tag_name)
+        tasks_with_tag = executor.submit(
+            get_json_response, 'tags/{}/tasks'.format(tag_id.result()))
 
-    tasks_with_tag = executor.submit(get_json_response,
-                                     'tags/{}/tasks'.format(tag_id.result()))
+        tasks = pd.Series([t['gid'] for t in tasks_with_tag.result()],
+                          name='task.id')
 
-    tasks = pd.Series([t['gid'] for t in tasks_with_tag.result()],
-                      name='task.id')
+        tasks_details = {
+            executor.submit(get_json_response, 'tasks/{}'.format(t)): t
+            for t in tasks
+        }
 
-    tasks_details = {
-        executor.submit(get_json_response, 'tasks/{}'.format(t)): t
-        for t in tasks
-    }
+        for f in concurrent.futures.as_completed(tasks_details):
+            fut = tasks_details[f]
+            try:
+                t = f.result()
+                net_tasks.append(t)
+            except Exception as exc:
+                print('Error: {}'.format(exc))
 
-    for f in concurrent.futures.as_completed(tasks_details):
-        fut = tasks_details[f]
-        try:
-            t = f.result()
-            net_tasks.append(t)
-        except Exception as exc:
-            print('Error: {}'.format(exc))
+    records = [task_as_record(t) for t in net_tasks]
+    df = pd.DataFrame(records)
+    # df.to_csv('records.csv', index=False)
 
-records = [task_as_record(t) for t in net_tasks]
-df = pd.DataFrame(records)
-# df.to_csv('records.csv', index=False)
+    # df = pd.read_csv('records.csv')
+    new_df = df.dropna(subset=['Status']).sort_values(['Priority', 'Status'
+                                                       ]).replace(np.nan, '')
+    out_html = template.render(df=new_df)
+    with open('out.html', 'w') as f:
+        f.write(out_html)
 
-# df = pd.read_csv('records.csv')
-new_df = df.dropna(subset=['Status']).sort_values(['Priority', 'Status'
-                                                   ]).replace(np.nan, '')
-out_html = template.render(df=new_df)
 
-# with open('out.html', 'w') as f:
-# f.write(template.render(df=new_df))
+if __name__ == '__main__':
+    do_it(None, None)
