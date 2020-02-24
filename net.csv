@@ -1,20 +1,20 @@
 Status,Name,Assigned To,Due Date,Priority,Module,Url
 Master Backlog - Ungroomed,EP - Profile using new Hazard slides will not Update in Config mode,,,Blocker,EigenProfile,https://app.asana.com/0/1134367795571121/1157562707024814
+Master Backlog - Ungroomed,EA - Contribution widget to Export does not populate the legend labels when Enum is Flood Score or Surge Score,Rohit,2020-02-26,Critical,Exposure Analytics,https://app.asana.com/0/1134367795571121/1161854664864243
 Master Backlog - Ungroomed,EE - Hazard Data apply-to-all option is not same as in geocoding,Karthika Kalaivani,,Medium,EigenExpress,https://app.asana.com/0/1134367795571121/1156941871863305
-Master Backlog - Ungroomed,EA - WMS layer labels must be legible in drop down,Karthika Kalaivani,,Critical,Exposure Analytics,https://app.asana.com/0/1134367795571121/1156460975802774
-QA Passed,User unable to create Comparison Profile in EP page ,Krishnakumar,2020-02-21,,EigenProfile,https://app.asana.com/0/1134367795571121/1162837460852153
-QA Passed,EP - CSS alignment for EP hazard slide - Part 2,RAMYA ,,Blocker,EigenProfile,https://app.asana.com/0/1134367795571121/1161298893105353
-QA Passed,Update Consolidated EP template with new Hazard Slide in prism.support,Karthika Kalaivani,2020-02-24,Critical,,https://app.asana.com/0/1134367795571121/1156590408930791
-QA Passed,EA - Show legend for WMS layers under map,Krishnakumar,2020-02-24,Blocker,Exposure Analytics,https://app.asana.com/0/1134367795571121/1156460975780769
-QA Passed,EP - Allow users to select any attribute (text attribute/ enum/ number) in top n grid,RAMYA ,2020-02-24,Critical,EigenProfile,https://app.asana.com/0/1134367795571121/1156401406409685
-QA Passed,EP - default zoom level is broken in EP,Krishnakumar,2020-02-24,Blocker,EigenProfile,https://app.asana.com/0/1134367795571121/1155933470055352
+Master Backlog - Ungroomed,[Duplicate] EA - WMS layer labels must be legible in drop down,Karthika Kalaivani,,Critical,Exposure Analytics,https://app.asana.com/0/1134367795571121/1156460975802774
+UAT Failed,User unable to create Comparison Profile in EP page ,Krishnakumar,2020-02-21,,EigenProfile,https://app.asana.com/0/1134367795571121/1162837460852153
 Master Backlog - Groomed,EP PDF issues,Subbu,2020-03-04,,EigenProfile,https://app.asana.com/0/1134367795571121/1162183369370567
 Master Backlog - Groomed,EP new hazard slide -show legend for all pie chart contribution graph ,Subbu,2020-03-03,Critical,EigenProfile,https://app.asana.com/0/1134367795571121/1162183369370563
-Master Backlog - Groomed,Add heatmap legend in EP,Krishnakumar,2020-02-24,High,EigenProfile,https://app.asana.com/0/1134367795571121/1155933470055349
 In Progress,EP - Make TopN grid dynamic ,Subbu,2020-02-25,Blocker,EigenProfile,https://app.asana.com/0/1134367795571121/1162183369370561
 In Progress,Update colormap labels,Abdul Azeem,2020-02-24,High,,https://app.asana.com/0/1134367795571121/1156460975780772
-Reported Bug list,EA - Contribution widget to Export does not populate the legend labels when Enum is Flood Score or Surge Score,Rohit,2020-02-26,Critical,Exposure Analytics,https://app.asana.com/0/1134367795571121/1161854664864243
-In UAT,White Label Email - Customize text on the Link to Triggered Alerts,RAMYA ,,High,EigenAlert,https://app.asana.com/0/1134367795571121/1159907257029281
+UAT Passed,EP - CSS alignment for EP hazard slide - Part 2,RAMYA ,,Blocker,EigenProfile,https://app.asana.com/0/1134367795571121/1161298893105353
+UAT Passed,White Label Email - Customize text on the Link to Triggered Alerts,RAMYA ,,High,EigenAlert,https://app.asana.com/0/1134367795571121/1159907257029281
+UAT Passed,EA - Show legend for WMS layers under map,Krishnakumar,2020-02-24,Blocker,Exposure Analytics,https://app.asana.com/0/1134367795571121/1156460975780769
+UAT Passed,EP - Allow users to select any attribute (text attribute/ enum/ number) in top n grid,RAMYA ,2020-02-24,Critical,EigenProfile,https://app.asana.com/0/1134367795571121/1156401406409685
+UAT Passed,EP - default zoom level is broken in EP,Krishnakumar,2020-02-24,Blocker,EigenProfile,https://app.asana.com/0/1134367795571121/1155933470055352
+QA Passed,Update Consolidated EP template with new Hazard Slide in prism.support,Karthika Kalaivani,2020-02-24,Critical,,https://app.asana.com/0/1134367795571121/1156590408930791
+Sprint - Committed (Feb 10th prod push),Add heatmap legend in EP,Krishnakumar,2020-02-24,High,EigenProfile,https://app.asana.com/0/1134367795571121/1155933470055349
 Sprint - Target,Duplicate columns in Asset Details in Export Analysis,Rohit,2020-03-02,High,Exposure Analytics,https://app.asana.com/0/1134367795571121/1154551763284057
 Sprint - Target,EP text boxes are supporting special chars,Rohit,2020-02-24,Critical,EigenProfile,https://app.asana.com/0/1134367795571121/1155933470055364
 QA Failed,Analysis link - Option to navigate from EP to EA ,Rohit,2020-02-20,High,EigenProfile,https://app.asana.com/0/1134367795571121/1155933470055370
