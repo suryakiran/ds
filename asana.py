@@ -42,15 +42,16 @@ def get_project_id(name):
     return get_id_by_route('projects', name)
 
 
-def task_as_record(task):
+def task_as_record(task, pid):
     td = {}
     assignee = task.get('assignee')
     if assignee is not None:
         td['Assigned To'] = assignee['name']
     else:
         td['Assigned To'] = np.nan
-    url = 'https://app.asana.com/0/{}/{}'.format(project_id, task['gid'])
-    td['Name'] = '<a href="{}">{}</a>'.format(url, task['name'])
+    url = 'https://app.asana.com/0/{}/{}'.format(pid, task['gid'])
+    td['Name'] = '<a href="{}" target="_blank">{}</a>'.format(
+        url, task['name'])
     td['Due Date'] = task['due_on']
     td['Status'] = np.nan
 
@@ -73,6 +74,7 @@ def task_as_record(task):
 
 
 def do_it(event, context):
+    net_tasks = []
     project_id = get_project_id('EigenPrism Release Mgmt')
 
     with tpe(max_workers=50) as executor:
@@ -97,9 +99,9 @@ def do_it(event, context):
             except Exception as exc:
                 print('Error: {}'.format(exc))
 
-    records = [task_as_record(t) for t in net_tasks]
+    records = [task_as_record(t, project_id) for t in net_tasks]
     df = pd.DataFrame(records)
-    # df.to_csv('records.csv', index=False)
+    df.to_csv('records.csv', index=False)
 
     # df = pd.read_csv('records.csv')
     new_df = df.dropna(subset=['Status']).sort_values(['Priority', 'Status'
