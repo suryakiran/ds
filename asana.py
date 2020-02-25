@@ -7,6 +7,7 @@ import pandas as pd
 
 from jinja2 import FileSystemLoader, Environment
 
+lambda_env = os.environ.get('LAMBDA_ENV')
 token = os.environ['ASANA_ACCESS_TOKEN']
 url = 'https://app.asana.com/api/1.0'
 request_header = {
@@ -16,7 +17,7 @@ request_header = {
 
 project_id = None
 loader = FileSystemLoader('.')
-jenv = Environment(loader=loader)
+jenv = Environment(loader=loader, trim_blocks=True, lstrip_blocks=True, keep_trailing_newline=True)
 template = jenv.get_template('table.html')
 tag_name = 'AJG Punchlist'
 net_tasks = []
@@ -37,29 +38,45 @@ def get_id_by_route(route, name):
         if (d['name'] == name):
             return d['gid']
 
+def get_tasks_by_tag_name(name):
+    tag = get_id_by_route('tags', name)
+    if tag is not None:
+        return get_json_response('tags/{}/tasks'.format(tag))
+    return None
+
 
 def get_project_id(name):
     return get_id_by_route('projects', name)
 
 
-def task_as_record(task, pid):
+def task_as_record(task):
     td = {}
+    membership = task.get('memberships')
+    td['Status'] = np.nan
+    pid = None
+
+    if membership is not None and len(membership) > 0:
+        section = membership[0].get('section')
+        if section is not None:
+            td['Status'] = section['name']
+        project = membership[0].get('project')
+        if project is not None:
+            pid = project['gid']
+
     assignee = task.get('assignee')
     if assignee is not None:
         td['Assigned To'] = assignee['name']
     else:
         td['Assigned To'] = np.nan
-    url = 'https://app.asana.com/0/{}/{}'.format(pid, task['gid'])
-    td['Name'] = '<a href="{}" target="_blank">{}</a>'.format(
-        url, task['name'])
-    td['Due Date'] = task['due_on']
-    td['Status'] = np.nan
 
-    membership = task.get('memberships')
-    if membership is not None and len(membership) > 0:
-        section = membership[0].get('section')
-        if section is not None:
-            td['Status'] = section['name']
+    if pid is not None:
+        url = 'https://app.asana.com/0/{}/{}'.format(pid, task['gid'])
+        td['Name'] = '<a href="{}" target="_blank">{}</a>'.format(
+            url, task['name'])
+    else:
+        td['Name'] = task['name']
+
+    td['Due Date'] = task['due_on']
 
     for f in task['custom_fields']:
         key = f.get('name')
@@ -72,19 +89,12 @@ def task_as_record(task, pid):
 
     return td
 
-
-def do_it(event, context):
+def do_it_lambda(event, context):
     net_tasks = []
-    project_id = get_project_id('EigenPrism Release Mgmt')
 
-    with tpe(max_workers=50) as executor:
-        tag_id = executor.submit(get_id_by_route, 'tags', tag_name)
-
-        tasks_with_tag = executor.submit(
-            get_json_response, 'tags/{}/tasks'.format(tag_id.result()))
-
-        tasks = pd.Series([t['gid'] for t in tasks_with_tag.result()],
-                          name='task.id')
+    with tpe(max_workers=None) as executor:
+        tasks_with_tag = get_tasks_by_tag_name(tag_name)
+        tasks = [t['gid'] for t in tasks_with_tag]
 
         tasks_details = {
             executor.submit(get_json_response, 'tasks/{}'.format(t)): t
@@ -99,17 +109,36 @@ def do_it(event, context):
             except Exception as exc:
                 print('Error: {}'.format(exc))
 
-    records = [task_as_record(t, project_id) for t in net_tasks]
+    records = [task_as_record(t) for t in net_tasks]
     df = pd.DataFrame(records)
     df.to_csv('records.csv', index=False)
 
-    # df = pd.read_csv('records.csv')
-    new_df = df.dropna(subset=['Status']).sort_values(['Priority', 'Status'
-                                                       ]).replace(np.nan, '')
-    out_html = template.render(df=new_df)
-    with open('out.html', 'w') as f:
-        f.write(out_html)
+    return df
+
+def do_it_local(event, context):
+    return pd.read_csv('records.csv')
+    
+
+def do_it(event, context):
+    df = None
+    if lambda_env:
+        df = do_it_lambda(event, context)
+    else:
+        df = do_it_local(event, context)
+
+    df['Due Date'] = pd.to_datetime(df['Due Date']).dt.strftime('%d-%b-%Y')
+    df = df.dropna(subset=['Status']) \
+    .sort_values(['Priority', 'Status']) \
+    .replace(np.nan, '') \
+    .reindex(columns = ['Name', 'Assigned To', 'Status', 'Module', 'Due Date', 'Priority'])
+
+    out_html = template.render(data = {'data': df, 'tag': tag_name})
+    return out_html
 
 
 if __name__ == '__main__':
-    do_it(None, None)
+    lambda_env = False
+    out_html = do_it(None, None)
+    with open('out.html', 'w') as f:
+        f.write(out_html)
+
