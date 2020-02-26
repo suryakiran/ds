@@ -4,6 +4,7 @@ from concurrent.futures import ThreadPoolExecutor as tpe
 import concurrent.futures
 import numpy as np
 import pandas as pd
+import tempfile
 
 from jinja2 import FileSystemLoader, Environment
 
@@ -14,6 +15,7 @@ request_header = {
     'Authorization': 'Bearer {}'.format(token),
     'Accept': 'application/json'
 }
+csv_file = os.path.join(tempfile.gettempdir(), 'records.csv')
 
 project_id = None
 loader = FileSystemLoader('.')
@@ -111,12 +113,12 @@ def do_it_lambda(event, context):
 
     records = [task_as_record(t) for t in net_tasks]
     df = pd.DataFrame(records)
-    df.to_csv('records.csv', index=False)
+    df.to_csv(csv_file, index=False)
 
     return df
 
 def do_it_local(event, context):
-    return pd.read_csv('records.csv')
+    return pd.read_csv(csv_file)
     
 
 def do_it(event, context):

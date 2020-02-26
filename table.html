@@ -11,57 +11,61 @@
     </head>
 
     {% set df = data.data %}
-    <div class="table-responsive">
-        <table border="1" class="table table-bordered table-inverse table-striped table-hover table-sm">
-            <thead class="thead-dark">
-                <tr>
-                    {% for c in df.columns %}
-                    <th>{{ c }}</th>
-                    {% endfor %}
-                </tr>
-            </thead>
-            <tbody>
-                {% for idx,row in df.iterrows() %}
-                {% set priority = row['Priority'] %}
-                {% if priority == 'Blocker' %}
-                <tr class="table-danger">
-                {% elif priority == 'Critical' %}
-                <tr class="table-warning">
-                {% elif priority == 'High' %}
-                <tr class="table-info">
-                {% else %}
-                <tr>
-                {% endif %}
-                {% for cidx in range(df.columns | length) %}
-                    <td>{{ row[cidx] }}</td>
-                {% endfor %}
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-    </div>
+        <div class="row">
+            {% set counts = df['Priority'].value_counts() %}
+            <div class="col-lg-2">
+                    <table border="1" class="table table-bordered table-inverse table-striped table-hover table-sm">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th colspan="2">Statistics for {{ data.tag }} tasks</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Total</td>
+                                <td align="right">{{ df.index | length }}</td>
+                            </tr>
+                            {% for p in ['Blocker', 'Critical', 'High'] %}
+                            <tr>
+                                <td>{{ p }}</td>
+                                <td align="right">{{ counts[p] }}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+        </div>
 
-    {% set counts = df['Priority'].value_counts() %}
-    <div>
-        <table border="1" class="table table-bordered table-inverse table-striped table-hover table-sm">
-            <thead class="thead-dark">
-                <tr>
-                    <th colspan="2">Statistics for {{ data.tag }} tasks</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Total</td>
-                    <td align="right">{{ df.index | length }}</td>
-                </tr>
-                {% for p in ['Blocker', 'Critical', 'High'] %}
-                <tr>
-                    <td>{{ p }}</td>
-                    <td align="right">{{ counts[p] }}</td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-    </div>
-    
+        <div class="col-lg-8 col-md-10">
+            <table border="1" class="table table-bordered table-inverse table-striped table-hover table-sm">
+                <thead class="thead-dark">
+                    <tr>
+                        {% for c in df.columns %}
+                        <th>{{ c }}</th>
+                        {% endfor %}
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for idx,row in df.iterrows() %}
+                    {% set priority = row['Priority'] %}
+                    {% if priority == 'Blocker' %}
+                    <tr class="table-danger">
+                        {% elif priority == 'Critical' %}
+                        <tr class="table-warning">
+                            {% elif priority == 'High' %}
+                            <tr class="table-info">
+                                {% else %}
+                                <tr>
+                                    {% endif %}
+                                    {% for cidx in range(df.columns | length) %}
+                                    <td>{{ row[cidx] }}</td>
+                                    {% endfor %}
+                                </tr>
+                                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        </div>
+
+        
 </html>
