@@ -15,14 +15,17 @@ request_header = {
     'Authorization': 'Bearer {}'.format(token),
     'Accept': 'application/json'
 }
-task_fields=['memberships.project.gid','(memberships.section|assignee|custom_fields|custom_fields.enum_value).name','name','due_on']
+task_fields=[
+             'memberships.project.gid',
+             '(memberships.section|assignee|custom_fields|custom_fields.enum_value).name',
+             'name',
+             'due_on'
+             ]
 csv_file = os.path.join(tempfile.gettempdir(), 'records.csv')
 
-project_id = None
 loader = FileSystemLoader('.')
 jenv = Environment(loader=loader, trim_blocks=True, lstrip_blocks=True, keep_trailing_newline=True)
 template = jenv.get_template('table.html')
-tag_name = 'AJG Punchlist'
 net_tasks = []
 
 
@@ -93,7 +96,7 @@ def task_as_record(task):
 
     return td
 
-def do_it_lambda(event, context):
+def do_it_lambda(tag_name):
     net_tasks = []
 
     with tpe(max_workers=None) as executor, requests.Session() as session:
@@ -121,16 +124,22 @@ def do_it_lambda(event, context):
 
     return df
 
-def do_it_local(event, context):
+def do_it_local(tag_name):
     return pd.read_csv(csv_file)
     
 
 def do_it(event, context):
     df = None
+    tag_name = None
+    if event:
+        tag_name = event.get('tag')
+    if tag_name is None:
+        return template.render(data = None)
+    
     if lambda_env:
-        df = do_it_lambda(event, context)
+        df = do_it_lambda(tag_name)
     else:
-        df = do_it_local(event, context)
+        df = do_it_local(tag_name)
 
     df['Due Date'] = pd.to_datetime(df['Due Date']).dt.strftime('%d-%b-%Y')
     df = df.dropna(subset=['Status']) \
@@ -144,7 +153,7 @@ def do_it(event, context):
 
 if __name__ == '__main__':
     lambda_env = True
-    out_html = do_it(None, None)
+    out_html = do_it({'tag': 'AJG Punchlist'}, None)
     with open('out.html', 'w') as f:
         f.write(out_html)
 

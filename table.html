@@ -10,9 +10,16 @@
              caption-side: top;
          }
         </style>
+        {% if data is none %}
+        <title>No asana results</title>
+        {% else %}
         <title>List of {{ data.tag }} tasks</title>
+        {% endif %}
     </head>
 
+    {% if data is none %}
+    No tag specified
+    {% else %}
     {% set df = data.data %}
         <div class="row">
             {% set counts = df['Priority'].value_counts() %}
@@ -40,7 +47,6 @@
 
         <div class="col-lg-8 col-md-10">
             <table border="1" class="table table-bordered table-inverse table-striped table-hover table-sm">
-                <!-- <caption>Running</caption> -->
                 <thead class="thead-dark">
                     <tr>
                         {% for c in df.columns %}
@@ -70,6 +76,6 @@
         </div>
 
         </div>
-
+        {% endif %}
         
 </html>
