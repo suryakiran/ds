@@ -7,7 +7,6 @@ bucket='er-lambda-python-code'
 pkg = 'asana_tag_filter_test.zip'
 
 files = ['pkg_lambda.py', 'asana.py', 'table.html']
-dirs = ['jinja2', 'markupsafe']
 
 def add_files_from_dir(d):
     for root, dn, fnames in os.walk(d):
@@ -15,7 +14,7 @@ def add_files_from_dir(d):
             if not (fn.endswith('pyc') or fn.endswith('pyd')):
                 files.append(os.path.join(root, fn))
 
-for d in dirs:
+for d in []:
     add_files_from_dir(d)
 
 
@@ -27,3 +26,5 @@ print('zip file created successfully')
 
 s3 = boto3.client('s3')
 s3.upload_file(pkg, bucket, pkg)
+
+print('pkg {} uploaded to s3'.format(pkg))

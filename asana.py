@@ -25,25 +25,25 @@ tag_name = 'AJG Punchlist'
 net_tasks = []
 
 
-def get_json_response(route):
-    resp = requests.get('{}/{}'.format(url, route), headers=request_header)
+def get_json_response(session, route):
+    resp = session.get('{}/{}'.format(url, route))
     if resp.ok:
         return resp.json()['data']
     return None
 
 
-def get_id_by_route(route, name):
-    resp = get_json_response(route)
+def get_id_by_route(session, route, name):
+    resp = get_json_response(session, route)
     if resp is None:
         return None
     for d in resp:
         if (d['name'] == name):
             return d['gid']
 
-def get_tasks_by_tag_name(name):
-    tag = get_id_by_route('tags', name)
+def get_tasks_by_tag_name(session, name):
+    tag = get_id_by_route(session, 'tags', name)
     if tag is not None:
-        return get_json_response('tags/{}/tasks'.format(tag))
+        return get_json_response(session, 'tags/{}/tasks'.format(tag))
     return None
 
 
@@ -55,6 +55,7 @@ def task_as_record(task):
     td = {}
     membership = task.get('memberships')
     td['Status'] = np.nan
+    td['Id'] = task['gid']
     pid = None
 
     if membership is not None and len(membership) > 0:
@@ -93,13 +94,15 @@ def task_as_record(task):
 
 def do_it_lambda(event, context):
     net_tasks = []
+    session = requests.Session()
+    session.headers.update(request_header)
 
     with tpe(max_workers=None) as executor:
-        tasks_with_tag = get_tasks_by_tag_name(tag_name)
+        tasks_with_tag = get_tasks_by_tag_name(session, tag_name)
         tasks = [t['gid'] for t in tasks_with_tag]
 
         tasks_details = {
-            executor.submit(get_json_response, 'tasks/{}'.format(t)): t
+            executor.submit(get_json_response, session, 'tasks/{}'.format(t)): t
             for t in tasks
         }
 
@@ -139,7 +142,7 @@ def do_it(event, context):
 
 
 if __name__ == '__main__':
-    lambda_env = False
+    lambda_env = True
     out_html = do_it(None, None)
     with open('out.html', 'w') as f:
         f.write(out_html)
