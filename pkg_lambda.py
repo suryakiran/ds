@@ -34,4 +34,7 @@ out = aws_lambda.update_function_code(FunctionName='asana_filter_by_tag', S3Buck
 if out['ResponseMetadata']['HTTPStatusCode'] == 200:
     print('lambda code update success')
 else:
-    print('lambda code udpate failed')
+    print('lambda code update failed')
+
+if os.path.exists(pkg):
+    os.remove(pkg)

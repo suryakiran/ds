@@ -15,6 +15,7 @@ request_header = {
     'Authorization': 'Bearer {}'.format(token),
     'Accept': 'application/json'
 }
+task_fields=['memberships.project.gid','(memberships.section|assignee|custom_fields|custom_fields.enum_value).name','name','due_on']
 csv_file = os.path.join(tempfile.gettempdir(), 'records.csv')
 
 project_id = None
@@ -25,8 +26,8 @@ tag_name = 'AJG Punchlist'
 net_tasks = []
 
 
-def get_json_response(session, route):
-    resp = session.get('{}/{}'.format(url, route))
+def get_json_response(session, route, **opt_fields):
+    resp = session.get('{}/{}'.format(url, route), params=opt_fields)
     if resp.ok:
         return resp.json()['data']
     return None
@@ -94,15 +95,15 @@ def task_as_record(task):
 
 def do_it_lambda(event, context):
     net_tasks = []
-    session = requests.Session()
-    session.headers.update(request_header)
 
-    with tpe(max_workers=None) as executor:
+    with tpe(max_workers=None) as executor, requests.Session() as session:
+        session.headers.update(request_header)
+
         tasks_with_tag = get_tasks_by_tag_name(session, tag_name)
         tasks = [t['gid'] for t in tasks_with_tag]
 
         tasks_details = {
-            executor.submit(get_json_response, session, 'tasks/{}'.format(t)): t
+            executor.submit(get_json_response, session, 'tasks/{}'.format(t), opt_fields=','.join(task_fields)): t
             for t in tasks
         }
 
@@ -121,6 +122,11 @@ def do_it_lambda(event, context):
     return df
 
 def do_it_local(event, context):
+    with requests.Session() as session:
+        session.headers.update(request_header)
+        with open('task.json', 'w') as f:
+            f.write(json.dumps(t, indent=4))
+
     return pd.read_csv(csv_file)
     
 
@@ -130,6 +136,8 @@ def do_it(event, context):
         df = do_it_lambda(event, context)
     else:
         df = do_it_local(event, context)
+
+        
 
     df['Due Date'] = pd.to_datetime(df['Due Date']).dt.strftime('%d-%b-%Y')
     df = df.dropna(subset=['Status']) \
