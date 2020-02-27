@@ -30,7 +30,7 @@ s3.upload_file(pkg, bucket, pkg)
 print('pkg {} uploaded to s3'.format(pkg))
 
 aws_lambda = boto3.client('lambda')
-out = aws_lambda.update_function_code(FunctionName='test_abc', S3Bucket=bucket, S3Key=pkg, DryRun=False)
+out = aws_lambda.update_function_code(FunctionName='asana_filter_by_tag', S3Bucket=bucket, S3Key=pkg, DryRun=False)
 if out['ResponseMetadata']['HTTPStatusCode'] == 200:
     print('lambda code update success')
 else:
