@@ -122,11 +122,6 @@ def do_it_lambda(event, context):
     return df
 
 def do_it_local(event, context):
-    with requests.Session() as session:
-        session.headers.update(request_header)
-        with open('task.json', 'w') as f:
-            f.write(json.dumps(t, indent=4))
-
     return pd.read_csv(csv_file)
     
 
@@ -136,8 +131,6 @@ def do_it(event, context):
         df = do_it_lambda(event, context)
     else:
         df = do_it_local(event, context)
-
-        
 
     df['Due Date'] = pd.to_datetime(df['Due Date']).dt.strftime('%d-%b-%Y')
     df = df.dropna(subset=['Status']) \
