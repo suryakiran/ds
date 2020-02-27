@@ -6,6 +6,9 @@
          body {
              font-family: 'PT Sans';
          }
+         caption {
+             caption-side: top;
+         }
         </style>
         <title>List of {{ data.tag }} tasks</title>
     </head>
@@ -37,6 +40,7 @@
 
         <div class="col-lg-8 col-md-10">
             <table border="1" class="table table-bordered table-inverse table-striped table-hover table-sm">
+                <!-- <caption>Running</caption> -->
                 <thead class="thead-dark">
                     <tr>
                         {% for c in df.columns %}
