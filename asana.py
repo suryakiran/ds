@@ -15,16 +15,18 @@ request_header = {
     'Authorization': 'Bearer {}'.format(token),
     'Accept': 'application/json'
 }
-task_fields=[
-             'memberships.project.gid',
-             '(memberships.section|assignee|custom_fields|custom_fields.enum_value).name',
-             'name',
-             'due_on'
-             ]
+task_fields = [
+    'completed', 'memberships.project.gid',
+    '(memberships.section|assignee|custom_fields|custom_fields.enum_value).name',
+    'name', 'due_on'
+]
 csv_file = os.path.join(tempfile.gettempdir(), 'records.csv')
 
 loader = FileSystemLoader('.')
-jenv = Environment(loader=loader, trim_blocks=True, lstrip_blocks=True, keep_trailing_newline=True)
+jenv = Environment(loader=loader,
+                   trim_blocks=True,
+                   lstrip_blocks=True,
+                   keep_trailing_newline=True)
 template = jenv.get_template('table.html')
 net_tasks = []
 
@@ -44,6 +46,7 @@ def get_id_by_route(session, route, name):
         if (d['name'] == name):
             return d['gid']
 
+
 def get_tasks_by_tag_name(session, name):
     tag = get_id_by_route(session, 'tags', name)
     if tag is not None:
@@ -58,6 +61,7 @@ def get_project_id(name):
 def task_as_record(task):
     td = {}
     membership = task.get('memberships')
+    td['Completed'] = task.get('completed', False)
     td['Status'] = np.nan
     td['Id'] = task['gid']
     pid = None
@@ -96,6 +100,7 @@ def task_as_record(task):
 
     return td
 
+
 def do_it_lambda(tag_name):
     net_tasks = []
 
@@ -106,7 +111,10 @@ def do_it_lambda(tag_name):
         tasks = [t['gid'] for t in tasks_with_tag]
 
         tasks_details = {
-            executor.submit(get_json_response, session, 'tasks/{}'.format(t), opt_fields=','.join(task_fields)): t
+            executor.submit(get_json_response,
+                            session,
+                            'tasks/{}'.format(t),
+                            opt_fields=','.join(task_fields)): t
             for t in tasks
         }
 
@@ -124,9 +132,10 @@ def do_it_lambda(tag_name):
 
     return df
 
+
 def do_it_local(tag_name):
     return pd.read_csv(csv_file)
-    
+
 
 def do_it(event, context):
     df = None
@@ -134,26 +143,27 @@ def do_it(event, context):
     if event:
         tag_name = event.get('tag')
     if tag_name is None:
-        return template.render(data = None)
-    
+        return template.render(data=None)
+
     if lambda_env:
         df = do_it_lambda(tag_name)
     else:
         df = do_it_local(tag_name)
 
     df['Due Date'] = pd.to_datetime(df['Due Date']).dt.strftime('%d-%b-%Y')
+    completed = df[df['Completed'] == True].index
+    df.drop(completed, inplace=True)
     df = df.dropna(subset=['Status']) \
     .sort_values(['Priority', 'Status']) \
     .replace(np.nan, '') \
     .reindex(columns = ['Name', 'Assigned To', 'Status', 'Module', 'Due Date', 'Priority'])
 
-    out_html = template.render(data = {'data': df, 'tag': tag_name})
+    out_html = template.render(data={'data': df, 'tag': tag_name})
     return out_html
 
 
 if __name__ == '__main__':
-    lambda_env = True
+    lambda_env = False
     out_html = do_it({'tag': 'AJG Punchlist'}, None)
     with open('out.html', 'w') as f:
         f.write(out_html)
-
