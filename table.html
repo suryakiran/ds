@@ -9,6 +9,13 @@
          caption {
              caption-side: top;
          }
+         h6 {
+             color: #ffffff;
+             border-style: ridge;
+             border-radius: 5px;
+             border-width: 1px;
+             padding: 5px;
+         }
         </style>
         {% if data is none %}
         <title>No asana results</title>
@@ -21,61 +28,136 @@
     No tag specified
     {% else %}
     {% set df = data.data %}
+    {% set passed = data.passed %}
+    {% set in_qa = data.in_qa %}
+    {% set failed = data.failed %}
+    <div class="container-fluid">
         <div class="row">
+            
             {% set counts = df['Priority'].value_counts() %}
             <div class="col-lg-2">
-                    <table border="1" class="table table-bordered table-inverse table-striped table-hover table-sm">
-                        <thead class="thead-dark">
-                            <tr>
-                                <th colspan="2">Statistics for {{ data.tag }} tasks</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Total</td>
-                                <td align="right">{{ df.index | length }}</td>
-                            </tr>
-                            {% for p in ['Blocker', 'Critical', 'High'] %}
-                            <tr>
-                                <td>{{ p }}</td>
-                                <td align="right">{{ counts[p] }}</td>
-                            </tr>
-                            {% endfor %}
-                        </tbody>
-                    </table>
-        </div>
-
-        <div class="col-lg-8 col-md-10">
-            <table border="1" class="table table-bordered table-inverse table-striped table-hover table-sm">
-                <thead class="thead-dark">
-                    <tr>
-                        {% for c in df.columns %}
-                        <th>{{ c }}</th>
+                <table border="1" class="table table-bordered table-inverse table-striped table-hover table-sm">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th colspan="2">Statistics for {{ data.tag }} tasks</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Total</td>
+                            <td align="right">{{ df.index | length }}</td>
+                        </tr>
+                        {% for p in ['Blocker', 'Critical', 'High'] %}
+                        <tr>
+                            <td>{{ p }}</td>
+                            <td align="right">{{ counts[p] }}</td>
+                        </tr>
                         {% endfor %}
-                    </tr>
-                </thead>
-                <tbody>
-                    {% for idx,row in df.iterrows() %}
-                    {% set priority = row['Priority'] %}
-                    {% if priority == 'Blocker' %}
-                    <tr class="table-danger">
-                        {% elif priority == 'Critical' %}
-                        <tr class="table-warning">
-                            {% elif priority == 'High' %}
-                            <tr class="table-info">
-                                {% else %}
-                                <tr>
-                                    {% endif %}
-                                    {% for cidx in range(df.columns | length) %}
-                                    <td>{{ row[cidx] }}</td>
-                                    {% endfor %}
-                                </tr>
-                                {% endfor %}
-                </tbody>
-            </table>
-        </div>
+                    </tbody>
+                </table>
+            </div>
 
+            <div class="col-lg-8 col-md-10">
+                <table border="1" class="table table-bordered table-inverse table-striped table-hover table-sm">
+                    <thead class="thead-dark">
+                        <tr>
+                            {% for c in df.columns %}
+                            <th>{{ c }}</th>
+                            {% endfor %}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for idx,row in df.iterrows() %}
+                        {% set priority = row['Priority'] %}
+                        {% if priority == 'Blocker' %}
+                        <tr class="table-danger">
+                            {% elif priority == 'Critical' %}
+                            <tr class="table-warning">
+                                {% elif priority == 'High' %}
+                                <tr class="table-info">
+                                    {% else %}
+                                    <tr>
+                                        {% endif %}
+                                        {% for cidx in range(df.columns | length) %}
+                                        <td>{{ row[cidx] }}</td>
+                                        {% endfor %}
+                                    </tr>
+                                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+ 
+        </div> <!-- row -->
+        <hr>
+        <div class="row">
+            <div class="col-lg-4 col-md-2">
+                <h6 class="bg-danger"> QA/UAT Failed </h6>
+                <table border="1" class="table table-bordered table-inverse table-striped table-hover table-sm">
+                    <thead>
+                        <tr>
+                            {% for c in failed.columns %}
+                            <th>{{ c }}</th>
+                            {% endfor %}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for idx,row in failed.iterrows() %}
+                        <tr>
+                            {% for cidx in range(failed.columns | length) %}
+                            <td>{{ row[cidx] }}</td>
+                            {% endfor %}
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="col-lg-4 col-md-2">
+                <h6 class="bg-info"> In QA </h6>
+                <table border="1" class="table table-bordered table-inverse table-striped table-hover table-sm">
+                    <thead>
+                        <tr>
+                            {% for c in in_qa.columns %}
+                            <th>{{ c }}</th>
+                            {% endfor %}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for idx,row in in_qa.iterrows() %}
+                        <tr>
+                            {% for cidx in range(in_qa.columns | length) %}
+                            <td>{{ row[cidx] }}</td>
+                            {% endfor %}
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="col-lg-4 col-md-2">
+                <h6 class="bg-success"> QA/UAT Passed </h6>
+                <table border="1" class="table table-bordered table-inverse table-striped table-hover table-sm">
+                    <thead>
+                        <tr>
+                            {% for c in passed.columns %}
+                            <th>{{ c }}</th>
+                            {% endfor %}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for idx,row in passed.iterrows() %}
+                        <tr>
+                            {% for cidx in range(passed.columns | length) %}
+                            <td>{{ row[cidx] }}</td>
+                            {% endfor %}
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
         </div>
-        {% endif %}
-        
+    </div> <!-- container-fluid -->
+    {% endif %}
+    
 </html>

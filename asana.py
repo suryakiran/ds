@@ -16,7 +16,7 @@ request_header = {
     'Accept': 'application/json'
 }
 task_fields = [
-    'completed', 'memberships.project.gid',
+    'completed', 'memberships.project.gid', 'modified_at',
     '(memberships.section|assignee|custom_fields|custom_fields.enum_value).name',
     'name', 'due_on'
 ]
@@ -65,6 +65,7 @@ def task_as_record(task):
     td['Completed'] = task.get('completed', False)
     td['Status'] = np.nan
     td['Id'] = task['gid']
+    td['Last Modified'] = task['modified_at']
     pid = None
 
     if membership is not None and len(membership) > 0:
@@ -152,15 +153,43 @@ def do_it(event, context):
     else:
         df = do_it_local(tag_name)
 
-    df['Due Date'] = pd.to_datetime(df['Due Date']).dt.strftime('%d-%b-%Y')
+    for d in ['Due Date', 'Last Modified']:
+        df[d] = pd.to_datetime(df[d]).dt.strftime('%d-%b-%Y')
+
     completed = df[df['Completed'] == True].index
     df.drop(completed, inplace=True)
     df = df.dropna(subset=['Status']) \
     .sort_values(['Priority', 'Status']) \
     .replace(np.nan, '') \
-    .reindex(columns = ['Name', 'Assigned To', 'Status', 'Module', 'Due Date', 'Priority'])
+    .reindex(columns = ['Name', 'Assigned To', 'Status', 'Due Date', 'Module', 'Priority'])
 
-    out_html = template.render(data={'data': df, 'tag': tag_name})
+    in_qa = df[df['Status'] == 'In QA']
+    df.drop(in_qa.index, inplace=True)
+
+    passed = df.loc[(df['Status'].str.endswith('Passed')) |
+                    (df['Status'].str.contains('Resolved'))]
+    df.drop(passed.index, inplace=True)
+
+    failed = df[df['Status'].str.endswith('Failed')]
+    df.drop(failed.index, inplace=True)
+    failed = failed.reindex(
+        columns=['Name', 'Assigned To', 'Status', 'Module', 'Priority'])
+    passed = passed.reindex(columns=['Name', 'Status'])
+    in_qa = in_qa.reindex(
+        columns=['Name', 'Assigned To', 'Module', 'Priority'])
+
+    completed_support_requests = df[df['Status'] ==
+                                    'Completed Support Requests']
+    df.drop(completed_support_requests.index, inplace=True)
+
+    out_html = template.render(
+        data={
+            'data': df,
+            'passed': passed,
+            'failed': failed,
+            'in_qa': in_qa,
+            'tag': tag_name
+        })
     return out_html
 
 
