@@ -23,10 +23,11 @@ task_fields = [
 csv_file = os.path.join(tempfile.gettempdir(), 'records.csv')
 
 loader = FileSystemLoader('.')
-jenv = Environment(loader=loader,
-                   trim_blocks=True,
-                   lstrip_blocks=True,
-                   keep_trailing_newline=True)
+jenv = Environment(
+    loader=loader,
+    trim_blocks=True,
+    lstrip_blocks=True,
+    keep_trailing_newline=True)
 template = jenv.get_template('table.html')
 net_tasks = []
 
@@ -111,10 +112,11 @@ def do_it_lambda(tag_name):
         tasks = [t['gid'] for t in tasks_with_tag]
 
         tasks_details = {
-            executor.submit(get_json_response,
-                            session,
-                            'tasks/{}'.format(t),
-                            opt_fields=','.join(task_fields)): t
+            executor.submit(
+                get_json_response,
+                session,
+                'tasks/{}'.format(t),
+                opt_fields=','.join(task_fields)): t
             for t in tasks
         }
 
@@ -163,7 +165,7 @@ def do_it(event, context):
 
 
 if __name__ == '__main__':
-    lambda_env = False
+    lambda_env = True
     out_html = do_it({'tag': 'AJG Punchlist'}, None)
     with open('out.html', 'w') as f:
         f.write(out_html)
