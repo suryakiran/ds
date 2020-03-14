@@ -172,9 +172,13 @@ def do_it(event, context):
 
     failed = df[df['Status'].str.endswith('Failed')]
     df.drop(failed.index, inplace=True)
+
     failed = failed.reindex(
-        columns=['Name', 'Assigned To', 'Status', 'Module', 'Priority'])
-    passed = passed.reindex(columns=['Name', 'Status'])
+        columns=['Name', 'Assigned To', 'Status', 'Module', 'Priority'
+                 ]).sort_values(['Status'])
+
+    passed = passed.reindex(columns=['Name', 'Status']).sort_values(['Status'])
+
     in_qa = in_qa.reindex(
         columns=['Name', 'Assigned To', 'Module', 'Priority'])
 
@@ -194,7 +198,7 @@ def do_it(event, context):
 
 
 if __name__ == '__main__':
-    lambda_env = True
+    lambda_env = False
     out_html = do_it({'tag': 'AJG Punchlist'}, None)
     with open('out.html', 'w') as f:
         f.write(out_html)
